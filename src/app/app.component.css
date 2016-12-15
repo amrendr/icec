@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content{
+    flex: 1;
+}
+
+
+.flex{
+    flex: 1 1 auto;
+}
+
+.toolbar{
+    color: white;
+}
+
+.toolbar span {
+    margin-right: 1.25rem;
+}
+
+.toolbar.shadow {
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
