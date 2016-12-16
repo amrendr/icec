@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="slides" (click)="changeSlide()">
+    <div *ngFor="let item of annoucement" class="slide" [class.show]="item === selectedAnnoucement">
+      <div class="content">
+        <div class="margin">
+          <div class="title">
+            {{item.title}}
+          </div>
+          <div class="inset-5x">
+            {{item.desc}}
+          </div>
+        </div>
+        <div>
+          <button md-raised-button color="primary" class="more" [routerLink]="item.url">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

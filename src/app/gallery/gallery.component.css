@@ -1,0 +1,10 @@
+[md-raised-button] {
+    width: 100%;
+}
+md-grid-list {
+    max-width: 1403px;
+}
+
+md-sidenav-layout {
+    /*height: calc(100vh - 8rem);*/
+}

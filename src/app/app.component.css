@@ -5,7 +5,12 @@
 }
 
 .content{
+    margin: 4rem 0 0;
     flex: 1;
+}
+
+.icon-20 {
+  font-size: 1.25rem;
 }
 
 
@@ -15,6 +20,12 @@
 
 .toolbar{
     color: white;
+}
+
+.toolbar a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .toolbar span {
