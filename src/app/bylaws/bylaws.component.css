@@ -1,0 +1,22 @@
+.bylaws {
+    font-family: Courier New, Courier, monospace;
+}
+
+.subtitle {
+    font-weight: 400;
+    text-decoration: underline;
+    padding: 0 1rem;
+}
+
+.intend-right{
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+.subsection{
+    display: flex;
+}
+
+.underline {
+    text-decoration: underline;
+}

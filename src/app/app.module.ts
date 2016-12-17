@@ -11,6 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AnnouncementBarComponent } from './announcement-bar/announcement-bar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
+import { BylawsComponent } from './bylaws/bylaws.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AboutComponent } from './about/about.component';
     GalleryComponent,
     AnnouncementBarComponent,
     NavigationComponent,
-    AboutComponent
+    AboutComponent,
+    BylawsComponent
   ],
   imports: [
     BrowserModule,

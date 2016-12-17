@@ -66,10 +66,16 @@ header .vertical:hover{
     color:whitesmoke;
 }
 
-.min-height{
-    min-height: calc(100vh - 18rem);
+.article{
+    min-height: calc(100vh - 22rem);
+    margin: 1rem 2rem;
+    padding: 1rem 4rem;
 }
 
 a {
     font-weight: 400;
+}
+
+a .navitem:hover{
+    color: #EF6C00;
 }

@@ -14,6 +14,19 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  navitems: Navitem[] = [
+    {title:'Home', url:'/home'},
+    {title:'About', url:'/about'},
+    {title:'Center Rental Information', url:'/rental'},
+    {title:'Membership', url:'/membership'},
+    {title:'Student Resources', url:'/home'},
+    {title:'Community Events', url:'/events'},
+    {title:'Continuing Medical Education (CME)', url:'/cme'},
+    {title:'India Fest', url:'/home'},
+    {title:'Photo Gallery', url:'/gallery'},
+    {title:'Contact US', url:'/contact'}
+  ]
+
   @ViewChild('sidenav') sidenav: MdSidenav;
 
   openSidenav() {
@@ -33,4 +46,9 @@ export class NavigationComponent implements OnInit {
       this.openSidenav();
   }
 
+}
+
+export interface Navitem {
+  title: string;
+  url: string;
 }

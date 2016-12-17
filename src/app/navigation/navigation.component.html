@@ -8,27 +8,10 @@
           </button>
         </div>
         <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">Home</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/about']">About</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">Center Rental Information</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">Membership</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">Student Resources</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/events']">Community Events</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">Continuing Medical Education (CME)</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/home']">India Fest</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/gallery']">Photo Gallery</a></md-list-item>
-        <md-divider></md-divider>
-        <md-list-item><a [routerLink]="['/contact']">Contact US</a></md-list-item>
-        <md-divider></md-divider>
-
+        <div *ngFor="let item of navitems">
+          <a [routerLink]="[item.url]"><md-list-item class="navitem">{{item.title}}</md-list-item></a>
+          <md-divider></md-divider>
+        </div>
       </md-nav-list>
       
   </md-sidenav>
@@ -40,7 +23,7 @@
     </md-list>
     <h1>{{title}}</h1>
   </header>
-  <div class="min-height">
+  <div class="article">
     <ng-content></ng-content>
   </div>
   </md-sidenav-layout>
