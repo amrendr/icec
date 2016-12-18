@@ -12,6 +12,7 @@ import { AnnouncementBarComponent } from './announcement-bar/announcement-bar.co
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { BylawsComponent } from './bylaws/bylaws.component';
+import { MissionComponent } from './mission/mission.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BylawsComponent } from './bylaws/bylaws.component';
     AnnouncementBarComponent,
     NavigationComponent,
     AboutComponent,
-    BylawsComponent
+    BylawsComponent,
+    MissionComponent
   ],
   imports: [
     BrowserModule,
