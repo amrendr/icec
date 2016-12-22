@@ -49,8 +49,9 @@
     justify-content:space-between;
 }
 
-.content .margin {
+.content .item {
     margin-right: 1.25rem;
+    width: 563px;
 }
 
 .title {

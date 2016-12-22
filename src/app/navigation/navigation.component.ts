@@ -8,6 +8,7 @@ import { MdSidenav } from '@angular/material';
 export class NavigationComponent implements OnInit {
   
   @Input() title:string;
+  @Input() subtitle:string;
   isSidenavOpen: boolean = false;
   constructor() { }
 

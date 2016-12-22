@@ -5,6 +5,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { BylawsComponent } from './bylaws/bylaws.component';
 import { MissionComponent } from './mission/mission.component';
+import { MembersComponent } from './members/members.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,9 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'bylaws', component: BylawsComponent },
     { path: 'mission', component: MissionComponent },
+    { path: 'members', redirectTo:'members/current/executives', pathMatch:'full' },
+    { path: 'members/:type', component: MembersComponent },
+    { path: 'members/:year/:type', component: MembersComponent },
     { path: 'gallery', component: GalleryComponent }
 ]
 

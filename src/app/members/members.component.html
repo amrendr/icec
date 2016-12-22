@@ -1,0 +1,33 @@
+<app-navigation [subtitle]="members.title || 'Administrative Structure and Membership'" [title]="'Members ' + (members.year || '')">
+
+<div style="display: flex;">
+
+<md-input placeholder="Search" [(ngModel)]="filterTxt"></md-input>
+<span class="flex"></span>
+<md-select placeholder="Select Member Type" [(ngModel)]="currentType" #memberTypeControl="ngModel">
+  <md-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
+    {{ type.viewValue }}
+  </md-option>
+</md-select>
+</div>
+
+
+
+<div class="flex">
+  <div class="card" *ngFor="let member of filteredMembers()">
+    <md-card>
+      <md-card-header>
+        <md-icon class="avatar" md-card-avatar>person</md-icon>
+        <md-card-title>{{member.fullname}}</md-card-title>
+        <md-card-subtitle><span *ngIf="member.title">{{member.title}} & </span> <span>{{member.membershipType}}</span></md-card-subtitle>
+      </md-card-header>
+      <span class="flex detail" md-line *ngIf="member.email"><md-icon>email</md-icon> <a href="mailto:{{member.email}}">{{member.email}}</a></span>
+      <span class="flex detail" md-line *ngIf="member.contact"><md-icon>phone</md-icon> {{member.contact}}</span>
+      <span class="flex detail" md-line *ngIf="member.membershipTerm"><md-icon>card_membership</md-icon> {{member.membershipTerm}}</span>
+    </md-card>
+  </div>
+  <div *ngIf="filteredMembers().length == 0"><h3>No Data Available</h3></div>
+</div>
+
+
+</app-navigation>

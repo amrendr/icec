@@ -19,7 +19,7 @@ export class AnnouncementBarComponent implements OnInit {
     { title: 'Health Fair 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/gallery' }
   ];
 
-  interval;
+  interval: any;
   selectedAnnoucement: AnnouncementBar = this.annoucement[0];
   currentAnnoucemntIndex: number = 0;
 

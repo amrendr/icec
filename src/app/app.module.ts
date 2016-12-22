@@ -13,6 +13,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { BylawsComponent } from './bylaws/bylaws.component';
 import { MissionComponent } from './mission/mission.component';
+import { MembersComponent } from './members/members.component';
+import { AppService } from './app.service';
+import { AppFilterListPipe } from './app.pipe';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { MissionComponent } from './mission/mission.component';
     NavigationComponent,
     AboutComponent,
     BylawsComponent,
-    MissionComponent
+    MissionComponent,
+    MembersComponent,
+    AppFilterListPipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,7 @@ import { MissionComponent } from './mission/mission.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService, AppFilterListPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

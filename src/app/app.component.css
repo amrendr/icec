@@ -1,21 +1,25 @@
 .container{
     display: flex;
     min-height: 100vh;
+    width: 100%;
     flex-direction: column;
 }
 
 .content{
     margin: 4rem 0 0;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .icon-20 {
   font-size: 1.25rem;
 }
 
+.ie-fix{
+    display: flex;
+}
 
 .flex{
-    flex: 1 1 auto;
+    flex-flow: row nowrap;
 }
 
 .toolbar{
@@ -26,6 +30,10 @@
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.toolbar a:hover {
+    background-color: rgba(239, 108, 0, 0.8);
 }
 
 .toolbar span {
