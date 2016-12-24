@@ -1,0 +1,85 @@
+<app-navigation [subtitle]="'Administrative Structure and Membership'" [title]="'Membership'">
+
+  <div class="flex contact">
+    <div class="card card1">
+      <md-card>
+        <md-card-title>Membership, New and Renewal</md-card-title>
+        <md-card-subtitle>Please fill membership form below and pay annual fees either by cash or online.</md-card-subtitle>
+        <md-card-content>
+          <div class="flex detail" md-line>
+            <md-icon>insert_drive_file</md-icon>Membership Form (
+            <a href="assets/documents/ICEC_Membership_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
+            <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)
+          </div>
+          <div>&nbsp;</div>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="card card1">
+      <md-card>
+        <md-card-title>Pay Annual Membership Fees Online</md-card-title>
+        <md-card-subtitle>2.5% convenience charge is added to the total.</md-card-subtitle>
+        <md-card-content>
+          <div class="flex" md-line>
+            <md-radio-group [(ngModel)]="paymentType">
+              <md-radio-button class="radio-btn" [value]="'pp'" aria-label="PayPal">
+                <img class="radio-img padding-right" src="assets/pp-acceptance-small.png" alt="PayPal Acceptance">
+              </md-radio-button>
+              <md-radio-button class="radio-btn" [value]="'cc'" aria-label="Credit / Debit Card">
+                <img class="radio-img" src="assets/cc-badges-mcvdam-small.png" alt="Credit Card Badges">
+              </md-radio-button>
+            </md-radio-group>
+          </div>
+
+          <div class="flex pp-item" md-line *ngIf="paymentType == 'pp'">
+            <div class="pp-item padding-right">Pay through your&nbsp;
+              <a href="https://www.paypal.me/IndiaCenterGnvFL/102.50" target="blank">PayPal</a>&nbsp;account.
+            </div>
+            <a class="pp-item" href="https://www.paypal.me/IndiaCenterGnvFL/102.50" target="blank">
+              <img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_paynow_107x26.png" alt="Pay Now">
+            </a>
+          </div>
+          <form target="paypal" ngNoForm action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <div class="flex detail" md-line *ngIf="paymentType == 'cc'">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="S36NWEERNN9TW">
+              <md-input-container class="input">
+                <input type="hidden" name="on0" value="Enter child(ren)'s name & age">
+                <input md-input placeholder="Enter Child(ren)'s name & age" name="os0" maxlength="200" />
+              </md-input-container>
+              <div>
+                <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_paynow_107x26.png" border="0" name="submit"
+                  alt="PayPal - The safer, easier way to pay online!">
+              </div>
+            </div>
+          </form>
+        </md-card-content>
+        <md-card-footer align="end" class="flex card-footer" md-line>
+          <span class="flex"></span>
+          <span class="poweredby">powered by</span>
+          <img class="poweredbyimg" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal Logo">
+        </md-card-footer>
+      </md-card>
+    </div>
+  </div>
+  <h3>Categories of memberships</h3>
+  <md-divider></md-divider>
+  <ul>
+    <li> Donor Member (donation of $5,000 or more) </li>
+    <li>Founding Member (donation of $1,000 - $4,999) </li>
+    <li>Regular Member (payment of $100 annual dues) </li>
+    <li>Associate Member (students) Honorary Member </li>
+  </ul>
+
+  <h3>Benefits of membership</h3>
+  <md-divider></md-divider>
+  <ul>
+    <li>Participation in Independence & Republic Day cultural programs for Youth Group members only. Please contact <a href="mailto:shakul@hotmail.com?subject=ICEC YouthGroup">Sharvari Pathak</a>      / (352) 331-4320 for more details.</li>
+    <li>Xerographic Copy Center – 10% discount for all your printing and photocopying needs</li>
+    <li>Morgan Stanley Smith Barney – Get financial consultation</li>
+    <li>First Place Auto Sales – Buy vehicles at wholesale prices</li>
+    <li>Discounts on entry tickets to Celebration of Festivals, Music Concerts, Picnics, etc.</li>
+    <li>ICEC rental discount - $200.00 for Donor & Founding members and $100.00 for Regular members</li>
+  </ul>
+
+</app-navigation>

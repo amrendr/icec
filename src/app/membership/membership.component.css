@@ -1,0 +1,53 @@
+.card1 {
+  width: calc(50% - 10px);
+}
+
+.detail {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.padding-right {
+  padding-right: 1rem
+}
+
+.padding-left {
+  padding-left: 1rem
+}
+
+.radio-img {
+  vertical-align: text-bottom;
+}
+
+.radio-btn {
+  margin-bottom: 1rem;
+}
+
+.pp-item {
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.input {
+  margin-right: 1rem;
+  width: 200px;
+}
+
+.poweredby {
+  margin: 8px 5px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  color: #7b8388;
+  display: inline-block;
+}
+
+.poweredbyimg {
+  margin-right: 8px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.card-footer {
+  align-items: center;
+}

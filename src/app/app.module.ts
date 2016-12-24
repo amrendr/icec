@@ -18,6 +18,7 @@ import { AppService } from './app.service';
 import { AppFilterListPipe } from './app.pipe';
 import { RentalComponent } from './rental/rental.component';
 import { AppDimensionService } from './app.dimension.service';
+import { MembershipComponent } from './membership/membership.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AppDimensionService } from './app.dimension.service';
     MissionComponent,
     MembersComponent,
     AppFilterListPipe,
-    RentalComponent
+    RentalComponent,
+    MembershipComponent
   ],
   imports: [
     BrowserModule,
