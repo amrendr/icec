@@ -1,0 +1,11 @@
+.card1 {
+  width: calc(33% - 10px);
+}
+
+.card2 {
+  width: calc(67% - 10px);
+}
+
+.contact{
+    margin-top: 1rem;
+}

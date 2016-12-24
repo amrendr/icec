@@ -1,0 +1,70 @@
+<app-navigation [subtitle]="'Center Rental Information'" [title]="'Renatl'">
+  <h3> Looking for a Conference Hall or Banquet facility in Gainesville? The ICEC offers a low-cost option.</h3>
+  <div class="flex contact">
+    <div class="card card1">
+      <md-card>
+        <md-card-subtitle>For More Information</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>IQ</span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>(352) 871-7113</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
+        </md-card-content>
+
+      </md-card>
+    </div>
+    <div class="card card2">
+      <md-card>
+        <md-card-subtitle>ICEC Rental Documents</md-card-subtitle>
+        <md-card-content>
+          <div class="flex detail" md-line>
+            <md-icon>insert_drive_file</md-icon>Rental Agreement (
+            <a href="assets/documents/Rental_Agreement-Rev2013-08-31.pdf" target="blank">PDF</a>)
+          </div>
+          <div class="flex detail" md-line>
+            <md-icon>insert_drive_file</md-icon>ICEC Reservation Request Form (
+            <a href="assets/documents/ICEC_Reservation_Request_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
+            <a href="assets/documents/ICEC_Reservation_Request_Form.doc" target="blank">DOC</a>)
+          </div>
+          <div class="flex detail" md-line>
+            <md-icon>insert_drive_file</md-icon>ICEC-organized Event Reservation Form (
+            <a href="assets/documents/ICEC_Event_Reservation_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
+            <a href="assets/documents/ICEC_Event_Reservation_Form.doc" target="blank">DOC</a>)
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+  <h3>Salient Features</h3>
+  <md-divider></md-divider>
+  <ul>
+    <li> Close to Shands and UF </li>
+    <li> Clean and modern amenities </li>
+    <li> Affordable rental rates </li>
+    <li> Ideal for conferences, seminars, social and cultural events </li>
+  </ul>
+
+  <md-grid-list [cols]="col$ | async" rowHeight="336px">
+    <md-grid-tile *ngFor="let room of building" [rowspan]="room.rows">
+      <img src="assets/building/{{room.image}}" alt="photo of {{room.name}}">
+      <md-grid-tile-footer>
+        <h3 md-line>{{room.name}}</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+
+  <p>
+    The auditorium occupies 10,000 square feet and can seat up to 400 persons. The spacious stage area lends itself to multiple
+    uses and features a large drop-down projection screen, music system and stage lights, which are also available for renting.
+  </p>
+  <p>
+    No cooking is allowed anywhere inside the building. However, the food-warming area containing microwave ovens, refrigerator
+    and ice coolers, provides abundant space for handling food and beverages brought to the building.
+  </p>
+  <p>
+    Other amenities available for rental include a prayer room, a game room, a TV room, and library room. These rooms on the
+    second floor can accommodate up to 30 persons per room.
+  </p>
+  <p>
+    The building features an elevator and is fully accessible. Meetings and seminars can be organized in a cozy & quiet atmosphere.
+  </p>
+</app-navigation>

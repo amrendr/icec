@@ -29,7 +29,7 @@ export class AppService {
                 members.memberList = item.regularMembers;
                 break;
             case 'OM':
-                members.title = 'Regular/Founding Members';
+                members.title = 'Donor/Founding Members';
                 members.memberList = allMemberList;
                 break;
             default:

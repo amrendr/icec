@@ -16,6 +16,8 @@ import { MissionComponent } from './mission/mission.component';
 import { MembersComponent } from './members/members.component';
 import { AppService } from './app.service';
 import { AppFilterListPipe } from './app.pipe';
+import { RentalComponent } from './rental/rental.component';
+import { AppDimensionService } from './app.dimension.service';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { AppFilterListPipe } from './app.pipe';
     BylawsComponent,
     MissionComponent,
     MembersComponent,
-    AppFilterListPipe
+    AppFilterListPipe,
+    RentalComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { AppFilterListPipe } from './app.pipe';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AppService, AppFilterListPipe],
+  providers: [AppService, AppFilterListPipe, AppDimensionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

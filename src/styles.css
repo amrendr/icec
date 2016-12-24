@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h2,
 h3,
 h4 {
@@ -51,18 +56,34 @@ footer md-toolbar-row {
   color: gray;
 }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/*************************************/
+/******** Card Styles ****************/
+/*************************************/
+
+.card {
+  min-width: 18rem;
+  margin: 5px;
+  width: calc(25% - 10px);
+}
+
+.avatar {
+  font-size: 2.5rem;
+  color: darkgray;
+}
+
+.flex>md-icon {
+  font-size: 1rem;
+  color: darkgray;
+}
+
+.detail {
+  font-size: 0.875rem;
 }
 
 
 /******************************************************************************************/
-
-
 /****table global styling*****************************************************************/
-
-
 /******************************************************************************************/
 
 table {

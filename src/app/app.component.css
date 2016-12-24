@@ -12,6 +12,7 @@
 
 .icon-20 {
   font-size: 1.25rem;
+  color: white;
 }
 
 .ie-fix{
@@ -22,7 +23,7 @@
     flex-flow: row nowrap;
 }
 
-.toolbar{
+.toolbar {
     color: white;
 }
 
