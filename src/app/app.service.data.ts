@@ -74,6 +74,15 @@ export const GalleryList: Gallery[] = [
             { rows: 1, caption: "Cinny", imageUrl: "assets/gallery/dogs/Cinny.png" },
             { rows: 1, caption: "Hermes", imageUrl: "assets/gallery/dogs/Hermes.png" }
         ]
+    },
+    {
+        year: 2016, section: 'indiafest',
+        title: 'India Fest', subtitle: 'Food Stalls & Vendors',
+        max_image_width: 350, row_height: 200,
+        imageUrl: 'https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w331-h220-rw',
+        photos: [
+            { rows: 1, caption: "Photo1", imageUrl: "https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w1280-h720-rw-no" },
+        ]
     }
 ];
 

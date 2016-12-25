@@ -1,4 +1,4 @@
-<app-navigation [title]="'Gallery'" [subtitle]="getSubtitle()">
+<app-navigation [title]="getTitle()" [subtitle]="getSubtitle()">
   <div class="flex" *ngIf="gallery.length > 1">
     <div class="card card-33" *ngFor="let item of gallery">
       <gallery-card [item]="item"></gallery-card>

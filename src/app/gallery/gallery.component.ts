@@ -15,6 +15,7 @@ export class GalleryComponent implements OnInit {
   col$: Observable<number>;
   gallery$: Observable<Gallery[]>;
   gallery: Gallery[] = [];
+  params: Args;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -51,20 +52,34 @@ export class GalleryComponent implements OnInit {
           input.year = +params['year'];
         break;
     }
-    input.type = params['section']
+    input.type = params['section'];
+    this.params = input;
     return input;
   }
 
   getSubtitle(): string {
     let subtitle: string = '';
-    if (this.gallery.length == 1) {
-      subtitle = this.gallery[0].title || this.gallery[0].subtitle;
-      if (this.gallery[0].year)
-        subtitle += ' (' + this.gallery[0].year + ')';
-    } else if (this.gallery.length > 1) {
-      subtitle = this.gallery[0].section;
-      subtitle = subtitle.charAt(0).toUpperCase() + subtitle.slice(1);
+    if (this.params.type) {
+      if (this.gallery.length == 1) {
+        subtitle = this.gallery[0].subtitle;
+      } else if (this.gallery.length > 1) {
+        subtitle = this.gallery[0].section;
+        subtitle = subtitle.charAt(0).toUpperCase() + subtitle.slice(1);
+      }
+    }
+    else {
+      subtitle = 'Various Items'
     }
     return subtitle;
+  }
+
+  getTitle(): string {
+    let title: string = 'Gallery';
+    if (this.gallery.length == 1) {
+      title = this.gallery[0].title;
+      if (this.gallery[0].year)
+        title += ' (' + this.gallery[0].year + ')';
+    }
+    return title;
   }
 }
