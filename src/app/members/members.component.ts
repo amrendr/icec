@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
-import { AppService, Members, Member } from '../app.service';
+import { AppService, Members, Member, Args } from '../app.service';
 import { AppFilterListPipe } from '../app.pipe';
 
 
@@ -23,7 +23,7 @@ export class MembersComponent implements OnInit {
   ngOnInit() {
     this.activeRoute.params
       .map((params: Params) => this.formatInput(params))
-      .switchMap((input: Args) => this.memberService.getMembers(input.type, input.year))
+      .switchMap((input: Args) => this.memberService.getMembers(input))
       .subscribe(members => this.members = members);
 
   }
@@ -85,10 +85,5 @@ export class MembersComponent implements OnInit {
       ["membershipType", "membershipTerm", "fullname", "lastname", "email", "contact", "title"]
     );
   }
-
 }
 
-export class Args {
-  year: number;
-  type: string;
-}

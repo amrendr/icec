@@ -102,15 +102,6 @@ footer md-toolbar-row {
   width: calc(80% - 10px);
 }
 
-.card.gallery img {
-  width: auto;
-  margin: -24px -16px -24px 0;
-}
-
-.card.gallery md-card-title, .card.gallery md-card-subtitle  {
-  margin-right: 1rem;
-}
-
 .avatar {
   font-size: 2.5rem;
   color: darkgray;

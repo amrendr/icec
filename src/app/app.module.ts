@@ -20,6 +20,7 @@ import { RentalComponent } from './rental/rental.component';
 import { AppDimensionService } from './app.dimension.service';
 import { MembershipComponent } from './membership/membership.component';
 import { YouthGroupComponent } from './youth-group/youth-group.component';
+import { GalleryCardComponent } from './gallery-card/gallery-card.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { YouthGroupComponent } from './youth-group/youth-group.component';
     AppFilterListPipe,
     RentalComponent,
     MembershipComponent,
-    YouthGroupComponent
+    YouthGroupComponent,
+    GalleryCardComponent
   ],
   imports: [
     BrowserModule,

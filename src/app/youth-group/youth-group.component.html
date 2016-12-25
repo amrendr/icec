@@ -1,5 +1,5 @@
 <app-navigation [title]="'Youth Group'">
-  <div class="flex contact">
+  <div class="flex">
     <div class="card card-33">
       <md-card>
         <md-card-subtitle>Contact Person</md-card-subtitle>
@@ -10,17 +10,9 @@
         </md-card-content>
       </md-card>
     </div>
-    <a [routerLink]="['/gallery/youth']">
-      <div class="card gallery">
-        <md-card>
-          <md-card-title-group>
-            <md-card-title>Gallery</md-card-title>
-            <md-card-subtitle>Youth Group Photos</md-card-subtitle>
-            <img md-card-lg-image src="assets/gallery/Youth Group/ICEC-youthgroup-earthday.jpg" alt="Youth Group Gallery">
-          </md-card-title-group>
-        </md-card>
-      </div>
-    </a>
+    <div class="card card-33">
+      <gallery-card [item]="gallery" title="Gallery"></gallery-card>
+    </div>
   </div>
 
   <h3>Brief History and Mission</h3>

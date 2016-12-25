@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppDimensionService } from '../app.dimension.service';
-import { Observable } from 'rxjs/Rx';
+import { AppService, Gallery, Args } from '../app.service';
 
 @Component({
   selector: 'app-rental',
@@ -9,24 +8,23 @@ import { Observable } from 'rxjs/Rx';
 })
 export class RentalComponent implements OnInit {
 
+  gallery: Gallery;
+
   constructor(
-    private windowsize: AppDimensionService
+    private galleryService: AppService
   ) { }
 
   ngOnInit() {
-    this.col$ = this.windowsize.getGalleryColumns(this.img_maxwidth);
+    this.getRentalPhotos();
   }
 
-  img_maxwidth: number = 448;
-  col$: Observable<number>;
+  getRentalPhotos(): void {
+    let input: Args = { type: 'rental', year: null };
+    let galleries: Gallery[];
 
-  building = [
-    { rows: 1, caption: "Auditorium Stage", image: "stage.jpg" },
-    { rows: 1, caption: "Main Hall & Upstairs Rooms", image: "main_hall.jpg" },
-    { rows: 1, caption: "Food-warming & Storage Area", image: "food_warming_area.jpg" },
-    { rows: 1, caption: "TV Room", image: "tv_room.jpg" },
-    { rows: 1, caption: "Library Room", image: "library.jpg" },
-    { rows: 1, caption: "Prayer Room", image: "prayer_room.jpg" },
-  ];
+    this.galleryService.getGallery(input).then(
+      x => this.gallery = ((x && x.length > 0) ? x[0] : null)
+    );
+  }
 
 }

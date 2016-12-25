@@ -1,14 +1,20 @@
-  <app-navigation [title]="'Gallery'">
-    <md-grid-list cols="4" rowHeight="200px">
-      <md-grid-tile *ngFor="let dog of dogs" [rowspan]="dog.rows">
-        <img src="assets/gallery/dogs/{{dog.name}}.png" alt="photo of {{dog.name}}">
+<app-navigation [title]="'Gallery'" [subtitle]="getSubtitle()">
+  <div class="flex" *ngIf="gallery.length > 1">
+    <div class="card card-33" *ngFor="let item of gallery">
+      <gallery-card [item]="item"></gallery-card>
+    </div>
+  </div>
+  <div *ngIf="gallery.length == 1">
+    <md-grid-list [cols]="col$ | async" [rowHeight]="gallery[0].row_height">
+      <md-grid-tile *ngFor="let photo of gallery[0].photos" [rowspan]="photo.rows">
+        <img src="{{photo.imageUrl}}" alt="photo of {{photo.caption}}">
         <md-grid-tile-footer>
-          <h3 md-line>{{dog.name}}</h3>
-          <span md-line>Human: {{dog.human}}</span>
-          <button md-icon-button (click)="showDog(dog)">
-              <md-icon>more_horiz</md-icon>
-            </button>
+          <h3 md-line>{{photo.caption}}</h3>
         </md-grid-tile-footer>
       </md-grid-tile>
     </md-grid-list>
-  </app-navigation>
+  </div>
+  <div *ngIf="gallery.length == 0">
+    <h3>No Data Available</h3>
+  </div>
+</app-navigation>

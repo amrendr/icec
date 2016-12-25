@@ -1,0 +1,11 @@
+<a *ngIf="item" (click)="navigateTo(item)">
+  <md-card>
+    <md-card-title-group>
+      <md-card-title class="title">{{title || item.title}}</md-card-title>
+      <md-card-subtitle>{{item.subtitle}}</md-card-subtitle>
+      <div class="img">
+        <img md-card-lg-image src="{{item.imageUrl}}" alt="{{item.subtitle}}">
+      </div>
+    </md-card-title-group>
+  </md-card>
+</a>

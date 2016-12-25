@@ -12,26 +12,29 @@
 
       </md-card>
     </div>
-    <div class="card card-67">
+    <div class="card card-33">
       <md-card>
         <md-card-subtitle>ICEC Rental Documents</md-card-subtitle>
         <md-card-content>
           <div class="flex detail" md-line>
-            <md-icon>insert_drive_file</md-icon>Rental Agreement (
-            <a href="assets/documents/Rental_Agreement-Rev2013-08-31.pdf" target="blank">PDF</a>)
+            <md-icon>insert_drive_file</md-icon>Rental Agreement <span>&nbsp;(</span>
+            <a href="assets/documents/Rental_Agreement-Rev2013-08-31.pdf" target="blank">PDF</a><span>)</span>
           </div>
           <div class="flex detail" md-line>
-            <md-icon>insert_drive_file</md-icon>ICEC Reservation Request Form (
+            <md-icon>insert_drive_file</md-icon>ICEC Reservation Request Form <span>&nbsp;(</span>
             <a href="assets/documents/ICEC_Reservation_Request_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Reservation_Request_Form.doc" target="blank">DOC</a>)
+            <a href="assets/documents/ICEC_Reservation_Request_Form.doc" target="blank">DOC</a><span>)</span>
           </div>
           <div class="flex detail" md-line>
-            <md-icon>insert_drive_file</md-icon>ICEC-organized Event Reservation Form (
+            <md-icon>insert_drive_file</md-icon>ICEC-organized Event Reservation Form <span>&nbsp;(</span>
             <a href="assets/documents/ICEC_Event_Reservation_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Event_Reservation_Form.doc" target="blank">DOC</a>)
+            <a href="assets/documents/ICEC_Event_Reservation_Form.doc" target="blank">DOC</a><span>)</span>
           </div>
         </md-card-content>
       </md-card>
+    </div>
+    <div class="card card-33">
+      <gallery-card [item]="gallery" title="Gallery"></gallery-card>
     </div>
   </div>
   <h3>Salient Features</h3>
@@ -42,15 +45,6 @@
     <li> Affordable rental rates </li>
     <li> Ideal for conferences, seminars, social and cultural events </li>
   </ul>
-
-  <md-grid-list [cols]="col$ | async" rowHeight="336px">
-    <md-grid-tile *ngFor="let room of building" [rowspan]="room.rows">
-      <img src="assets/gallery/building/{{room.image}}" alt="photo of {{room.caption}}">
-      <md-grid-tile-footer>
-        <h3 md-line>{{room.caption}}</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-  </md-grid-list>
 
   <p>
     The auditorium occupies 10,000 square feet and can seat up to 400 persons. The spacious stage area lends itself to multiple

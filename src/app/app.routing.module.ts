@@ -22,7 +22,9 @@ const appRoutes: Routes = [
     { path: 'membership', component: MembershipComponent },
     { path: 'youth', component: YouthGroupComponent },
     { path: 'rental', component: RentalComponent },
-    { path: 'gallery', component: GalleryComponent }
+    { path: 'gallery', component: GalleryComponent },
+    { path: 'gallery/:section', component: GalleryComponent },
+    { path: 'gallery/:section/:year', component: GalleryComponent }
 ]
 
 @NgModule({

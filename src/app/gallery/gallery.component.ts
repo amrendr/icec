@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
+
+import { AppService, Gallery, Args } from '../app.service';
+import { AppDimensionService } from '../app.dimension.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,21 +12,59 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  col$: Observable<number>;
+  gallery$: Observable<Gallery[]>;
+  gallery: Gallery[] = [];
+
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private galleryService: AppService,
+    private windowsize: AppDimensionService
+
+  ) { }
 
   ngOnInit() {
+    this.gallery$ = this.activeRoute.params
+      .map((params: Params) => this.formatInput(params))
+      .switchMap((input: Args) => this.galleryService.getGallery(input));
+
+    this.gallery$.subscribe(gallery => this.gallery = gallery);
+    this.col$ = this.gallery$
+      .switchMap((gallery: Gallery[]) => this.windowsize.getGalleryColumns(gallery[0].max_image_width))
+      .startWith(4)
+      .publishReplay(1)
+      .refCount();
+
   }
 
- dogs = [
-    {rows: 2, name: "Mal", human: "Jeremy", age: 5},
-    {rows: 1, name: "Molly", human: "David", age: 5},
-    { rows: 1, name: "Sophie", human: "Alex", age: 8},
-    {rows: 2, name: "Taz", human: "Joey", age: '11 weeks'},
-    { rows: 1, name: "Kobe", human: "Igor", age: 5},
-    {rows: 2, name: "Porter", human: "Kara", age: 3},
-    { rows: 1, name: "Stephen", human: "Hasi", age: 8},
-    {rows: 1, name: "Cinny", human: "Jules", age: 3},
-    { rows: 1, name: "Hermes", human: "Kara", age: 3},
-  ];
+  formatInput(params: Params): Args {
+    let input: Args = { year: null, type: null };
+    switch (params['year']) {
+      case 'current':
+      case null:
+      case undefined:
+        break;
+      default:
+        if (isNaN(params['year']))
+          input.year = -1;
+        else
+          input.year = +params['year'];
+        break;
+    }
+    input.type = params['section']
+    return input;
+  }
 
+  getSubtitle(): string {
+    let subtitle: string = '';
+    if (this.gallery.length == 1) {
+      subtitle = this.gallery[0].title || this.gallery[0].subtitle;
+      if (this.gallery[0].year)
+        subtitle += ' (' + this.gallery[0].year + ')';
+    } else if (this.gallery.length > 1) {
+      subtitle = this.gallery[0].section;
+      subtitle = subtitle.charAt(0).toUpperCase() + subtitle.slice(1);
+    }
+    return subtitle;
+  }
 }

@@ -1,0 +1,21 @@
+img {
+  width: auto;
+}
+
+.img {
+  margin: -24px -16px -24px auto;
+  overflow: hidden;
+}
+
+md-card-title,
+md-card-subtitle {
+  margin-right: 1rem;
+}
+
+md-card-title {
+  white-space: nowrap;
+}
+
+a {
+  cursor: pointer;
+}
