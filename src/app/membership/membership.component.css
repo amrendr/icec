@@ -1,9 +1,8 @@
-.card1 {
-  width: calc(50% - 10px);
+.member {
+  padding: 1rem;
 }
 
 .detail {
-  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -48,6 +47,6 @@
   vertical-align: middle;
 }
 
-.card-footer {
+.card-payment {
   align-items: center;
 }

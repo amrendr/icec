@@ -19,6 +19,7 @@ import { AppFilterListPipe } from './app.pipe';
 import { RentalComponent } from './rental/rental.component';
 import { AppDimensionService } from './app.dimension.service';
 import { MembershipComponent } from './membership/membership.component';
+import { YouthGroupComponent } from './youth-group/youth-group.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MembershipComponent } from './membership/membership.component';
     MembersComponent,
     AppFilterListPipe,
     RentalComponent,
-    MembershipComponent
+    MembershipComponent,
+    YouthGroupComponent
   ],
   imports: [
     BrowserModule,

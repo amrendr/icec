@@ -21,12 +21,12 @@ export class RentalComponent implements OnInit {
   col$: Observable<number>;
 
   building = [
-    { rows: 1, name: "Auditorium Stage", image: "stage.jpg" },
-    { rows: 1, name: "Main Hall & Upstairs Rooms", image: "main_hall.jpg" },
-    { rows: 1, name: "Food-warming & Storage Area", image: "food_warming_area.jpg" },
-    { rows: 1, name: "TV Room", image: "tv_room.jpg" },
-    { rows: 1, name: "Library Room", image: "library.jpg" },
-    { rows: 1, name: "Prayer Room", image: "prayer_room.jpg" },
+    { rows: 1, caption: "Auditorium Stage", image: "stage.jpg" },
+    { rows: 1, caption: "Main Hall & Upstairs Rooms", image: "main_hall.jpg" },
+    { rows: 1, caption: "Food-warming & Storage Area", image: "food_warming_area.jpg" },
+    { rows: 1, caption: "TV Room", image: "tv_room.jpg" },
+    { rows: 1, caption: "Library Room", image: "library.jpg" },
+    { rows: 1, caption: "Prayer Room", image: "prayer_room.jpg" },
   ];
 
 }

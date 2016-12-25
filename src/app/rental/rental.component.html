@@ -1,18 +1,18 @@
-<app-navigation [subtitle]="'Center Rental Information'" [title]="'Renatl'">
+<app-navigation [subtitle]="'Center Rental Information'" [title]="'Rental'">
   <h3> Looking for a Conference Hall or Banquet facility in Gainesville? The ICEC offers a low-cost option.</h3>
   <div class="flex contact">
-    <div class="card card1">
+    <div class="card card-33">
       <md-card>
         <md-card-subtitle>For More Information</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>IQ</span>
+          <span class="flex detail" md-line><md-icon>person</md-icon>Iqbal Qaiyumi (IQ)</span>
           <span class="flex detail" md-line><md-icon>phone</md-icon>(352) 871-7113</span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:iqbal.qaiyumi@gmail.com?subject=ICEC Rental Information">iqbal.qaiyumi@gmail.com</a></span>
         </md-card-content>
 
       </md-card>
     </div>
-    <div class="card card2">
+    <div class="card card-67">
       <md-card>
         <md-card-subtitle>ICEC Rental Documents</md-card-subtitle>
         <md-card-content>
@@ -45,9 +45,9 @@
 
   <md-grid-list [cols]="col$ | async" rowHeight="336px">
     <md-grid-tile *ngFor="let room of building" [rowspan]="room.rows">
-      <img src="assets/building/{{room.image}}" alt="photo of {{room.name}}">
+      <img src="assets/gallery/building/{{room.image}}" alt="photo of {{room.caption}}">
       <md-grid-tile-footer>
-        <h3 md-line>{{room.name}}</h3>
+        <h3 md-line>{{room.caption}}</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
   </md-grid-list>

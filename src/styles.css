@@ -58,13 +58,57 @@ footer md-toolbar-row {
 
 
 /*************************************/
+
+
 /******** Card Styles ****************/
+
+
 /*************************************/
 
 .card {
   min-width: 18rem;
   margin: 5px;
+}
+
+.card-20 {
+  width: calc(20% - 10px);
+}
+
+.card-25 {
   width: calc(25% - 10px);
+}
+
+.card-33 {
+  width: calc(33.333% - 10px);
+}
+
+.card-40 {
+  width: calc(40% - 10px);
+}
+
+.card-50 {
+  width: calc(50% - 10px);
+}
+
+.card-60 {
+  width: calc(60% - 10px);
+}
+
+.card-67 {
+  width: calc(66.667% - 10px);
+}
+
+.card-80 {
+  width: calc(80% - 10px);
+}
+
+.card.gallery img {
+  width: auto;
+  margin: -24px -16px -24px 0;
+}
+
+.card.gallery md-card-title, .card.gallery md-card-subtitle  {
+  margin-right: 1rem;
 }
 
 .avatar {
@@ -83,7 +127,11 @@ footer md-toolbar-row {
 
 
 /******************************************************************************************/
+
+
 /****table global styling*****************************************************************/
+
+
 /******************************************************************************************/
 
 table {

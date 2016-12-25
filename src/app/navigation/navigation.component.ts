@@ -20,10 +20,11 @@ export class NavigationComponent implements OnInit {
     {title:'About', url:'/about'},
     {title:'Center Rental Information', url:'/rental'},
     {title:'Membership', url:'/membership'},
-    {title:'Student Resources', url:'/home'},
+    {title:'Youth Group', url:'/youth'},
+    {title:'Student Resources', url:'/resources/student'},
     {title:'Community Events', url:'/events'},
     {title:'Continuing Medical Education (CME)', url:'/cme'},
-    {title:'India Fest', url:'/home'},
+    {title:'India Fest', url:'/events/indiafest'},
     {title:'Photo Gallery', url:'/gallery'},
     {title:'Contact US', url:'/contact'}
   ]

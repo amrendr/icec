@@ -8,6 +8,7 @@ import { MissionComponent } from './mission/mission.component';
 import { MembersComponent } from './members/members.component';
 import { RentalComponent } from './rental/rental.component';
 import { MembershipComponent } from './membership/membership.component';
+import { YouthGroupComponent } from './youth-group/youth-group.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     { path: 'members/:type', component: MembersComponent },
     { path: 'members/:year/:type', component: MembersComponent },
     { path: 'membership', component: MembershipComponent },
+    { path: 'youth', component: YouthGroupComponent },
     { path: 'rental', component: RentalComponent },
     { path: 'gallery', component: GalleryComponent }
 ]
