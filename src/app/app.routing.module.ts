@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { AboutComponent } from './about/about.component';
-import { BylawsComponent } from './bylaws/bylaws.component';
-import { MissionComponent } from './mission/mission.component';
-import { MembersComponent } from './members/members.component';
-import { RentalComponent } from './rental/rental.component';
-import { MembershipComponent } from './membership/membership.component';
-import { YouthGroupComponent } from './youth-group/youth-group.component';
+import { HomeComponent } from './components/home/home.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { AboutComponent } from './components/about/about.component';
+import { BylawsComponent } from './components/bylaws/bylaws.component';
+import { MissionComponent } from './components/mission/mission.component';
+import { MembersComponent } from './components/members/members.component';
+import { RentalComponent } from './components/rental/rental.component';
+import { MembershipComponent } from './components/membership/membership.component';
+import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },

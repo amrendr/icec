@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
-import { AppService, Gallery, Args } from '../app.service';
-import { AppDimensionService } from '../app.dimension.service';
+import { AppService, Gallery, Args } from '../../services/app.service';
+import { AppDimensionService } from '../../services/app.dimension.service';
 
 @Component({
   selector: 'app-gallery',

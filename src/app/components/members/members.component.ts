@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
-import { AppService, Members, Member, Args } from '../app.service';
-import { AppFilterListPipe } from '../app.pipe';
+import { AppService, Members, Member, Args } from '../../services/app.service';
+import { AppFilterListPipe } from '../../services/app.pipe';
 
 
 @Component({

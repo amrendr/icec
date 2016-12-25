@@ -6,21 +6,23 @@ import { MaterialModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { AnnouncementBarComponent } from './announcement-bar/announcement-bar.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { AboutComponent } from './about/about.component';
-import { BylawsComponent } from './bylaws/bylaws.component';
-import { MissionComponent } from './mission/mission.component';
-import { MembersComponent } from './members/members.component';
-import { AppService } from './app.service';
-import { AppFilterListPipe } from './app.pipe';
-import { RentalComponent } from './rental/rental.component';
-import { AppDimensionService } from './app.dimension.service';
-import { MembershipComponent } from './membership/membership.component';
-import { YouthGroupComponent } from './youth-group/youth-group.component';
-import { GalleryCardComponent } from './gallery-card/gallery-card.component';
+import { AnnouncementBarComponent } from './shared/announcement-bar/announcement-bar.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { GalleryCardComponent } from './shared/gallery-card/gallery-card.component';
+
+import { AppService } from './services/app.service';
+import { AppDimensionService } from './services/app.dimension.service';
+import { AppFilterListPipe } from './services/app.pipe';
+
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { BylawsComponent } from './components/bylaws/bylaws.component';
+import { MissionComponent } from './components/mission/mission.component';
+import { MembersComponent } from './components/members/members.component';
+import { RentalComponent } from './components/rental/rental.component';
+import { MembershipComponent } from './components/membership/membership.component';
+import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 
 
 @NgModule({
