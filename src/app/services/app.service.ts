@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer } from './app.service.data';
+import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer, IcecContacts } from './app.service.data';
 
 
 @Injectable()
@@ -37,7 +37,15 @@ export class AppService {
                 members.title = 'India Fest Organizer';
                 members.memberList = IndiaFestOrganizer;
                 break;
-            
+            case 'CU':
+                members.title = 'Contact Us';
+                members.memberList = IcecContacts.filter(x => x.membershipType.toLowerCase() === 'contacts');
+                break;
+            case 'NA':
+                members.title = 'Newcomers Assistance';
+                members.memberList = IcecContacts.filter(x => x.membershipType.toLowerCase() === 'assistance');
+                break;
+
             default:
                 members.title = 'Executive Members';
                 members.memberList = item.executives;
@@ -111,6 +119,7 @@ export class Member {
     email?: string;
     contact?: string;
     title?: string;
+    subtitle?: string;
 }
 
 export class MemberList {

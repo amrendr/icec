@@ -1,6 +1,38 @@
 <app-navigation title="Contact" subtitle="Newcomers to Gainesville? WELCOME...">
 
+  <h3>Contacts</h3>
+  <md-divider></md-divider>
+  <div class="flex inset-15x">
+    <div class="card card-33" *ngFor="let contact of contacts">
+      <md-card>
+        <md-card-title>{{contact.title}}</md-card-title>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
   <p>
-    contact works!
+    Check us out on <a href="http://www.facebook.com/home.php#!/group.php?gid=122380273096&amp;ref=ts" target="blank">Facebook</a>.
+  </p>
+  <h3>Newcomers to Gainesville? WELCOME...</h3>
+  <md-divider></md-divider>
+  <div class="flex inset-15x">
+    <div class="card card-50" *ngFor="let contact of assistants">
+      <md-card>
+        <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+  <p>
+    For the latest information about community events, subscribe to ICEC's listserve by sending a blank email to
+    <a href="mailto:icec-gainesville-subscribe@yahoogroups.com?subject=Subscribe">icec-gainesville-subscribe@yahoogroups.com</a>.
   </p>
 </app-navigation>

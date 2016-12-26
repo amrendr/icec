@@ -424,11 +424,24 @@ export const AllMemberList: Member[] = [
     { membershipType: 'Founding Member', membershipTerm: '', lastname: 'Vyas', fullname: 'Mr. & Mrs. Suryakant Vyas' }
 ];
 
-export const IndiaFestOrganizer: Member[]= [
-  { membershipType: 'Organizer', fullname: 'Razee Tumati', lastname: 'Tumati', title: 'Marketing & Publicity', contact: '', email: 'luckyrazee@gmail.com', membershipTerm: 'India Fest 2017' },
-  { membershipType: 'Organizer', fullname: 'Shaheda Qaiyumi', lastname: 'Qaiyumi', title: 'Vendors', contact: '(352) 871-7112', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Vendor Stall at India Fest 2017' },
-  { membershipType: 'Organizer', fullname: 'Mehak Chopra', lastname: 'Chopra', title: 'Cultural Show', contact: '(703) 789-4671', email: 'chopramehak4@gmail.com', membershipTerm: 'Cultural Program at India Fest 2017' },
-  { membershipType: 'Organizer', fullname: 'Manisha Ranade', lastname: 'Ranade', title: 'Volunteers', contact: '(352) 271-3065', email: 'manisha.ranade@gmail.com', membershipTerm: 'Volunteering at India Fest 2017' },
-  { membershipType: 'Organizer', fullname: 'Anil Thomas', lastname: 'Thomas', title: 'Logistics', contact: '(352) 262-7119', email: 'anilthomasv@hotmail.com', membershipTerm: 'Logistics for India Fest 2017' },
-  { membershipType: 'Organizer', fullname: 'Yogi Deshmukh', lastname: 'Deshmukh', title: 'General Information', contact: '', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Question/Inquiry about India Fest 2017' },
+export const IndiaFestOrganizer: Member[] = [
+    { membershipType: 'Organizer', fullname: 'Razee Tumati', lastname: 'Tumati', title: 'Marketing & Publicity', contact: '', email: 'luckyrazee@gmail.com', membershipTerm: 'India Fest 2017' },
+    { membershipType: 'Organizer', fullname: 'Shaheda Qaiyumi', lastname: 'Qaiyumi', title: 'Vendors', contact: '(352) 871-7112', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Vendor Stall at India Fest 2017' },
+    { membershipType: 'Organizer', fullname: 'Mehak Chopra', lastname: 'Chopra', title: 'Cultural Show', contact: '(703) 789-4671', email: 'chopramehak4@gmail.com', membershipTerm: 'Cultural Program at India Fest 2017' },
+    { membershipType: 'Organizer', fullname: 'Manisha Ranade', lastname: 'Ranade', title: 'Volunteers', contact: '(352) 271-3065', email: 'manisha.ranade@gmail.com', membershipTerm: 'Volunteering at India Fest 2017' },
+    { membershipType: 'Organizer', fullname: 'Anil Thomas', lastname: 'Thomas', title: 'Logistics', contact: '(352) 262-7119', email: 'anilthomasv@hotmail.com', membershipTerm: 'Logistics for India Fest 2017' },
+    { membershipType: 'Organizer', fullname: 'Yogi Deshmukh', lastname: 'Deshmukh', title: 'General Information', contact: '', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Question/Inquiry about India Fest 2017' },
+];
+
+export const IcecContacts: Member[] = [
+    { membershipType: 'Contacts', fullname: 'Ravi Bhosale, MBA', lastname: 'Bhosale', title: 'President', contact: '(352) 275-2276', email: 'bhosale.ravi@gmail.com', membershipTerm: 'ICEC President' },
+    { membershipType: 'Contacts', fullname: 'Rizwana Thanawala, M.D.', lastname: 'Thanawala', title: 'Vice-President', contact: '(386) 365-5313', email: 'kbrrz@aol.com', membershipTerm: 'ICEC Vice-President' },
+    { membershipType: 'Contacts', fullname: 'Ramakant Srivastava, Ph.D.', lastname: 'Srivastava', title: 'Secretary', contact: '(352) 466-3668', email: 'rsrivastava1943@gmail.com', membershipTerm: 'ICEC Secretary' },
+    { membershipType: 'Contacts', fullname: 'Shaheda Qaiyumi, M.D.', lastname: 'Qaiyumi', title: 'Treasurer', contact: '(352) 378-7112', email: 'shahedaq@gmail.com', membershipTerm: 'ICEC Treasurer' },
+    { membershipType: 'Contacts', fullname: 'Sharvari Pathak', lastname: 'Pathak', title: 'Youth Group Coordinator', contact: '(352) 331-4320', email: 'shakul@hotmail.com', membershipTerm: 'ICEC Youth Group' },
+    { membershipType: 'Contacts', fullname: 'Praveen Pathak, Ph.D.', lastname: 'Pathak', title: 'Communications Support', contact: '(352) 331-4320', email: 'praveen@ufl.edu', membershipTerm: 'ICEC Communications' },
+    { membershipType: 'Contacts', fullname: 'Iqbal Qaiyumi (IQ)', lastname: 'Qaiyumi', title: 'ICEC Rental Information', contact: '(352) 871-7113', email: 'iqbal.qaiyumi@gmail.com', membershipTerm: 'ICEC Rental' },
+    { membershipType: 'Contacts', fullname: 'Yogi Deshmukh', lastname: 'Deshmukh', title: 'Web Support', contact: '(407) 970-2934', email: 'yogid1978@hotmail.com', membershipTerm: 'ICEC Website' },
+    { membershipType: 'Assistance', fullname: 'Ravi Bhosale, MBA', lastname: 'Bhosale', title: 'Newcomers Support', contact: '(352) 275-2276', email: 'bhosale.ravi@gmail.com', membershipTerm: 'Newcomers to Gainesville', subtitle: 'We are very happy to have you join our community. If you need assistance of any kind, please contact:' },
+    { membershipType: 'Assistance', fullname: 'Iqbal Qaiyumi (IQ)', lastname: 'Qaiyumi', title: 'Newcomers Support', contact: '(352) 871-7113', email: 'iqbal.qaiyumi@gmail.com', membershipTerm: 'Newcomers to Gainesville', subtitle:'If you need help regarding buy/sell/trade of cars or general information about Gainesville community, please contact:' },
 ];

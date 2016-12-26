@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService, Member, Args } from '../../services/app.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contacts: Member[];
+  assistants: Member[];
+
+  constructor(
+    private memberService: AppService
+  ) { }
 
   ngOnInit() {
+    this.getIcecContacts();
+    this.getIcecAssistance();
   }
 
+  getIcecContacts(): void {
+    let input: Args = { type: 'CU', year: null };
+    this.memberService.getMembers(input).then(x => this.contacts = x.memberList);
+  }
+
+  getIcecAssistance(): void {
+    let input: Args = { type: 'NA', year: null };
+    this.memberService.getMembers(input).then(x => this.assistants = x.memberList);
+  }
 }
