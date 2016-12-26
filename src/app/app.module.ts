@@ -23,6 +23,7 @@ import { MembersComponent } from './components/members/members.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { MembershipComponent } from './components/membership/membership.component';
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
+import { ResourcesComponent } from './components/resources/resources.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { YouthGroupComponent } from './components/youth-group/youth-group.compon
     RentalComponent,
     MembershipComponent,
     YouthGroupComponent,
-    GalleryCardComponent
+    GalleryCardComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,
