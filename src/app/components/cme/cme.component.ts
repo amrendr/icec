@@ -2,28 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { AppService, Gallery, Args } from '../../services/app.service';
 
 @Component({
-  selector: 'app-rental',
-  templateUrl: './rental.component.html',
-  styleUrls: ['./rental.component.css']
+  selector: 'app-cme',
+  templateUrl: './cme.component.html',
+  styleUrls: ['./cme.component.css']
 })
-export class RentalComponent implements OnInit {
-
-  gallery: Gallery;
+export class CmeComponent implements OnInit {
 
   constructor(
     private galleryService: AppService
   ) { }
 
   ngOnInit() {
-    this.getRentalPhotos();
+    this.getCmeGallery();
   }
 
-  getRentalPhotos(): void {
-    let input: Args = { type: 'rental', year: null };
+  gallery: Gallery;
+
+  getCmeGallery(): void {
+    let input: Args = { type: 'cme', year: null };
 
     this.galleryService.getGallery(input).then(
       x => this.gallery = ((x && x.length > 0) ? x[0] : null)
     );
   }
-
 }

@@ -76,6 +76,27 @@ export const GalleryList: Gallery[] = [
         ]
     },
     {
+        year: 2016, section: 'cme',
+        title: 'Continuing Medical Education', subtitle: 'CME Programs',
+        max_image_width: 350, row_height: 200,
+        imageUrl: 'assets/gallery/cme/lecture300.jpg',
+        photos: [
+            { rows: 1, caption: "CME 2005 001", imageUrl: "assets/gallery/cme/CME 2005 001.jpg" },
+            { rows: 1, caption: "CME 2005 002", imageUrl: "assets/gallery/cme/CME 2005 002.jpg" },
+            { rows: 1, caption: "CME 2005 003", imageUrl: "assets/gallery/cme/CME 2005 003.jpg" },
+            { rows: 1, caption: "CME 2005 004", imageUrl: "assets/gallery/cme/CME 2005 004.jpg" },
+            { rows: 1, caption: "CME 2005 005", imageUrl: "assets/gallery/cme/CME 2005 005.jpg" },
+            { rows: 1, caption: "CME 2005 006", imageUrl: "assets/gallery/cme/CME 2005 006.jpg" },
+            { rows: 1, caption: "CME 2005 007", imageUrl: "assets/gallery/cme/CME 2005 007.jpg" },
+            { rows: 1, caption: "CME 2005 008", imageUrl: "assets/gallery/cme/CME 2005 008.jpg" },
+            { rows: 1, caption: "CME 2005 009", imageUrl: "assets/gallery/cme/CME 2005 009.jpg" },
+            { rows: 1, caption: "CME 2005 010", imageUrl: "assets/gallery/cme/CME 2005 010.jpg" },
+            { rows: 1, caption: "CME 2005 011", imageUrl: "assets/gallery/cme/CME 2005 011.jpg" },
+            { rows: 1, caption: "CME 2005 012", imageUrl: "assets/gallery/cme/CME 2005 012.jpg" },
+            { rows: 1, caption: "CME 2005 013", imageUrl: "assets/gallery/cme/CME 2005 013.jpg" },
+        ]
+    },
+    {
         year: 2016, section: 'indiafest',
         title: 'India Fest', subtitle: 'Food Stalls & Vendors',
         max_image_width: 350, row_height: 200,

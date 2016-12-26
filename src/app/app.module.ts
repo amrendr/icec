@@ -24,6 +24,7 @@ import { RentalComponent } from './components/rental/rental.component';
 import { MembershipComponent } from './components/membership/membership.component';
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 import { ResourcesComponent } from './components/resources/resources.component';
+import { CmeComponent } from './components/cme/cme.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ResourcesComponent } from './components/resources/resources.component';
     MembershipComponent,
     YouthGroupComponent,
     GalleryCardComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    CmeComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,6 @@ export class YouthGroupComponent implements OnInit {
 
   getYouthPhotos(): void {
     let input: Args = { type: 'youth', year: null };
-    let galleries: Gallery[];
 
     this.galleryService.getGallery(input).then(
       x => this.gallery = ((x && x.length > 0) ? x[0] : null)
