@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AnnouncementBarComponent implements OnInit {
 
   constructor() {
-    this.interval = setInterval(() => { this.changeAnnouncement(); }, 5000);
   }
 
   ngOnInit() {
+    this.interval = setInterval(() => { this.changeAnnouncement(); }, 5000);
   }
 
   annoucement: AnnouncementBar[] = [
-    { title: 'India Fest 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym) April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/gallery' },
-    { title: 'Health Fair 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/gallery' }
+    { title: 'India Fest 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym) April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' },
+    { title: 'Health Fair 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' }
   ];
 
   interval: any;

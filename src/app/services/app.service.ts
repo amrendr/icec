@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MembersData, AllMemberList, GalleryList } from './app.service.data';
+import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer } from './app.service.data';
 
 
 @Injectable()
@@ -33,6 +33,11 @@ export class AppService {
                 members.title = 'Donor/Founding Members';
                 members.memberList = AllMemberList;
                 break;
+            case 'IF':
+                members.title = 'India Fest Organizer';
+                members.memberList = IndiaFestOrganizer;
+                break;
+            
             default:
                 members.title = 'Executive Members';
                 members.memberList = item.executives;

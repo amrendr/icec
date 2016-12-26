@@ -25,6 +25,9 @@ import { MembershipComponent } from './components/membership/membership.componen
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { CmeComponent } from './components/cme/cme.component';
+import { EventsComponent } from './components/events/events.component';
+import { IndiafestComponent } from './components/indiafest/indiafest.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { CmeComponent } from './components/cme/cme.component';
     YouthGroupComponent,
     GalleryCardComponent,
     ResourcesComponent,
-    CmeComponent
+    CmeComponent,
+    EventsComponent,
+    IndiafestComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

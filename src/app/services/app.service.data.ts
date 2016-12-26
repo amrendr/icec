@@ -423,3 +423,12 @@ export const AllMemberList: Member[] = [
     { membershipType: 'Founding Member', membershipTerm: '', lastname: 'Vyapaka', fullname: 'Mrs. Vidya & Dr. Jagannadha Vyapaka' },
     { membershipType: 'Founding Member', membershipTerm: '', lastname: 'Vyas', fullname: 'Mr. & Mrs. Suryakant Vyas' }
 ];
+
+export const IndiaFestOrganizer: Member[]= [
+  { membershipType: 'Organizer', fullname: 'Razee Tumati', lastname: 'Tumati', title: 'Marketing & Publicity', contact: '', email: 'luckyrazee@gmail.com', membershipTerm: 'India Fest 2017' },
+  { membershipType: 'Organizer', fullname: 'Shaheda Qaiyumi', lastname: 'Qaiyumi', title: 'Vendors', contact: '(352) 871-7112', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Vendor Stall at India Fest 2017' },
+  { membershipType: 'Organizer', fullname: 'Mehak Chopra', lastname: 'Chopra', title: 'Cultural Show', contact: '(703) 789-4671', email: 'chopramehak4@gmail.com', membershipTerm: 'Cultural Program at India Fest 2017' },
+  { membershipType: 'Organizer', fullname: 'Manisha Ranade', lastname: 'Ranade', title: 'Volunteers', contact: '(352) 271-3065', email: 'manisha.ranade@gmail.com', membershipTerm: 'Volunteering at India Fest 2017' },
+  { membershipType: 'Organizer', fullname: 'Anil Thomas', lastname: 'Thomas', title: 'Logistics', contact: '(352) 262-7119', email: 'anilthomasv@hotmail.com', membershipTerm: 'Logistics for India Fest 2017' },
+  { membershipType: 'Organizer', fullname: 'Yogi Deshmukh', lastname: 'Deshmukh', title: 'General Information', contact: '', email: 'IndiaFestGainesville@gmail.com', membershipTerm: 'Question/Inquiry about India Fest 2017' },
+];

@@ -11,6 +11,11 @@ import { MembershipComponent } from './components/membership/membership.componen
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { CmeComponent } from './components/cme/cme.component';
+import { EventsComponent } from './components/events/events.component';
+import { IndiafestComponent } from './components/indiafest/indiafest.component';
+import { ContactComponent } from './components/contact/contact.component';
+
+
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,10 +31,13 @@ const appRoutes: Routes = [
     { path: 'youth', component: YouthGroupComponent },
     { path: 'resources', component: ResourcesComponent },
     { path: 'resources/:section', component: ResourcesComponent },
+    { path: 'events', component: EventsComponent },
     { path: 'cme', component: CmeComponent },
+    { path: 'indiafest', component: IndiafestComponent },
     { path: 'gallery', component: GalleryComponent },
     { path: 'gallery/:section', component: GalleryComponent },
-    { path: 'gallery/:section/:year', component: GalleryComponent }
+    { path: 'gallery/:section/:year', component: GalleryComponent },
+    { path: 'contact', component: ContactComponent }
 ]
 
 @NgModule({

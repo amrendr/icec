@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit {
     {title:'Student Resources', url:'/resources/student'},
     {title:'Community Events', url:'/events'},
     {title:'Continuing Medical Education (CME)', url:'/cme'},
-    {title:'India Fest', url:'/events/indiafest'},
+    {title:'India Fest', url:'/indiafest'},
     {title:'Photo Gallery', url:'/gallery'},
     {title:'Contact US', url:'/contact'}
   ]

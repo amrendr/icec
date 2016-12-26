@@ -1,0 +1,71 @@
+<app-navigation title="India Fest & Health Fair 2017" subtitle="April 8th from 9 AM - 6 PM (Santa Fe College Gym)">
+
+<div class="flex">
+    <div class="card card-50">
+      <md-card class="backdrop">
+        <md-card-title>India Fest & Health Fair</md-card-title>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon>April 8, 2017</span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon>Saturday 9 AM - 6 PM</span>
+          <span class="flex detail" md-line><md-icon>place</md-icon>Santa Fe College Gym</span>
+          <span class="flex detail" md-line><md-icon>map</md-icon>3000 NW 83 St, Gainesville, FL 32606</span>
+        </md-card-content>
+        <md-card-subtitle>Contact for General Information</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>Yogi Deshmukh</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:IndiaFestGainesville@gmail.com?subject=Question/Inquiry about India Fest 2017">IndiaFestGainesville@gmail.com</a></span>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="card card-33">
+      <gallery-card [item]="gallery" title="Gallery"></gallery-card>
+    </div>
+  </div>
+  <p>India Fest & Health Fair is organized annually by ICEC since 1999. Some of the activities include: </p>
+  <div class="resources">
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Indian Dances
+    </div>
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Indian Cuisine
+    </div>
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Indian Jewelry
+    </div>
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Indian Art & Crafts
+    </div>
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Traditional Indian Attire
+    </div>
+    <div class="flex" md-line>
+      <md-icon>star</md-icon>
+      Cultural Program
+    </div>
+  </div>
+
+  <h3>For more information about 2017 event, please contact</h3>
+  <md-divider></md-divider>
+  <div class="flex inset-15x">
+    <div class="card card-33" *ngFor="let contact of contacts">
+      <md-card>
+        <md-card-title>{{contact.title}}</md-card-title>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+  <p>
+    Want to bring fresh ideas to the table for India Fest & Health Fair 2017? Want to participate in or organize the next event?
+    Contact us at <a href="mailto:IndiaFestGainesville@gmail.com?subject=Organize India Fest 2017">IndiaFestGainesville@gmail.com</a>.
+  </p>
+
+</app-navigation>
