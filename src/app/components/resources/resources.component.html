@@ -4,18 +4,21 @@
   <md-divider></md-divider>
   <div class="flex inset-15x">
     <div class="card card-50">
-      <md-card>
-        <md-card-title>SAT Class</md-card-title>
+      <md-card *ngIf="event">
+        <md-card-title>{{event.title}}</md-card-title>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon>Dates - TBA</span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon>Sunday 10:30 am - 12:30 pm</span>
-          <span class="flex detail" md-line><md-icon>location_on</md-icon>ICEC (Library Room)</span>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon>{{event.date}}</span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon>{{event.time}}</span>
+          <span class="flex detail" md-line><md-icon>place</md-icon>{{event.venue}}</span>
+          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon>{{event.address}}</span>
         </md-card-content>
-        <md-card-subtitle>Contact Person</md-card-subtitle>
+        <md-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>Sharvari Pathak</span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:shakul@hotmail.com?subject=ICEC SAT Classes">shakul@hotmail.com</a></span>
+          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon>{{event.person}}</span>
+          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon>{{event.contact}}</span>
+          <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
         </md-card-content>
+        <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
       </md-card>
     </div>
   </div>

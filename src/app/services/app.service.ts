@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer, IcecContacts } from './app.service.data';
+import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer, IcecContacts, Events } from './app.service.data';
 
 
 @Injectable()
@@ -52,6 +52,17 @@ export class AppService {
                 break;
         }
         return Promise.resolve(members);
+    }
+
+    getEvents(key: string): Promise<Event[]> {
+        let returnItems: Event[];
+
+        if (!key)
+            returnItems = Events;
+        else
+            returnItems = Events.filter(x => x.key.toUpperCase() === key.toUpperCase());
+
+        return Promise.resolve(returnItems);
     }
 
     getGallery(input: Args): Promise<Gallery[]> {
@@ -144,6 +155,20 @@ export class Gallery {
     max_image_width: number;
     imageUrl: string;
     photos: Photo[];
-    hasMultiple?:boolean;
+    hasMultiple?: boolean;
 }
 
+export class Event {
+    key: string;
+    title: string;
+    date: string;
+    time: string;
+    venue: string;
+    address?: string;
+    person?: string;
+    contact?: string;
+    email?: string;
+    subject?: string;
+    ps?: string;
+    eventUrl?: string;
+}

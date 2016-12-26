@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService, Event } from '../../services/app.service';
 
 @Component({
   selector: 'app-resources',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesComponent implements OnInit {
 
-  constructor() { }
+  event: Event;
+
+  constructor(
+    private eventService: AppService
+  ) { }
 
   ngOnInit() {
+    this.getEventInfo('SAT');
   }
-
+  
+  getEventInfo(key: string): void {
+    this.eventService.getEvents(key).then(x => this.event = ((x && x.length > 0) ? x[0] : null));
+  }
 }

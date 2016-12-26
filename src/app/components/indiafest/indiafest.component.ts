@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, Member, Args, Gallery } from '../../services/app.service';
+import { AppService, Member, Args, Gallery, Event } from '../../services/app.service';
 
 @Component({
   selector: 'app-indiafest',
@@ -10,6 +10,7 @@ export class IndiafestComponent implements OnInit {
 
   gallery: Gallery;
   contacts: Member[];
+  event: Event;
 
   constructor(
     private appService: AppService
@@ -18,6 +19,7 @@ export class IndiafestComponent implements OnInit {
   ngOnInit() {
     this.getIndiafestPhotos();
     this.getIndiafestOrganizer();
+    this.getEventInfo('IFHF');
   }
 
   getIndiafestPhotos(): void {
@@ -31,5 +33,9 @@ export class IndiafestComponent implements OnInit {
   getIndiafestOrganizer(): void {
     let input: Args = { type: 'IF', year: null };
     this.appService.getMembers(input).then(x => this.contacts = x.memberList);
+  }
+
+  getEventInfo(key: string): void {
+    this.appService.getEvents(key).then(x => this.event = ((x && x.length > 0) ? x[0] : null));
   }
 }

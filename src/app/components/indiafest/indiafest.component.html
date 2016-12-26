@@ -1,20 +1,22 @@
 <app-navigation title="India Fest & Health Fair 2017" subtitle="April 8th from 9 AM - 6 PM (Santa Fe College Gym)">
 
-<div class="flex">
+  <div class="flex">
     <div class="card card-50">
-      <md-card class="backdrop">
-        <md-card-title>India Fest & Health Fair</md-card-title>
+      <md-card class="backdrop" *ngIf="event">
+        <md-card-title>{{event.title}}</md-card-title>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon>April 8, 2017</span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon>Saturday 9 AM - 6 PM</span>
-          <span class="flex detail" md-line><md-icon>place</md-icon>Santa Fe College Gymnasium</span>
-          <span class="flex detail" md-line><md-icon>map</md-icon>Building V, 3000 NW 83 St, Gainesville, FL</span>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon>{{event.date}}</span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon>{{event.time}}</span>
+          <span class="flex detail" md-line><md-icon>place</md-icon>{{event.venue}}</span>
+          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon>{{event.address}}</span>
         </md-card-content>
-        <md-card-subtitle>Contact for General Information</md-card-subtitle>
+        <md-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>Yogi Deshmukh</span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:IndiaFestGainesville@gmail.com?subject=Question/Inquiry about India Fest 2017">IndiaFestGainesville@gmail.com</a></span>
+          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon>{{event.person}}</span>
+          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon>{{event.contact}}</span>
+          <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
         </md-card-content>
+        <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
       </md-card>
     </div>
     <div class="card card-33">
@@ -24,29 +26,17 @@
   <p>India Fest & Health Fair is organized annually by ICEC since 1999. Some of the activities include: </p>
   <div class="resources">
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Indian Dances
-    </div>
+      <md-icon>star</md-icon>Indian Dances</div>
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Indian Cuisine
-    </div>
+      <md-icon>star</md-icon>Indian Cuisine</div>
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Indian Jewelry
-    </div>
+      <md-icon>star</md-icon>Indian Jewelry</div>
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Indian Art & Crafts
-    </div>
+      <md-icon>star</md-icon>Indian Art & Crafts</div>
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Traditional Indian Attire
-    </div>
+      <md-icon>star</md-icon>Traditional Indian Attire</div>
     <div class="flex" md-line>
-      <md-icon>star</md-icon>
-      Cultural Program
-    </div>
+      <md-icon>star</md-icon>Cultural Program</div>
   </div>
 
   <h3>For more information about 2017 event, please contact</h3>

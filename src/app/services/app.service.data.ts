@@ -1,4 +1,4 @@
-import { Gallery, Photo, Member, MemberList } from './app.service';
+import { Gallery, Photo, Member, MemberList, Event } from './app.service';
 
 export const GalleryList: Gallery[] = [
     {
@@ -443,5 +443,12 @@ export const IcecContacts: Member[] = [
     { membershipType: 'Contacts', fullname: 'Iqbal Qaiyumi (IQ)', lastname: 'Qaiyumi', title: 'ICEC Rental Information', contact: '(352) 871-7113', email: 'iqbal.qaiyumi@gmail.com', membershipTerm: 'ICEC Rental' },
     { membershipType: 'Contacts', fullname: 'Yogi Deshmukh', lastname: 'Deshmukh', title: 'Web Support', contact: '(407) 970-2934', email: 'yogid1978@hotmail.com', membershipTerm: 'ICEC Website' },
     { membershipType: 'Assistance', fullname: 'Ravi Bhosale, MBA', lastname: 'Bhosale', title: 'Newcomers Support', contact: '(352) 275-2276', email: 'bhosale.ravi@gmail.com', membershipTerm: 'Newcomers to Gainesville', subtitle: 'We are very happy to have you join our community. If you need assistance of any kind, please contact:' },
-    { membershipType: 'Assistance', fullname: 'Iqbal Qaiyumi (IQ)', lastname: 'Qaiyumi', title: 'Newcomers Support', contact: '(352) 871-7113', email: 'iqbal.qaiyumi@gmail.com', membershipTerm: 'Newcomers to Gainesville', subtitle:'If you need help regarding buy/sell/trade of cars or general information about Gainesville community, please contact:' },
+    { membershipType: 'Assistance', fullname: 'Iqbal Qaiyumi (IQ)', lastname: 'Qaiyumi', title: 'Newcomers Support', contact: '(352) 871-7113', email: 'iqbal.qaiyumi@gmail.com', membershipTerm: 'Newcomers to Gainesville', subtitle: 'If you need help regarding buy/sell/trade of cars or general information about Gainesville community, please contact:' },
 ];
+
+export const Events: Event[] = [
+    { key: 'GPC', title: 'Grandparents\' Club', date: 'First Sunday (Each month)', time: '3 pm - 5 pm', venue: 'Club Member\'s Residence', address: '', person: 'Chetana Mehta', contact: '', email: 'chetanamehta1230@gmail.com', subject: 'Grandparents\' Club', ps: '', eventUrl: '' },
+    { key: 'IRD', title: 'Indian Republic Day 2017', date: 'TBD', time: 'TBD', venue: 'India Cultural & Education Center', address: '1115 SW 13th Street, Gainesville, FL', person: '', contact: '', email: '', subject: '', ps: 'More info coming soon...', eventUrl: '' },
+    { key: 'IFHF', title: 'India Fest & Health Fair', date: 'Saturday, April 8, 2017', time: '9 am - 6 pm', venue: 'Santa Fe College Gymnasium', address: 'Building V, 3000 NW 83 St, Gainesville, FL', person: 'Yogi Deshmukh', contact: '', email: 'IndiaFestGainesville@gmail.com', subject: 'Question/Inquiry about India Fest 2017', ps: '', eventUrl: '/indiafest' },
+    { key: 'SAT', title: 'SAT Class', date: 'TBD', time: '10:30 am - 12:30 pm', venue: 'ICEC (Library Room)', address: '1115 SW 13th Street, Gainesville, FL', person: 'Sharvari Pathak', contact: '', email: 'shakul@hotmail.com', subject: 'ICEC SAT Classes', ps: '', eventUrl: '' },
+]

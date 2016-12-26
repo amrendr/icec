@@ -1,5 +1,36 @@
 <app-navigation title="Community Events" subtitle="Meet, Organize, & Celebrate">
+  
+  <h3>Events</h3>
+  <md-divider></md-divider>
+  <div class="flex inset-15x">
+    <div class="card card-50" *ngFor="let event of events">
+      <md-card>
+        <md-card-title *ngIf="!event.eventUrl">{{event.title}}</md-card-title>
+        <md-card-title *ngIf="event.eventUrl"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></md-card-title>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon>{{event.date}}</span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon>{{event.time}}</span>
+          <span class="flex detail" md-line><md-icon>place</md-icon>{{event.venue}}</span>
+          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon>{{event.address}}</span>
+        </md-card-content>
+        <md-card-subtitle *ngIf="event.person || event.contact || event.email">For question, contact</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon>{{event.person}}</span>
+          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon>{{event.contact}}</span>
+          <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
+        </md-card-content>
+        <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
+      </md-card>
+    </div>
+  </div>
+  <h3>
+    <a target="_blank" href="http://www.google.com/calendar/embed?src=ecalendar.icec@gmail.com">ICEC Events Calendar</a>
+  </h3>
   <p>
-    events works!
+    If you would like to publish an event on the ICEC calendar, send an event invitation to <a href="mailto:ecalendar.icec@gmail.com">ecalendar.icec@gmail.com</a>    from your Gmail account. Please include all the event details and the flyer/brochure in jpg/pdf format, if available.
+  </p>
+  <p>
+    Learn more about sending event invitations from Gmail at <a target="_blank" href="http://email.about.com/od/gmailtips/qt/etaddinvitation.htm">http://email.about.com/od/gmailtips/qt/etaddinvitation.htm</a>. (Note:
+    This is a non-affiliated, external website)
   </p>
 </app-navigation>
