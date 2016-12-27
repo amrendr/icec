@@ -79,6 +79,12 @@ header .vertical:hover{
     padding: 1rem 4rem;
 }
 
+.article.nomargin
+{
+    margin: 0;
+    padding: 0;
+}
+
 a {
     font-weight: 400;
 }

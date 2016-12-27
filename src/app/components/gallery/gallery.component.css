@@ -1,10 +1,79 @@
-[md-raised-button] {
-    width: 100%;
-}
-md-grid-list {
-    max-width: 1403px;
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  z-index: 1;
+  transition: all 0.5s ease-out;
+  background: #303030;
 }
 
-md-sidenav-layout {
-    /*height: calc(100vh - 8rem);*/
+.gallery{
+  background: #303030;
+}
+
+.gallery md-grid-tile{
+    cursor: pointer;
+}
+
+.active {
+  z-index: 2;
+  left: 0;
+}
+
+.hide {
+  display: none;
+}
+
+
+.slideshow{
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.btn md-icon{
+    color: snow;
+    display: block;
+}
+
+.btn > button:disabled md-icon{
+    color: grey;
+}
+
+.btn.close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+}
+
+
+.slide-btn {
+  align-items: center;
+}
+
+.slide-btn.back{
+  width: 3rem;;
+}
+
+.slide-btn.next{
+  width: 3rem;
+  justify-content: flex-end;
+}
+
+.slide {
+  height: calc(100% - 3rem);
+  width: calc(100% - 6rem);
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
 }

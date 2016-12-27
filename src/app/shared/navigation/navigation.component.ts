@@ -9,6 +9,7 @@ export class NavigationComponent implements OnInit {
   
   @Input() title:string;
   @Input() subtitle:string;
+  @Input() nomargin:boolean;
   isSidenavOpen: boolean = false;
   constructor() { }
 
@@ -30,6 +31,10 @@ export class NavigationComponent implements OnInit {
   ]
 
   @ViewChild('sidenav') sidenav: MdSidenav;
+
+  onCloseStart(): void{
+    this.isSidenavOpen = false;
+  }
 
   openSidenav() {
     this.isSidenavOpen = true;

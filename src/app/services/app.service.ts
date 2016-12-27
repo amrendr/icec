@@ -143,6 +143,7 @@ export class MemberList {
 export class Photo {
     rows: number;
     caption: string;
+    thumbnail?:string;
     imageUrl: string;
 }
 
@@ -153,7 +154,7 @@ export class Gallery {
     subtitle: string;
     row_height: number;
     max_image_width: number;
-    imageUrl: string;
+    poster: string;
     photos: Photo[];
     hasMultiple?: boolean;
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
-import { AppService, Gallery, Args } from '../../services/app.service';
+import { AppService, Gallery, Photo, Args } from '../../services/app.service';
 import { AppDimensionService } from '../../services/app.dimension.service';
 
 @Component({
@@ -16,6 +16,11 @@ export class GalleryComponent implements OnInit {
   gallery$: Observable<Gallery[]>;
   gallery: Gallery[] = [];
   params: Args;
+  selectedPhotoIndex: number;
+  hasNextPhoto: boolean = false;
+  hasPrevPhoto: boolean = false;
+  isSlideShowActive: boolean = false;
+  selectedPhoto: Photo;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -81,5 +86,54 @@ export class GalleryComponent implements OnInit {
         title += ' (' + this.gallery[0].year + ')';
     }
     return title;
+  }
+
+  closeSlideShow(): void {
+    this.isSlideShowActive = false;
+  }
+
+  showPhoto(index: number): void {
+    this.isSlideShowActive = true;
+    this.selectedPhotoIndex = index;
+    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex)
+      this.hasNextPhoto = true;
+    if (this.selectedPhotoIndex > 0)
+      this.hasPrevPhoto = true;
+
+    this.setSelectedPhoto();
+  }
+
+  showNextPhoto(): void {
+    if (!this.hasNextPhoto)
+      return;
+
+    this.selectedPhotoIndex = this.selectedPhotoIndex + 1;
+    this.hasPrevPhoto = true;
+
+    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex)
+      this.hasNextPhoto = true;
+    else
+      this.hasNextPhoto = false;
+
+    this.setSelectedPhoto();
+  }
+
+  showPrevPhoto(): void {
+    if (!this.hasPrevPhoto)
+      return;
+
+    this.selectedPhotoIndex = this.selectedPhotoIndex - 1;
+    this.hasNextPhoto = true;
+
+    if (this.selectedPhotoIndex > 0)
+      this.hasPrevPhoto = true;
+    else
+      this.hasPrevPhoto = false;
+
+    this.setSelectedPhoto();
+  }
+
+  setSelectedPhoto(): void {
+    this.selectedPhoto = this.gallery[0].photos[this.selectedPhotoIndex];
   }
 }

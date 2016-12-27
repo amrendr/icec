@@ -1,13 +1,13 @@
-<app-navigation [title]="getTitle()" [subtitle]="getSubtitle()">
+<app-navigation [title]="getTitle()" [subtitle]="getSubtitle()" [nomargin]="gallery.length == 1">
   <div class="flex" *ngIf="gallery.length > 1">
     <div class="card card-33" *ngFor="let item of gallery">
       <gallery-card [item]="item"></gallery-card>
     </div>
   </div>
-  <div *ngIf="gallery.length == 1">
-    <md-grid-list [cols]="col$ | async" [rowHeight]="gallery[0].row_height">
-      <md-grid-tile *ngFor="let photo of gallery[0].photos" [rowspan]="photo.rows">
-        <img src="{{photo.imageUrl}}" alt="photo of {{photo.caption}}">
+  <div class="gallery" *ngIf="gallery.length == 1">
+    <md-grid-list [cols]="col$ | async" [rowHeight]="gallery[0].row_height" [class.hide]="isSlideShowActive">
+      <md-grid-tile *ngFor="let photo of gallery[0].photos; let i = index;" (click)="showPhoto(i)" [rowspan]="photo.rows">
+        <img src="{{photo.thumbnail || photo.imageUrl}}" alt="photo of {{photo.caption}}">
         <md-grid-tile-footer>
           <h3 md-line>{{photo.caption}}</h3>
         </md-grid-tile-footer>
@@ -18,3 +18,25 @@
     <h3>No Data Available</h3>
   </div>
 </app-navigation>
+
+<div>
+  <div class="btn close" *ngIf="isSlideShowActive">
+    <button md-icon-button (click)="closeSlideShow()"><md-icon >close</md-icon></button>
+  </div>
+
+  <div class="slideshow-container" [class.active]="isSlideShowActive" *ngIf="selectedPhoto">
+    <div class="flex slideshow" [class.hide]="!isSlideShowActive">
+      <div class="flex btn slide-btn back">
+        <button md-icon-button (click)="showPrevPhoto()" [disabled]="!hasPrevPhoto"><md-icon>navigate_before</md-icon></button>
+      </div>
+
+      <div class="slide" >
+        <img class="img" src="{{selectedPhoto.imageUrl || selectedPhoto.thumbnail}}" alt="photo of {{selectedPhoto.caption}}">
+      </div>
+
+      <div class="flex btn slide-btn next">
+        <button md-icon-button (click)="showNextPhoto()" [disabled]="!hasNextPhoto"><md-icon>navigate_next</md-icon></button>
+      </div>
+    </div>
+  </div>
+</div>
