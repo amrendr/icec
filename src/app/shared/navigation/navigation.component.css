@@ -20,7 +20,8 @@
 
 header {
     background: slategrey;
-    padding: 3rem 3rem 2rem 6rem;
+    height: 10rem;
+    padding: 3rem 2rem 2rem 6rem;
     box-sizing: border-box;
     background: linear-gradient(90deg, #00c853, #69F0AE);
     cursor: pointer;
@@ -70,6 +71,10 @@ header .vertical:hover{
 
 .vertical-nav:hover{
     color:whitesmoke;
+}
+
+.app-article {
+    min-height: calc(100vh - 10rem);
 }
 
 .app-article.nomargin

@@ -38,17 +38,19 @@ $app-xl: 1600px;
   .card-100 { width: calc(#{$p100} - #{$card-margin}); }
 }
 
-@mixin app-content($header, $margin-v, $margin-h, $padding-v, $padding-h, $first) {
+@mixin app-content($margin-v, $margin-h, $padding-v, $padding-h, $first) {
   .app-article {
-    min-height: calc(100vh - #{$header});
     margin: #{$margin-v} #{$margin-h};
     padding: #{$padding-v} #{$padding-h};
   }
   .first {
     margin-top: $first;
   }
-  header.app-header {
-    height: $header;
+}
+
+@mixin app-hide-subheader(){
+  header.app-header h2{
+    display: none;
   }
 }
 
@@ -56,26 +58,31 @@ $app-xl: 1600px;
   @return $width - 1px;
 }
 
+@function parseInt($n){
+  @return $n / ($n * 0 +1);
+}
+
 // Set the default width for cards
 @include app-card-width(12rem, 10px, 20%, 25%, 33.333%, 40%, 50%, 60%, 66.667%, 75%, 80%, 100%);
-@include app-content(10rem, 1rem, 2rem, 1rem, 4rem, 1.5rem);
+@include app-content(1rem, 2rem, 1rem, 4rem, 1.5rem);
 
 @media (max-width: media-max-width($app-sm))  {
   @include app-card-width(17rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
-  @include app-content(10rem, 1rem, 1rem, 0.5rem, 0.5rem, 0);
+  @include app-content(1rem, 1rem, 0.5rem, 0.5rem, 0);
+  @include app-hide-subheader();
 }
 //special case for card where it follow the previous pattern but overall container follow next pattern
 @media (min-width: $app-sm) and (max-width: media-max-width(640px))  {
   @include app-card-width(16rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
-  @include app-content(10rem, 1rem, 1rem, 1rem, 1rem, 0);
+  @include app-content(1rem, 1rem, 1rem, 1rem, 0);
 }
 @media (min-width: 640px) and (max-width: media-max-width($app-md))  {
   @include app-card-width(16rem, 10px, 50%, 50%, 50%, 50%, 50%, 100%, 100%, 100%, 100%, 100%);
-  @include app-content(10rem, 1rem, 1rem, 1rem, 1rem, 0);
+  @include app-content(1rem, 1rem, 1rem, 1rem, 0);
 }
 @media (min-width: $app-md) and (max-width: media-max-width($app-lg))  {
   @include app-card-width(12rem, 10px, 33.333%, 33.333%, 33.333%, 33.333%, 50%, 66.667%, 66.667%, 66.667%, 100%, 100%);
-  @include app-content(10rem, 1rem, 2rem, 1rem, 2rem, 0.5rem);
+  @include app-content(1rem, 2rem, 1rem, 2rem, 0.5rem);
 }
 @media (min-width: $app-lg) and (max-width: media-max-width($app-xl))  {
   @include app-card-width(12rem, 10px, 25%, 25%, 33.3333%, 33.3333%, 50%, 66.6667%, 66.6667%, 75%, 100%, 100%);
