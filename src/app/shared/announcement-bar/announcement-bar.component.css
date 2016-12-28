@@ -1,64 +1,57 @@
-.container{
-    bottom: 0;
-    left: 50%;
-    margin-bottom: -52px;
-    margin-left: -376px;
-    position: absolute;
-    width: 752px;
+.app-announcemnt-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.slides{
-
-    background: #fff;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.24), 0 0 4px rgba(0,0,0,0.12);
-    box-sizing: border-box;
-    color: #607D8B;
-    height: 104px;
-    overflow: hidden;
-    position: relative;
-    width: 752px;
-
+.app-announcemnt-container .slides {
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  color: #607D8B;
+  overflow: hidden;
+  position: relative;
+  width: 752px;
 }
 
-.slide {
-    bottom: 0;
-    box-sizing: border-box;
-    height: 104px;
-    left: 0;
-    margin-bottom: -104px;
-    opacity: 0;
-    padding: 32px;
-    position: absolute;
-    right: 0;
-    -webkit-transition: all .8s ease-out;
-    transition: all .8s ease-out;
-    width: 752px;
-    z-index: 1;
-    text-align: left;
+.app-announcemnt-container .slide {
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all .8s ease-out;
+  transition: all .8s ease-out;
+  z-index: 1;
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
-.show {
-    margin-bottom: 0;
-    opacity: 1;
-    z-index: 2;
+.app-announcemnt-container .show {
+  margin-bottom: 0;
+  opacity: 1;
+  z-index: 2;
 }
 
-.content {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content:space-between;
+.app-announcemnt-container .content {
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
-.content .item {
-    margin-right: 1.25rem;
-    width: 563px;
+.app-announcemnt-container .content .item {
+  margin-right: 1.25rem;
+  margin-bottom: 0.5rem;
+  width: 563px;
 }
 
-.title {
-    font-size:1.25rem;
-    font-weight:700;
+.app-announcemnt-container .title {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.more {
-    color: white;
+.app-announcemnt-container .more {
+  color: white;
 }

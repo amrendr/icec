@@ -1,16 +1,9 @@
-.backdrop{
-    height: 26rem;
+.app-home-backdrop{
     padding-top: 2.5rem;
     text-align: center; 
     background: 
     url('assets/silhouette2.png') no-repeat bottom center,
      linear-gradient(75deg, #fd8e01, white, white, #45b803);
     background-blend-mode:multiply; 
-    background-size:100%;
     position: relative;
-}
-
-.content{
-    margin: 4rem 2rem 1rem;
-    padding: 1rem 4rem;
 }

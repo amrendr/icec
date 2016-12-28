@@ -51,6 +51,26 @@ footer md-toolbar-row {
   margin-top: 1.25rem;
 }
 
+.flex>md-icon {
+  font-size: 1rem;
+  color: darkgray;
+}
+
+/***********cards styles******************/
+.card {
+  margin: 5px;
+}
+
+md-card .avatar {
+  font-size: 2.5rem;
+  color: darkgray;
+}
+
+md-card .detail {
+  font-size: 0.875rem;
+}
+
+
 /******************************************************************************************/
 
 
