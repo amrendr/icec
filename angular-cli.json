@@ -19,7 +19,7 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "cards.scss",
+        "mixin.scss",
         "icec-theme.scss"
       ],
       "scripts": [],
