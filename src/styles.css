@@ -21,6 +21,10 @@ h4 {
   margin-bottom: 0.3125rem;
 }
 
+.first {
+  margin-top: 0;
+}
+
 footer md-toolbar-row {
   justify-content: center;
 }

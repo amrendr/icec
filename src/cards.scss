@@ -19,29 +19,33 @@
 }
 
 $app-xs: 320px;
-$app-sm: 640px;
+$app-sm: 600px;
 $app-md: 960px;
 $app-lg: 1280px;
 $app-xl: 1600px;
 
-@mixin app-card-width($margin, $p20, $p25, $p33, $p40, $p50, $p60, $p67, $p75, $p80, $p100 ) {
-  .card-20 { width: calc(#{$p20} - #{$margin}); }
-  .card-25 { width: calc(#{$p25} - #{$margin}); }
-  .card-33 { width: calc(#{$p33} - #{$margin}); }
-  .card-40 { width: calc(#{$p40} - #{$margin}); }
-  .card-50 { width: calc(#{$p50} - #{$margin}); }
-  .card-60 { width: calc(#{$p60} - #{$margin}); }
-  .card-67 { width: calc(#{$p67} - #{$margin}); }
-  .card-75 { width: calc(#{$p75} - #{$margin}); }
-  .card-80 { width: calc(#{$p80} - #{$margin}); }
-  .card-100 { width: calc(#{$p100} - #{$margin}); }
+@mixin app-card-width($card-min-width, $card-margin, $p20, $p25, $p33, $p40, $p50, $p60, $p67, $p75, $p80, $p100 ) {
+  .card { min-width: calc(#{$card-min-width} - #{$card-margin}); }
+  .card-20 { width: calc(#{$p20} - #{$card-margin}); }
+  .card-25 { width: calc(#{$p25} - #{$card-margin}); }
+  .card-33 { width: calc(#{$p33} - #{$card-margin}); }
+  .card-40 { width: calc(#{$p40} - #{$card-margin}); }
+  .card-50 { width: calc(#{$p50} - #{$card-margin}); }
+  .card-60 { width: calc(#{$p60} - #{$card-margin}); }
+  .card-67 { width: calc(#{$p67} - #{$card-margin}); }
+  .card-75 { width: calc(#{$p75} - #{$card-margin}); }
+  .card-80 { width: calc(#{$p80} - #{$card-margin}); }
+  .card-100 { width: calc(#{$p100} - #{$card-margin}); }
 }
 
-@mixin app-content($header, $margin-v, $margin-h, $padding-v, $padding-h) {
+@mixin app-content($header, $margin-v, $margin-h, $padding-v, $padding-h, $first) {
   .app-article {
     min-height: calc(100vh - #{$header});
     margin: #{$margin-v} #{$margin-h};
     padding: #{$padding-v} #{$padding-h};
+  }
+  .first {
+    margin-top: $first;
   }
   header.app-header {
     height: $header;
@@ -53,34 +57,33 @@ $app-xl: 1600px;
 }
 
 // Set the default width for cards
-@include app-card-width(10px, 20%, 25%, 33.333%, 40%, 50%, 60%, 66.667%, 75%, 80%, 100%);
-@include app-content(10rem, 1rem, 2rem, 1rem, 4rem);
+@include app-card-width(20rem, 10px, 20%, 25%, 33.333%, 40%, 50%, 60%, 66.667%, 75%, 80%, 100%);
+@include app-content(10rem, 1rem, 2rem, 1rem, 4rem, 1.5rem);
 
-// Specific height for mobile devices in portrait mode.
-@media (max-width: $app-xs) {
-  @include app-card-width(10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
-  @include app-content(10rem, 1.5rem, 1rem, 0, 0);
+@media (max-width: media-max-width($app-sm))  {
+  @include app-card-width(17rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
+  @include app-content(10rem, 1rem, 1rem, 0.5rem, 0.5rem, 0);
 }
-// Specific height for mobile devices in landscape mode.
-@media (min-width: $app-xs) and (max-width: media-max-width($app-sm))  {
-  @include app-card-width(10px, 50%, 50%, 50%, 50%, 50%, 100%, 100%, 100%, 100%, 100%);
-  @include app-content(10rem, 1.5rem, 1rem, 0, 1rem);
+//spe
+@media (min-width: $app-sm) and (max-width: media-max-width(640px))  {
+  @include app-card-width(16rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
+  @include app-content(10rem, 1rem, 1rem, 1rem, 1rem, 0);
 }
-@media (min-width: $app-sm) and (max-width: media-max-width($app-md))  {
-  @include app-card-width(10px, 33.333%, 33.333%, 33.333%, 66.667%, 66.667%, 66.667%, 66.667%, 100%, 100%, 100%);
-  @include app-content(10rem, 1rem, 2rem, 1rem, 1rem);
+@media (min-width: 640px) and (max-width: media-max-width($app-md))  {
+  @include app-card-width(16rem, 10px, 50%, 50%, 50%, 50%, 50%, 100%, 100%, 100%, 100%, 100%);
+  @include app-content(10rem, 1rem, 1rem, 1rem, 1rem, 0);
 }
 @media (min-width: $app-md) and (max-width: media-max-width($app-lg))  {
-  @include app-card-width(10px, 25%, 25%, 50%, 50%, 50%, 75%, 75%, 75%, 100%, 100%);
-  @include app-content(10rem, 1rem, 2rem, 1rem, 2rem);
+  @include app-card-width(12rem, 10px, 33.333%, 33.333%, 33.333%, 66.667%, 66.667%, 66.667%, 66.667%, 100%, 100%, 100%);
+  @include app-content(10rem, 1rem, 2rem, 1rem, 2rem, 0.5rem);
 }
 @media (min-width: $app-lg) and (max-width: media-max-width($app-xl))  {
-  @include app-card-width(10px, 25%, 25%, 50%, 50%, 50%, 75%, 75%, 75%, 100%, 100%);
-  @include app-content(10rem, 1rem, 2rem, 1rem, 4rem);
+  @include app-card-width(12rem, 10px, 25%, 25%, 25%, 50%, 50%, 75%, 75%, 75%, 100%, 100%);
 }
 @media (min-width: $app-xl)  {
-  @include app-card-width(10px, 20%, 40%, 40%, 40%, 60%, 60%, 80%, 80%, 80%, 100%);
-  @include app-content(10rem, 1rem, 2rem, 1rem, 4rem);
+  // @include app-card-width(20rem, 10px, 25%, 25%, 50%, 50%, 50%, 75%, 75%, 75%, 100%, 100%);
+  @include app-card-width(12rem, 10px, 20%, 40%, 40%, 40%, 60%, 60%, 80%, 80%, 80%, 100%);
+  // @include app-content(10rem, 1rem, 2rem, 1rem, 4rem);
 }
 
 
