@@ -1,6 +1,6 @@
 <div>
-  <md-toolbar color="primary" class="toolbar shadow">
-    <a [routerLink]="['./home']"> <span class="flex"><md-icon class="icon-20">spa</md-icon>ICEC</span></a>
+  <md-toolbar color="primary" class="app-toolbar shadow">
+    <a [routerLink]="['./home']"> <span class="flex app-flex"><md-icon class="icon-20">spa</md-icon>ICEC</span></a>
     <span class="flex"></span>
     <a [routerLink]="['./about']"><span>About</span></a>
     <a [routerLink]="['./events']"><span>Events</span></a>
@@ -17,13 +17,13 @@
     <a md-menu-item [routerLink]="['./resources/student']"><span>Student Resources</span></a>
     <a md-menu-item [routerLink]="['./cme']"><span>Continuing Medical Education</span></a>
   </md-menu>
-  <div class="ie-fix">
-    <div class="container">
-      <div class="content">
+  <div class="app-ie-fix">
+    <div class="app-container">
+      <div class="app-content">
         <router-outlet></router-outlet>
       </div>
       <footer>
-        <md-toolbar color="accent" class="toolbar">
+        <md-toolbar color="accent" class="app-toolbar">
           1115 S.W. 13th Street, Gainesville, Florida 32608 (352) 379-2911
         </md-toolbar>
       </footer>

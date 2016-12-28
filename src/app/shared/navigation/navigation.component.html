@@ -14,7 +14,7 @@
       </div>
     </md-nav-list>
   </md-sidenav>
-  <header (click)="toggleSidenav()">
+  <header class="app-header" (click)="toggleSidenav()">
     <md-list class="vertical" [class.open]="isSidenavOpen">
       <md-list-item class="vertical-nav">
         <span md-line>Navigation</span>
@@ -24,7 +24,7 @@
     <h1>{{title}}</h1>
     <h2 *ngIf="subtitle">{{subtitle}}</h2>
   </header>
-  <div class="article" [class.nomargin]="nomargin">
+  <div class="app-article" [class.nomargin]="nomargin">
     <ng-content></ng-content>
   </div>
 </md-sidenav-container>

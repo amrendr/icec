@@ -1,0 +1,80 @@
+@import '~@angular/material/toolbar/toolbar';
+
+/***********mixin*********************/
+
+@mixin app-content-margin($margin) {
+  .app-content {
+  margin: $margin 0 0;
+  }
+}
+
+// Set the default height for the toolbar.
+@include app-content-margin($md-toolbar-height-desktop);
+
+// Specific height for mobile devices in portrait mode.
+@media ($md-xsmall) and (orientation: portrait) {
+  @include app-content-margin($md-toolbar-height-mobile-portrait);
+}
+
+// Specific height for mobile devices in landscape mode.
+@media ($md-small) and (orientation: landscape) {
+  @include app-content-margin($md-toolbar-height-mobile-landscape);
+}
+
+
+/**********************************************************/
+
+.app-ie-fix {
+  display: flex;
+}
+
+.app-flex {
+  flex-flow: row nowrap;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.app-content {
+  flex-grow: 1;
+  a {
+    text-decoration: none;
+    color: #EF6C00;
+    font-weight: 400;
+    &:hover {
+      color: gray;
+    }
+  }
+}
+
+
+.app-toolbar {
+  * {
+    color: white!important;
+  }
+  .icon-20 {
+    font-size: 1.25rem;
+  }
+  &.shadow {
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    span {
+      margin: 0 0.625rem;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.0588);
+    }
+  }
+}

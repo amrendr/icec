@@ -2,6 +2,7 @@
 
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 @import '~@angular/material/core/theming/prebuilt/purple-green.css';
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -45,77 +46,6 @@ footer md-toolbar-row {
 .inset-20x {
   margin-top: 1.25rem;
 }
-
-.content a {
-  text-decoration: none;
-  color: #EF6C00;
-  font-weight: 400;
-}
-
-.content a:hover {
-  color: gray;
-}
-
-
-/*************************************/
-
-
-/******** Card Styles ****************/
-
-
-/*************************************/
-
-.card {
-  min-width: 18rem;
-  margin: 5px;
-}
-
-.card-20 {
-  width: calc(20% - 10px);
-}
-
-.card-25 {
-  width: calc(25% - 10px);
-}
-
-.card-33 {
-  width: calc(33.333% - 10px);
-}
-
-.card-40 {
-  width: calc(40% - 10px);
-}
-
-.card-50 {
-  width: calc(50% - 10px);
-}
-
-.card-60 {
-  width: calc(60% - 10px);
-}
-
-.card-67 {
-  width: calc(66.667% - 10px);
-}
-
-.card-80 {
-  width: calc(80% - 10px);
-}
-
-.avatar {
-  font-size: 2.5rem;
-  color: darkgray;
-}
-
-.flex>md-icon {
-  font-size: 1rem;
-  color: darkgray;
-}
-
-.detail {
-  font-size: 0.875rem;
-}
-
 
 /******************************************************************************************/
 

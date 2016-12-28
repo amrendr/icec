@@ -19,7 +19,6 @@
 }
 
 header {
-    height: 10rem;
     background: slategrey;
     padding: 3rem 3rem 2rem 6rem;
     box-sizing: border-box;
@@ -73,13 +72,7 @@ header .vertical:hover{
     color:whitesmoke;
 }
 
-.article{
-    min-height: calc(100vh - 22rem);
-    margin: 1rem 2rem;
-    padding: 1rem 4rem;
-}
-
-.article.nomargin
+.app-article.nomargin
 {
     margin: 0;
     padding: 0;
