@@ -42,7 +42,7 @@ export class NavigationComponent implements OnInit {
   navitems: Navitem[] = [
     { title: 'Home', url: '/home' },
     { title: 'About', url: '/about' },
-    { title: 'Mission', url: '/mission' },
+    { title: 'Mission And Purpose', url: '/mission' },
     { title: 'Center Rental Information', url: '/rental' },
     { title: 'Membership', url: '/membership' },
     { title: 'Members', url: '/members' },

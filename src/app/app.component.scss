@@ -6,6 +6,9 @@
   .app-content {
     margin: $margin 0 0;
   }
+  .app-height{
+    min-height: calc(100vh - #{2*$margin});
+  }
 }
 
 // Set the default height for the toolbar.
