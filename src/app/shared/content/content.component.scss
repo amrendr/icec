@@ -28,8 +28,10 @@ header {
     width: 10rem;
     border: solid 1px #afafaf;
   }
-  .vertical.open {
-    left: 0;
+  .vertical {
+    &.open {
+      left: 0;
+    }
     &:hover {
       background: #EF6C00;
       cursor: pointer;
