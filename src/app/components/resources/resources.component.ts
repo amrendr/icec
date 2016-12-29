@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, Event } from '../../services/app.service';
+import { AppService } from '../../services/app.service';
+import { Event } from '../../services/app.class';
+
 
 @Component({
   selector: 'app-resources',

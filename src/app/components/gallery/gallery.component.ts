@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
-import { AppService, Gallery, Photo, Args } from '../../services/app.service';
+import { AppService } from '../../services/app.service';
+import { Gallery, Photo, Args } from '../../services/app.class';
 import { AppDimensionService } from '../../services/app.dimension.service';
 
 @Component({

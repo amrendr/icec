@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, Member, Args, Gallery, Event } from '../../services/app.service';
+import { AppService} from '../../services/app.service';
+import { Member, Args, Gallery, Event } from '../../services/app.class';
+
 
 @Component({
   selector: 'app-indiafest',

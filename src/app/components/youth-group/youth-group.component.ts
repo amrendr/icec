@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, Gallery, Args } from '../../services/app.service';
+import { AppService } from '../../services/app.service';
+import { Gallery, Args } from '../../services/app.class';
+
 
 
 @Component({

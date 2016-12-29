@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, Announcement } from '../../services/app.service';
+import { AppService } from '../../services/app.service';
+import { Announcement } from '../../services/app.class';
+
 
 @Component({
   selector: 'app-announcement-bar',

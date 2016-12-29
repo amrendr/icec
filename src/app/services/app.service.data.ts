@@ -1,4 +1,4 @@
-import { Gallery, Photo, Member, MemberList, Event, AnnouncementBar } from './app.service';
+import { Gallery, Photo, Member, MemberList, Event, AnnouncementBar } from './app.class';
 
 export const GalleryList: Gallery[] = [
     {
