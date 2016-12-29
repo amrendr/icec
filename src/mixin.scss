@@ -61,9 +61,20 @@
   }
 }
 
+@mixin app-toobar-menu($hide) {
+  .desktop {
+    @if $hide==false {
+      display: flex;
+    }
+    @else {
+      display: none;
+    }
+  }
+}
 
-@function media-max-width($width){
-  @return $width - 1px;
+
+@function media-min-width($width){
+  @return $width + 1px;
 }
 
 @function parseInt($n){
@@ -81,41 +92,45 @@ $app-xl: 1600px;
 @include app-content(1rem, 2rem, 1rem, 4rem, 1.5rem);
 @include app-home-backdrop(26rem, 100%, auto);
 @include app-announcemnt-container(-52px 0 0,  104px, 2rem, 0);
-
-
-@media (max-width:399px){
+@include app-toobar-menu(false);
+  
+@media (max-width:400px){
   @include app-card-width(17rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
   @include app-content(1rem, 1rem, 0.5rem, 0.5rem, 0);
   @include app-hide-subheader();
   @include app-home-backdrop(20rem, auto, 175px);
   @include app-announcemnt-container(1rem, 175px, 1rem, 1);
+  @include app-toobar-menu(true);
 }
 
-@media (min-width: 400px) and (max-width: media-max-width($app-sm))  {
+@media (min-width: media-min-width(400px)) and (max-width: $app-sm)  {
   @include app-card-width(17rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
   @include app-content(1rem, 1rem, 0.5rem, 0.5rem, 0);
   @include app-hide-subheader();
   @include app-home-backdrop(20rem, auto, 175px);
   @include app-announcemnt-container(1rem, 150px, 1rem, 0);
+  @include app-toobar-menu(true);
   
 }
 //special case for card where it follow the previous pattern but overall container follow next pattern
-@media (min-width: $app-sm) and (max-width: media-max-width(640px))  {
+@media (min-width: media-min-width($app-sm)) and (max-width: 640px)  {
   @include app-card-width(16rem, 10px, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%, 100%);
   @include app-content(1rem, 1rem, 1rem, 1rem, 0);
   @include app-home-backdrop(20rem, auto, 175px);
   @include app-announcemnt-container(1rem, 150px, 2rem, 0);
+  @include app-toobar-menu(true);
+  
 }
-@media (min-width: 640px) and (max-width: media-max-width($app-md))  {
+@media (min-width: media-min-width(640px)) and (max-width: $app-md)  {
   @include app-card-width(16rem, 10px, 50%, 50%, 50%, 50%, 50%, 100%, 100%, 100%, 100%, 100%);
   @include app-content(1rem, 1rem, 1rem, 1rem, 0);
   @include app-announcemnt-container(1rem, 150px, 2rem, 0);
 }
-@media (min-width: $app-md) and (max-width: media-max-width($app-lg))  {
+@media (min-width: media-min-width($app-md)) and (max-width: $app-lg)  {
   @include app-card-width(12rem, 10px, 33.333%, 33.333%, 33.333%, 33.333%, 50%, 66.667%, 66.667%, 66.667%, 100%, 100%);
   @include app-content(1rem, 2rem, 1rem, 2rem, 0.5rem);
 }
-@media (min-width: $app-lg) and (max-width: media-max-width($app-xl))  {
+@media (min-width: media-min-width($app-lg)) and (max-width: $app-xl)  {
   @include app-card-width(12rem, 10px, 25%, 25%, 33.3333%, 33.3333%, 50%, 66.6667%, 66.6667%, 75%, 100%, 100%);
 }
 

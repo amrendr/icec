@@ -1,13 +1,13 @@
 <div>
   <md-toolbar color="primary" class="app-toolbar shadow">
-    <a [routerLink]="['./home']"> <span class="flex app-flex"><md-icon class="icon-20">spa</md-icon>ICEC</span></a>
+    <a [routerLink]="['./home']" class="logo"><button md-icon-button disabled><md-icon>spa</md-icon></button><span md-line class="txt">ICEC</span></a>
     <span class="flex"></span>
-    <!--<a [routerLink]="['./about']"><span>About</span></a>
-    <a [routerLink]="['./events']"><span>Events</span></a>
-    <a [routerLink]="['./gallery']"><span>Gallery</span></a>
-    <a [routerLink]="['./contact']"><span>Contact</span></a>-->
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
+    <a [routerLink]="['./about']" class="desktop"><span>About</span></a>
+    <a [routerLink]="['./indiafest']" class="desktop"><span class="app-flex">India Fest</span></a>
+    <a [routerLink]="['./gallery']" class="desktop"><span>Gallery</span></a>
+    <a [routerLink]="['./contact']" class="desktop"><span>Contact</span></a>
+    <button md-icon-button>
+      <md-icon>menu</md-icon>
     </button>
   </md-toolbar>
   <md-menu x-position="before" #menu="mdMenu">

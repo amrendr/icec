@@ -27,7 +27,7 @@ export class AppDimensionService {
     if (current_width / col < img_maxwidth * 2 / 3)
       col = col - 1;
     if (col == 0)
-      col == 1;
+      col = 1;
     return col;
   }
 
