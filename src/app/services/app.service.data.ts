@@ -1,4 +1,4 @@
-import { Gallery, Photo, Member, MemberList, Event } from './app.service';
+import { Gallery, Photo, Member, MemberList, Event, AnnouncementBar } from './app.service';
 
 export const GalleryList: Gallery[] = [
     {
@@ -103,8 +103,8 @@ export const GalleryList: Gallery[] = [
         poster: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220',
         photos: [
             { rows: 1, caption: "Photo1", thumbnail: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220', imageUrl: "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
-             { rows: 2, caption: "Photo1", thumbnail: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220', imageUrl: "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
-              { rows: 1, caption: "Photo1", thumbnail: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220', imageUrl: "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
+            { rows: 2, caption: "Photo1", thumbnail: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220', imageUrl: "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
+            { rows: 1, caption: "Photo1", thumbnail: 'https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220', imageUrl: "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
         ]
     }
 ];
@@ -454,3 +454,11 @@ export const Events: Event[] = [
     { key: 'IFHF', title: 'India Fest & Health Fair', date: 'Saturday, April 8, 2017', time: '9 am - 6 pm', venue: 'Santa Fe College Gymnasium', address: 'Building V, 3000 NW 83 St, Gainesville, FL', person: 'Yogi Deshmukh', contact: '', email: 'IndiaFestGainesville@gmail.com', subject: 'Question/Inquiry about India Fest 2017', ps: '', eventUrl: '/indiafest' },
     { key: 'SAT', title: 'SAT Class', date: 'TBD', time: '10:30 am - 12:30 pm', venue: 'ICEC (Library Room)', address: '1115 SW 13th Street, Gainesville, FL', person: 'Sharvari Pathak', contact: '', email: 'shakul@hotmail.com', subject: 'ICEC SAT Classes', ps: '', eventUrl: '' },
 ]
+
+export const Announcements: AnnouncementBar = {
+    interval: 5,
+    annoucements: [
+        { title: 'India Fest 2017', desc: 'April 8 from 9 AM - 6 PM (Santa Fe College Gym) April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' },
+        { title: 'Health Fair 2017', desc: 'April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' }
+    ]
+};

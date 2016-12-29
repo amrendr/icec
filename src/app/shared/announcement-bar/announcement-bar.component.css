@@ -55,3 +55,7 @@
 .app-announcemnt-container .more {
   color: white;
 }
+
+.hide {
+  display: none;
+}

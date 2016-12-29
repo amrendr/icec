@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer, IcecContacts, Events } from './app.service.data';
+import { MembersData, AllMemberList, GalleryList, IndiaFestOrganizer, IcecContacts, Events, Announcements } from './app.service.data';
 
 
 @Injectable()
@@ -52,6 +52,10 @@ export class AppService {
                 break;
         }
         return Promise.resolve(members);
+    }
+
+    getAnnouncement(): Promise<AnnouncementBar> {
+        return Promise.resolve(Announcements);
     }
 
     getEvents(key: string): Promise<Event[]> {
@@ -143,7 +147,7 @@ export class MemberList {
 export class Photo {
     rows: number;
     caption: string;
-    thumbnail?:string;
+    thumbnail?: string;
     imageUrl: string;
 }
 
@@ -172,4 +176,15 @@ export class Event {
     subject?: string;
     ps?: string;
     eventUrl?: string;
+}
+
+export class AnnouncementBar {
+    interval: number;
+    annoucements: Announcement[];
+}
+
+export class Announcement {
+    title: string;
+    desc: string;
+    url: string;
 }

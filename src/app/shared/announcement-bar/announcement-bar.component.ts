@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService, Announcement } from '../../services/app.service';
 
 @Component({
   selector: 'app-announcement-bar',
@@ -7,40 +8,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnnouncementBarComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor(
+    private annoucementService: AppService
+  ) { }
 
   ngOnInit() {
-    this.interval = setInterval(() => { this.changeAnnouncement(); }, 5000);
+    this.annoucementService.getAnnouncement().then(
+      (x) => {
+        this.annoucements = x.annoucements;
+
+        if (!isNaN(x.interval))
+          this.changeAnnouncementInterval = x.interval * 1000;
+
+        this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
+
+        if (x.annoucements.length > 0) {
+          this.selectedAnnoucement = x.annoucements[0];
+          this.showAnnouncement = false;
+        }
+        else {
+          this.showAnnouncement = true;
+        }
+      });
   }
 
-  annoucement: AnnouncementBar[] = [
-    { title: 'India Fest 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym) April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' },
-    { title: 'Health Fair 2017', desc:'April 8 from 9 AM - 6 PM (Santa Fe College Gym)', url: '/indiafest' }
-  ];
+  annoucements: Announcement[];
+  showAnnouncement: boolean = false;
 
   interval: any;
-  selectedAnnoucement: AnnouncementBar = this.annoucement[0];
+  selectedAnnoucement: Announcement;
   currentAnnoucemntIndex: number = 0;
+  changeAnnouncementInterval: number = 5000;
 
   changeAnnouncement(): void {
-    if (this.currentAnnoucemntIndex == this.annoucement.length)
+    if (this.currentAnnoucemntIndex == this.annoucements.length)
       this.currentAnnoucemntIndex = 0;
 
-    this.selectedAnnoucement = this.annoucement[this.currentAnnoucemntIndex++];
+    this.selectedAnnoucement = this.annoucements[this.currentAnnoucemntIndex++];
 
   }
 
   changeSlide(): void {
     clearInterval(this.interval);
     this.changeAnnouncement();
-    this.interval = setInterval(() => { this.changeAnnouncement(); }, 5000);
+    this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
   }
 
 }
 
-export interface AnnouncementBar {
-  title: string;
-  desc: string;
-  url: string;
-}
+
