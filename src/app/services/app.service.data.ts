@@ -58,23 +58,23 @@ export const GalleryList: Gallery[] = [
             { rows: 1, caption: "Earth Day", thumbnail: '', imageUrl: "assets/gallery/Youth Group/ICEC-youthgroup-earthday.jpg" }
         ]
     },
-    {
-        year: 2016, section: 'dogs',
-        title: 'Dogs', subtitle: 'Photos of Dogs',
-        max_image_width: 350, row_height: 200,
-        poster: 'assets/gallery/dogs/Stephen.png',
-        photos: [
-            { rows: 1, caption: "Molly", thumbnail: '', imageUrl: "assets/gallery/dogs/Molly.png" },
-            { rows: 2, caption: "Mal", thumbnail: '', imageUrl: "assets/gallery/dogs/Mal.png" },
-            { rows: 1, caption: "Sophie", thumbnail: '', imageUrl: "assets/gallery/dogs/Sophie.png" },
-            { rows: 2, caption: "Taz", thumbnail: '', imageUrl: "assets/gallery/dogs/Taz.png" },
-            { rows: 1, caption: "Kobe", thumbnail: '', imageUrl: "assets/gallery/dogs/Kobe.png" },
-            { rows: 2, caption: "Porter", thumbnail: '', imageUrl: "assets/gallery/dogs/Porter.png" },
-            { rows: 1, caption: "Stephen", thumbnail: '', imageUrl: "assets/gallery/dogs/Stephen.png" },
-            { rows: 1, caption: "Cinny", thumbnail: '', imageUrl: "assets/gallery/dogs/Cinny.png" },
-            { rows: 1, caption: "Hermes", thumbnail: '', imageUrl: "assets/gallery/dogs/Hermes.png" }
-        ]
-    },
+    // {
+    //     year: 2016, section: 'dogs',
+    //     title: 'Dogs', subtitle: 'Photos of Dogs',
+    //     max_image_width: 350, row_height: 200,
+    //     poster: 'assets/gallery/dogs/Stephen.png',
+    //     photos: [
+    //         { rows: 1, caption: "Molly", thumbnail: '', imageUrl: "assets/gallery/dogs/Molly.png" },
+    //         { rows: 2, caption: "Mal", thumbnail: '', imageUrl: "assets/gallery/dogs/Mal.png" },
+    //         { rows: 1, caption: "Sophie", thumbnail: '', imageUrl: "assets/gallery/dogs/Sophie.png" },
+    //         { rows: 2, caption: "Taz", thumbnail: '', imageUrl: "assets/gallery/dogs/Taz.png" },
+    //         { rows: 1, caption: "Kobe", thumbnail: '', imageUrl: "assets/gallery/dogs/Kobe.png" },
+    //         { rows: 2, caption: "Porter", thumbnail: '', imageUrl: "assets/gallery/dogs/Porter.png" },
+    //         { rows: 1, caption: "Stephen", thumbnail: '', imageUrl: "assets/gallery/dogs/Stephen.png" },
+    //         { rows: 1, caption: "Cinny", thumbnail: '', imageUrl: "assets/gallery/dogs/Cinny.png" },
+    //         { rows: 1, caption: "Hermes", thumbnail: '', imageUrl: "assets/gallery/dogs/Hermes.png" }
+    //     ]
+    // },
     {
         year: 2016, section: 'cme',
         title: 'CME', subtitle: 'Continuing Medical Education Programs',

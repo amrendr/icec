@@ -6,7 +6,7 @@
   .app-content {
     margin: $margin 0 0;
   }
-  .app-height{
+  .app-height {
     min-height: calc(100vh - #{2*$margin});
   }
 }
@@ -81,6 +81,41 @@
     }
     &:hover {
       background-color: rgba(0, 0, 0, 0.0588);
+    }
+  }
+}
+
+footer {
+  md-toolbar-row {
+    flex-direction: column!important;
+    .credit {
+      font-size: 14px;
+      color: gainsboro !important;
+    }
+    .desktop-display {
+      display: block;
+    }
+    .mobile-display {
+      display: none;
+    }
+  }
+}
+
+@media (max-width:600px) {
+  footer {
+    md-toolbar-row {
+      .footer {
+        font-size: 1rem;
+      }
+      .credit {
+        font-size: 12px;
+      }
+      .desktop-display {
+        display: none;
+      }
+      .mobile-display {
+        display: block;
+      }
     }
   }
 }
