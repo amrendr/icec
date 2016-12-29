@@ -7,7 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { AnnouncementBarComponent } from './shared/announcement-bar/announcement-bar.component';
-import { NavigationComponent } from './shared/navigation/navigation.component';
+import { ContentComponent } from './shared/content/content.component';
 import { GalleryCardComponent } from './shared/gallery-card/gallery-card.component';
 
 import { AppService } from './services/app.service';
@@ -36,7 +36,7 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeComponent,
     GalleryComponent,
     AnnouncementBarComponent,
-    NavigationComponent,
+    ContentComponent,
     AboutComponent,
     BylawsComponent,
     MissionComponent,

@@ -6,17 +6,10 @@
     <a [routerLink]="['./indiafest']" class="desktop"><span class="app-flex">India Fest</span></a>
     <a [routerLink]="['./gallery']" class="desktop"><span>Gallery</span></a>
     <a [routerLink]="['./contact']" class="desktop"><span>Contact</span></a>
-    <button md-icon-button>
+    <button md-icon-button (click)="toggleSidenav()" #navigation>
       <md-icon>menu</md-icon>
     </button>
   </md-toolbar>
-  <md-menu x-position="before" #menu="mdMenu">
-    <a md-menu-item [routerLink]="['./rental']"><span>Center Rental Information</span></a>
-    <a md-menu-item [routerLink]="['./membership']"><span>Membership</span></a>
-    <a md-menu-item [routerLink]="['./youth']"><span>Youth Group</span></a>
-    <a md-menu-item [routerLink]="['./resources/student']"><span>Student Resources</span></a>
-    <a md-menu-item [routerLink]="['./cme']"><span>Continuing Medical Education</span></a>
-  </md-menu>
   <div class="app-ie-fix">
     <div class="app-container">
       <div class="app-content">
