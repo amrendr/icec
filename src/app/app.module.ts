@@ -12,6 +12,7 @@ import { GalleryCardComponent } from './shared/gallery-card/gallery-card.compone
 
 import { AppService } from './services/app.service';
 import { AppDimensionService } from './services/app.dimension.service';
+import { AppNavigationService } from './services/app.navigation.service';
 import { AppFilterListPipe } from './services/app.pipe';
 
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -28,6 +29,7 @@ import { CmeComponent } from './components/cme/cme.component';
 import { EventsComponent } from './components/events/events.component';
 import { IndiafestComponent } from './components/indiafest/indiafest.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import { ContactComponent } from './components/contact/contact.component';
     CmeComponent,
     EventsComponent,
     IndiafestComponent,
-    ContactComponent
+    ContactComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,7 @@ import { ContactComponent } from './components/contact/contact.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AppService, AppFilterListPipe, AppDimensionService],
+  providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

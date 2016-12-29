@@ -1,0 +1,18 @@
+<md-sidenav-container>
+  <md-sidenav align="start" mode="over" (close-start)="onCloseStart()" #sidenav>
+    <md-nav-list>
+      <div class="nav-header">
+        <span md-subheader>Navigation</span>
+        <button md-icon-button (click)="toggleSidenav()"><md-icon>close</md-icon></button>
+      </div>
+      <md-divider></md-divider>
+      <div *ngFor="let item of navitems" (click)="closeSidenav()">
+        <a [routerLink]="[item.url]">
+          <md-list-item class="navitem">{{item.title}}</md-list-item>
+        </a>
+        <md-divider></md-divider>
+      </div>
+    </md-nav-list>
+  </md-sidenav>
+  <router-outlet></router-outlet>
+</md-sidenav-container>

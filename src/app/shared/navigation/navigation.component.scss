@@ -1,0 +1,26 @@
+[md-nav-list] {
+  width: 15rem;
+}
+
+.nav-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+  [md-subheader] {
+    font-size: 1rem;
+  }
+  button {
+    margin-top: -4px;
+    margin-right: 5px;
+  }
+}
+
+a {
+  font-weight: 400;
+  .navitem {
+    &:hover {
+      color: #EF6C00;
+    }
+  }
+}

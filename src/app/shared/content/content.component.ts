@@ -1,61 +1,26 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppNavigationService } from '../../services/app.navigation.service';
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-  
-  @Input() title:string;
-  @Input() subtitle:string;
-  @Input() nomargin:boolean;
-  isSidenavOpen: boolean = false;
-  constructor() { }
+
+  @Input() title: string;
+  @Input() subtitle: string;
+  @Input() nomargin: boolean;
+
+  constructor(
+    private navService: AppNavigationService
+  ) { }
 
   ngOnInit() {
   }
 
-  navitems: Navitem[] = [
-    {title:'Home', url:'/home'},
-    {title:'About', url:'/about'},
-    {title:'Center Rental Information', url:'/rental'},
-    {title:'Membership', url:'/membership'},
-    {title:'Youth Group', url:'/youth'},
-    {title:'Student Resources', url:'/resources/student'},
-    {title:'Community Events', url:'/events'},
-    {title:'Continuing Medical Education (CME)', url:'/cme'},
-    {title:'India Fest', url:'/indiafest'},
-    {title:'Photo Gallery', url:'/gallery'},
-    {title:'Contact US', url:'/contact'}
-  ]
-
-  @ViewChild('sidenav') sidenav: MdSidenav;
-
-  onCloseStart(): void{
-    this.isSidenavOpen = false;
+  toggleSidenav(): void {
+    this.navService.isSidenavOpen = !this.navService.isSidenavOpen;
+    this.navService.toggleSidenav();
   }
-
-  openSidenav() {
-    this.isSidenavOpen = true;
-    this.sidenav.open();
-  }
-
-  closeSidenav() {
-    this.isSidenavOpen = false;
-    this.sidenav.close();
-  }
-
-  toggleSidenav() {
-    if(this.isSidenavOpen)
-      this.closeSidenav()
-    else
-      this.openSidenav();
-  }
-
-}
-
-export interface Navitem {
-  title: string;
-  url: string;
 }

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-// import { NavigationComponent } from './shared/navigation/navigation.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +7,13 @@ import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  // @ViewChild('navigation') navigation: NavigationComponent;
+  @ViewChild('navigation') navigation: NavigationComponent;
 
   toggleSidenav(){
-    // this.navigation.toggleSidenav();
+    this.navigation.toggleSidenav();
+  }
+
+  closeSidenav(){
+    this.navigation.closeSidenav();
   }
 }

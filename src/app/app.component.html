@@ -1,19 +1,19 @@
 <div>
   <md-toolbar color="primary" class="app-toolbar shadow">
-    <a [routerLink]="['./home']" class="logo"><button md-icon-button disabled><md-icon>spa</md-icon></button><span md-line class="txt">ICEC</span></a>
+    <a [routerLink]="['./home']" (click)="closeSidenav()" class="logo"><button md-icon-button disabled><md-icon>spa</md-icon></button><span md-line class="txt">ICEC</span></a>
     <span class="flex"></span>
-    <a [routerLink]="['./about']" class="desktop"><span>About</span></a>
-    <a [routerLink]="['./indiafest']" class="desktop"><span class="app-flex">India Fest</span></a>
-    <a [routerLink]="['./gallery']" class="desktop"><span>Gallery</span></a>
-    <a [routerLink]="['./contact']" class="desktop"><span>Contact</span></a>
-    <button md-icon-button (click)="toggleSidenav()" #navigation>
+    <a [routerLink]="['./about']" (click)="closeSidenav()" class="desktop"><span>About</span></a>
+    <a [routerLink]="['./indiafest']" (click)="closeSidenav()" class="desktop"><span class="app-flex">India Fest</span></a>
+    <a [routerLink]="['./gallery']" (click)="closeSidenav()" class="desktop"><span>Gallery</span></a>
+    <a [routerLink]="['./contact']" (click)="closeSidenav()" class="desktop"><span>Contact</span></a>
+    <button md-icon-button (click)="toggleSidenav()">
       <md-icon>menu</md-icon>
     </button>
   </md-toolbar>
   <div class="app-ie-fix">
     <div class="app-container">
       <div class="app-content">
-        <router-outlet></router-outlet>
+        <app-navigation #navigation></app-navigation>
       </div>
       <footer>
         <md-toolbar color="accent" class="app-toolbar">

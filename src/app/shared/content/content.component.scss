@@ -1,0 +1,53 @@
+header {
+  background: slategrey;
+  height: 10rem;
+  padding: 3rem 2rem 2rem 6rem;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #00c853, #69F0AE);
+  cursor: pointer;
+  color: white;
+  border-bottom: solid 1px #afafaf;
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+  }
+  .vertical {
+    background: whitesmoke;
+    text-transform: uppercase;
+    position: absolute;
+    top: 102px;
+    left: 45px;
+    transform: rotate(-90deg);
+    transform-origin: left bottom 0;
+    transition: all 0.8s;
+    width: 10rem;
+    border: solid 1px #afafaf;
+  }
+  .vertical.open {
+    left: 0;
+    &:hover {
+      background: #EF6C00;
+      cursor: pointer;
+    }
+  }
+  .vertical-nav {
+    color: #EF6C00;
+    &:hover {
+      color: whitesmoke;
+    }
+  }
+}
+
+.app-article {
+  min-height: calc(100vh - 10rem);
+}
+
+.app-article.nomargin {
+  margin: 0;
+  padding: 0;
+}
