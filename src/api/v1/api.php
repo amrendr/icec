@@ -10,7 +10,7 @@
         case "indiafest": echo_data('../../data/indiafest.json'); break;
         case "contacts": echo_data('../../data/icecContacts.json'); break;
         case "events": echo_data('../../data/communityEvents.json'); break;
-        case "annoucement": echo_data('../../data/annoucements.json'); break;
+        case "announcement": echo_data('../../data/annoucements.json'); break;
         default : echo_default_data(); break;
         
       }
@@ -28,7 +28,7 @@
     echo $data;
   }
 
-  function echo_defaultdata(){
+  function echo_default_data(){
     echo '[]';
   }
 ?>

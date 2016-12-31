@@ -7,13 +7,13 @@ export class Api implements OnInit {
     constructor() {
         if (environment.production) {
             this.urls = {
-                galleryListDataApi: '/api/v1/api.php?action=gallery',
-                membersDataApi: '/api/v1/api.php?action=members',
-                allMemberDataApi: '/api/v1/api.php?action=allMembers',
-                indiafestOrganizerDataApi: '/api/v1/api.php?action=indiafest',
-                icecContactsDataApi: '/api/v1/api.php?action=contacts',
-                communityEventsDataApi: '/api/v1/api.php?action=events',
-                announcementsDataApi: '/api/v1/api.php?action=announcement',
+                galleryListDataApi: './api/v1/api.php?action=gallery',
+                membersDataApi: './api/v1/api.php?action=members',
+                allMemberDataApi: './api/v1/api.php?action=allMembers',
+                indiafestOrganizerDataApi: './api/v1/api.php?action=indiafest',
+                icecContactsDataApi: './api/v1/api.php?action=contacts',
+                communityEventsDataApi: './api/v1/api.php?action=events',
+                announcementsDataApi: './api/v1/api.php?action=announcement',
             };
         }
         else {
