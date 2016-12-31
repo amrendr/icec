@@ -24,11 +24,11 @@ export class ContactComponent implements OnInit {
 
   getIcecContacts(): void {
     let input: Args = { type: 'CU', year: null };
-    this.memberService.getMembers(input).then(x => this.contacts = x.memberList);
+    this.memberService.getMembers(input).subscribe(x => this.contacts = x.memberList);
   }
 
   getIcecAssistance(): void {
     let input: Args = { type: 'NA', year: null };
-    this.memberService.getMembers(input).then(x => this.assistants = x.memberList);
+    this.memberService.getMembers(input).subscribe(x => this.assistants = x.memberList);
   }
 }

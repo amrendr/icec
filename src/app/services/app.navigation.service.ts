@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject }    from 'rxjs/Subject';
-import { Observable } from 'rxjs/Rx';
+import { Observable, Subject } from 'rxjs/rx';
 
 @Injectable()
 export class AppNavigationService {

@@ -23,7 +23,7 @@ export class RentalComponent implements OnInit {
   getRentalPhotos(): void {
     let input: Args = { type: 'rental', year: null };
 
-    this.galleryService.getGallery(input).then(
+    this.galleryService.getGallery(input).subscribe(
       x => this.gallery = ((x && x.length > 0) ? x[0] : null)
     );
   }

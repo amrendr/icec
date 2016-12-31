@@ -23,7 +23,7 @@ export class CmeComponent implements OnInit {
   getCmeGallery(): void {
     let input: Args = { type: 'cme', year: null };
 
-    this.galleryService.getGallery(input).then(
+    this.galleryService.getGallery(input).subscribe(
       x => this.gallery = ((x && x.length > 0) ? x[0] : null)
     );
   }

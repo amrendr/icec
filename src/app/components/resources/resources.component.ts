@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../services/app.service';
-import { Event } from '../../services/app.class';
+import { CommunityEvent } from '../../services/app.class';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Event } from '../../services/app.class';
 })
 export class ResourcesComponent implements OnInit {
 
-  event: Event;
+  event: CommunityEvent;
 
   constructor(
     private eventService: AppService
@@ -21,6 +21,6 @@ export class ResourcesComponent implements OnInit {
   }
   
   getEventInfo(key: string): void {
-    this.eventService.getEvents(key).then(x => this.event = ((x && x.length > 0) ? x[0] : null));
+    this.eventService.getCommunityEvents(key).subscribe(x => this.event = ((x && x.length > 0) ? x[0] : null));
   }
 }

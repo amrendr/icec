@@ -15,7 +15,7 @@ export class AnnouncementBarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.annoucementService.getAnnouncement().then(
+    this.annoucementService.getAnnouncement().subscribe(
       (x) => {
         this.annoucements = x.annoucements;
 

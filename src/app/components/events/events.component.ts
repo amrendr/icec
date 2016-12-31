@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../services/app.service';
-import { Event } from '../../services/app.class';
+import { CommunityEvent } from '../../services/app.class';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Event } from '../../services/app.class';
 })
 export class EventsComponent implements OnInit {
 
-  events: Event[];
+  events: CommunityEvent[];
 
   constructor(
     private eventService: AppService
@@ -21,6 +21,6 @@ export class EventsComponent implements OnInit {
   }
 
   getEvents(): void {
-    this.eventService.getEvents(null).then(x => this.events = x);
+    this.eventService.getCommunityEvents(null).subscribe(x => this.events = x);
   }
 }

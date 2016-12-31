@@ -1,0 +1,108 @@
+[
+    {
+        "year": 0, "section": "rental",
+        "title": "Rental", "subtitle": "Photos of various rooms",
+        "max_image_width": 448, "row_height": 336,
+        "poster": "assets/gallery/building/stage.jpg",
+        "photos": [
+            { "rows": 1, "caption": "Auditorium Stage", "thumbnail": "", "imageUrl": "assets/gallery/building/stage.jpg" },
+            { "rows": 1, "caption": "Main Hall & Upstairs Rooms", "thumbnail": "", "imageUrl": "assets/gallery/building/main_hall.jpg" },
+            { "rows": 1, "caption": "Food-warming & Storage Area", "thumbnail": "", "imageUrl": "assets/gallery/building/food_warming_area.jpg" },
+            { "rows": 1, "caption": "TV Room", "thumbnail": "", "imageUrl": "assets/gallery/building/tv_room.jpg" },
+            { "rows": 1, "caption": "Library Room", "thumbnail": "", "imageUrl": "assets/gallery/building/library.jpg" },
+            { "rows": 1, "caption": "Prayer Room", "thumbnail": "", "imageUrl": "assets/gallery/building/prayer_room.jpg" }
+        ]
+    },
+    // {
+    //     "year": 2016, "section": "rental",
+    //     "title": "", "subtitle": "Photos of various rooms",
+    //     "max_image_width": 448, "row_height": 336,
+    //     "poster": "assets/gallery/building/stage.jpg",
+    //     "photos": [
+    //         { "rows": 1, "caption": "2016 Auditorium Stage","thumbnail": "", "imageUrl": "assets/gallery/building/stage.jpg" },
+    //         { "rows": 1, "caption": "2016 Main Hall & Upstairs Rooms","thumbnail": "", "imageUrl": "assets/gallery/building/main_hall.jpg" },
+    //         { "rows": 1, "caption": "2016 Food-warming & Storage Area","thumbnail": "", "imageUrl": "assets/gallery/building/food_warming_area.jpg" },
+    //         { "rows": 1, "caption": "2016 TV Room","thumbnail": "", "imageUrl": "assets/gallery/building/tv_room.jpg" },
+    //         { "rows": 1, "caption": "2016 Library Room","thumbnail": "", "imageUrl": "assets/gallery/building/library.jpg" },
+    //         { "rows": 1, "caption": "2016 Prayer Room","thumbnail": "", "imageUrl": "assets/gallery/building/prayer_room.jpg" }
+    //     ]
+    // },
+    {
+        "year": 2015, "section": "youth",
+        "title": "Youth Group", "subtitle": "Youth Group Photos",
+        "max_image_width": 448, "row_height": 336,
+        "poster": "assets/gallery/Youth Group/ICEC-youthgroup-earthday.jpg",
+        "photos": [
+            { "rows": 1, "caption": "ISA", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/3.jpg" },
+            { "rows": 1, "caption": "President Youth Group 2005", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/4.jpg" },
+            { "rows": 1, "caption": "Graduation '99", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/5.jpg" },
+            { "rows": 1, "caption": "Graduation '99", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/6.jpg" },
+            { "rows": 1, "caption": "Graduation '2001", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/7.jpg" },
+            { "rows": 1, "caption": "Graduation '99", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/8.jpg" },
+            { "rows": 1, "caption": "Graduation '99", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/9.jpg" },
+            { "rows": 1, "caption": "ICEC Cleanup", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/CME 2005 014.jpg" },
+            { "rows": 1, "caption": "ICEC Cleanup", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/CME 2005 015.jpg" },
+            { "rows": 1, "caption": "ICEC Cleanup", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/CME 2005 016.jpg" },
+            { "rows": 1, "caption": "ICEC Cleanup", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/CME 2005 018.jpg" },
+            { "rows": 1, "caption": "flag-41", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-41.jpg" },
+            { "rows": 1, "caption": "flag-42", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-42.jpg" },
+            { "rows": 1, "caption": "flag-43", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-43.jpg" },
+            { "rows": 1, "caption": "flag-44", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-44.jpg" },
+            { "rows": 1, "caption": "flag-45", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-45.jpg" },
+            { "rows": 1, "caption": "flag-46", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/flag-46.jpg" },
+            { "rows": 1, "caption": "Geography Bee 2010", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/GeographyBee2010.jpg" },
+            { "rows": 1, "caption": "Graduation 2010", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/Graduation2010.jpg" },
+            { "rows": 1, "caption": "ICEC Cleanup", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/ICEC cleanup 1.jpg" },
+            { "rows": 1, "caption": "Earth Day", "thumbnail": "", "imageUrl": "assets/gallery/Youth Group/ICEC-youthgroup-earthday.jpg" }
+        ]
+    },
+    // {
+    //     "year": 2016, "section": "dogs",
+    //     "title": "Dogs", "subtitle": "Photos of Dogs",
+    //     "max_image_width": 350, "row_height": 200,
+    //     "poster": "assets/gallery/dogs/Stephen.png",
+    //     "photos": [
+    //         { "rows": 1, "caption": "Molly", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Molly.png" },
+    //         { "rows": 2, "caption": "Mal", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Mal.png" },
+    //         { "rows": 1, "caption": "Sophie", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Sophie.png" },
+    //         { "rows": 2, "caption": "Taz", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Taz.png" },
+    //         { "rows": 1, "caption": "Kobe", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Kobe.png" },
+    //         { "rows": 2, "caption": "Porter", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Porter.png" },
+    //         { "rows": 1, "caption": "Stephen", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Stephen.png" },
+    //         { "rows": 1, "caption": "Cinny", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Cinny.png" },
+    //         { "rows": 1, "caption": "Hermes", "thumbnail": "", "imageUrl": "assets/gallery/dogs/Hermes.png" }
+    //     ]
+    // },
+    {
+        "year": 2016, "section": "cme",
+        "title": "CME", "subtitle": "Continuing Medical Education Programs",
+        "max_image_width": 350, "row_height": 200,
+        "poster": "assets/gallery/cme/lecture300.jpg",
+        "photos": [
+            { "rows": 1, "caption": "CME 2005 001", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 001.jpg" },
+            { "rows": 1, "caption": "CME 2005 002", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 002.jpg" },
+            { "rows": 1, "caption": "CME 2005 003", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 003.jpg" },
+            { "rows": 1, "caption": "CME 2005 004", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 004.jpg" },
+            { "rows": 1, "caption": "CME 2005 005", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 005.jpg" },
+            { "rows": 1, "caption": "CME 2005 006", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 006.jpg" },
+            { "rows": 1, "caption": "CME 2005 007", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 007.jpg" },
+            { "rows": 1, "caption": "CME 2005 008", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 008.jpg" },
+            { "rows": 1, "caption": "CME 2005 009", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 009.jpg" },
+            { "rows": 1, "caption": "CME 2005 010", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 010.jpg" },
+            { "rows": 1, "caption": "CME 2005 011", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 011.jpg" },
+            { "rows": 1, "caption": "CME 2005 012", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 012.jpg" },
+            { "rows": 1, "caption": "CME 2005 013", "thumbnail": "", "imageUrl": "assets/gallery/cme/CME 2005 013.jpg" }
+        ]
+    },
+    {
+        "year": 2016, "section": "indiafest",
+        "title": "India Fest", "subtitle": "Artists & Performances",
+        "max_image_width": 331, "row_height": 110,
+        "poster": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220",
+        "photos": [
+            { "rows": 1, "caption": "Photo1", "thumbnail": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
+            { "rows": 2, "caption": "Photo1", "thumbnail": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
+            { "rows": 1, "caption": "Photo1", "thumbnail": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" }
+        ]
+    }
+]

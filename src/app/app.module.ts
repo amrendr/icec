@@ -11,6 +11,7 @@ import { ContentComponent } from './shared/content/content.component';
 import { GalleryCardComponent } from './shared/gallery-card/gallery-card.component';
 
 import { AppService } from './services/app.service';
+import { Api } from './services/app.service.api';
 import { AppDimensionService } from './services/app.dimension.service';
 import { AppNavigationService } from './services/app.navigation.service';
 import { AppFilterListPipe } from './services/app.pipe';
@@ -62,7 +63,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService],
+  providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService, Api],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

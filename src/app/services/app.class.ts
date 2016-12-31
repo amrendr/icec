@@ -47,7 +47,7 @@ export class Gallery {
     hasMultiple?: boolean;
 }
 
-export class Event {
+export class CommunityEvent {
     key: string;
     title: string;
     date: string;

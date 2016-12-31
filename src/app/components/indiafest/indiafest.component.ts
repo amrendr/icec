@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService} from '../../services/app.service';
-import { Member, Args, Gallery, Event } from '../../services/app.class';
+import { Member, Args, Gallery, CommunityEvent } from '../../services/app.class';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class IndiafestComponent implements OnInit {
 
   gallery: Gallery;
   contacts: Member[];
-  event: Event;
+  event: CommunityEvent;
 
   constructor(
     private appService: AppService
@@ -27,17 +27,17 @@ export class IndiafestComponent implements OnInit {
   getIndiafestPhotos(): void {
     let input: Args = { type: 'indiafest', year: null };
 
-    this.appService.getGallery(input).then(
+    this.appService.getGallery(input).subscribe(
       x => this.gallery = ((x && x.length > 0) ? x[0] : null)
     );
   }
 
   getIndiafestOrganizer(): void {
     let input: Args = { type: 'IF', year: null };
-    this.appService.getMembers(input).then(x => this.contacts = x.memberList);
+    this.appService.getMembers(input).subscribe(x => this.contacts = x.memberList);
   }
 
   getEventInfo(key: string): void {
-    this.appService.getEvents(key).then(x => this.event = ((x && x.length > 0) ? x[0] : null));
+    this.appService.getCommunityEvents(key).subscribe(x => this.event = ((x && x.length > 0) ? x[0] : null));
   }
 }
