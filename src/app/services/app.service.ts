@@ -13,6 +13,13 @@ export class AppService {
         private api: Api
     ) { }
 
+    _membersObservable: Observable<any> = null;
+    _allMembersObservable: Observable<any> = null;
+    _indiafestOrganizerObservable: Observable<any> = null;
+    _icecContactsObservable: Observable<any> = null;
+    _announcementObservable: Observable<AnnouncementBar> = null;
+    _galleryObservable: Observable<Gallery[]> = null;
+    _communityEventObservable: Observable<CommunityEvent[]> = null;
 
     private extractData(res: Response) {
         let body = res.text();
@@ -39,31 +46,57 @@ export class AppService {
     }
 
     getMembers(input: Args): Observable<Members> {
-        let apiUrl: string;
+        let observable: Observable<any>;
 
         switch (input.type) {
             case 'OM':
-                apiUrl = this.api.urls.allMemberDataApi;
+                if (!this._allMembersObservable)
+                    this._allMembersObservable = this.http.get(this.api.urls.allMemberDataApi)
+                        .map(this.extractData)
+                        .catch(this.handleError)
+                        .publishReplay(1)
+                        .refCount();
+
+                observable = this._allMembersObservable;
                 break;
             case 'IF':
-                apiUrl = this.api.urls.indiafestOrganizerDataApi;
+                if (!this._indiafestOrganizerObservable)
+                    this._indiafestOrganizerObservable = this.http.get(this.api.urls.indiafestOrganizerDataApi)
+                        .map(this.extractData)
+                        .catch(this.handleError)
+                        .publishReplay(1)
+                        .refCount();
+
+                observable = this._indiafestOrganizerObservable;
                 break;
             case 'CU':
             case 'NA':
-                apiUrl = this.api.urls.icecContactsDataApi;
+                if (!this._icecContactsObservable)
+                    this._icecContactsObservable = this.http.get(this.api.urls.icecContactsDataApi)
+                        .map(this.extractData)
+                        .catch(this.handleError)
+                        .publishReplay(1)
+                        .refCount();
+
+                observable = this._icecContactsObservable;
                 break;
             case 'EM':
             case 'BM':
             case 'RM':
             default:
-                apiUrl = this.api.urls.membersDataApi;
+                if (!this._membersObservable)
+                    this._membersObservable = this.http.get(this.api.urls.membersDataApi)
+                        .map(this.extractData)
+                        .catch(this.handleError)
+                        .publishReplay(1)
+                        .refCount();
+
+                observable = this._membersObservable;
                 break;
         }
 
-        return this.http.get(apiUrl)
-            .map(this.extractData)
-            .map(data => this.formatMembers(data, input))
-            .catch(this.handleError);
+        return observable
+            .map(data => this.formatMembers(data, input));
 
     }
 
@@ -125,17 +158,25 @@ export class AppService {
     }
 
     getAnnouncement(): Observable<AnnouncementBar> {
-        return this.http.get(this.api.urls.announcementsDataApi)
-            .map(this.extractData)
-            .catch(this.handleError);
+
+        if (!this._announcementObservable)
+            this._announcementObservable = this.http.get(this.api.urls.announcementsDataApi)
+                .map(this.extractData)
+                .catch(this.handleError)
+                .publishReplay(1)
+                .refCount();
+        return this._announcementObservable;
     }
 
     getCommunityEvents(key: string): Observable<CommunityEvent[]> {
 
-        return this.http.get(this.api.urls.communityEventsDataApi)
-            .map(this.extractData)
-            .map(data => this.filterCommunityEvent(data, key))
-            .catch(this.handleError);
+        if (!this._communityEventObservable)
+            this._communityEventObservable = this.http.get(this.api.urls.communityEventsDataApi)
+                .map(this.extractData)
+                .catch(this.handleError)
+                .publishReplay(1)
+                .refCount();
+        return this._communityEventObservable;
     }
 
     private filterCommunityEvent(data: any, key: string): CommunityEvent[] {
@@ -150,10 +191,16 @@ export class AppService {
     }
 
     getGallery(input: Args): Observable<Gallery[]> {
-        return this.http.get(this.api.urls.galleryListDataApi)
-            .map(this.extractData)
-            .map(data => this.filterGallery(data, input))
-            .catch(this.handleError);
+
+        if (!this._galleryObservable)
+            this._galleryObservable = this.http.get(this.api.urls.galleryListDataApi)
+                .map(this.extractData)
+                .catch(this.handleError)
+                .publishReplay(1)
+                .refCount();
+
+        return this._galleryObservable
+            .map(data => this.filterGallery(data, input));
     }
 
     private filterGallery(data: any[], input: Args): Gallery[] {
