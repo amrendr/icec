@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService} from '../../services/app.service';
+import { AppService } from '../../services/app.service';
 import { Member, Args, Gallery, CommunityEvent } from '../../services/app.class';
 
 
@@ -13,6 +13,9 @@ export class IndiafestComponent implements OnInit {
   gallery: Gallery;
   contacts: Member[];
   event: CommunityEvent;
+  loading1: boolean;
+  loading2: boolean;
+  loading3: boolean;
 
   constructor(
     private appService: AppService
@@ -27,17 +30,25 @@ export class IndiafestComponent implements OnInit {
   getIndiafestPhotos(): void {
     let input: Args = { type: 'indiafest', year: null };
 
+    this.loading1 = true;
     this.appService.getGallery(input).subscribe(
-      x => this.gallery = ((x && x.length > 0) ? x[0] : null)
+      (x) => { this.gallery = ((x && x.length > 0) ? x[0] : null); this.loading1 = false; },
+      (err) => { this.loading1 = false; }
     );
   }
 
   getIndiafestOrganizer(): void {
     let input: Args = { type: 'IF', year: null };
-    this.appService.getMembers(input).subscribe(x => this.contacts = x.memberList);
+
+    this.loading2 = true;
+    this.appService.getMembers(input).subscribe((x) => { this.contacts = x.memberList; this.loading2 = false; },
+      (err) => { this.loading2 = false; }
+    );
   }
 
   getEventInfo(key: string): void {
-    this.appService.getCommunityEvents(key).subscribe(x => this.event = ((x && x.length > 0) ? x[0] : null));
+    this.loading3 = true;
+    this.appService.getCommunityEvents(key).subscribe((x) => { this.event = ((x && x.length > 0) ? x[0] : null); this.loading3 = false; },
+      (err) => { this.loading3 = false; });
   }
 }

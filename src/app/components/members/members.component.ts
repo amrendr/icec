@@ -22,15 +22,18 @@ export class MembersComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.loading = true;
     this.activeRoute.params
       .map((params: Params) => this.formatInput(params))
       .switchMap((input: Args) => this.memberService.getMembers(input))
-      .subscribe(members => this.members = members);
+      .subscribe(
+      (members) => { this.members = members; this.loading = false; },
+      (err) => { this.loading = false; });
 
   }
 
   formatInput(params: Params): Args {
-   // console.warn(params['year'], params['type']);
+    // console.warn(params['year'], params['type']);
     let input: Args = { year: null, type: null };
     switch (params['year']) {
       case 'current':
@@ -65,6 +68,7 @@ export class MembersComponent implements OnInit {
 
   currentType: string;
   filterTxt: string;
+  loading: boolean;
 
   memberTypes = [
     { value: 'EM', viewValue: 'Executives', url: 'executives' },
@@ -74,6 +78,7 @@ export class MembersComponent implements OnInit {
   ];
 
   onSelect(url: string): void {
+    this.loading = true;
     this.filterTxt = "";
     this.route.navigate(['/members', 'current', url]);
   }

@@ -12,6 +12,8 @@ export class ContactComponent implements OnInit {
 
   contacts: Member[];
   assistants: Member[];
+  loading1: boolean;
+  loading2: boolean;
 
   constructor(
     private memberService: AppService
@@ -23,12 +25,18 @@ export class ContactComponent implements OnInit {
   }
 
   getIcecContacts(): void {
+    this.loading1 = true;
     let input: Args = { type: 'CU', year: null };
-    this.memberService.getMembers(input).subscribe(x => this.contacts = x.memberList);
+    this.memberService.getMembers(input).subscribe(
+      (x) => { this.contacts = x.memberList; this.loading1 = false; },
+      (err) => { this.loading1 = false; });
   }
 
   getIcecAssistance(): void {
+    this.loading2 = true;
     let input: Args = { type: 'NA', year: null };
-    this.memberService.getMembers(input).subscribe(x => this.assistants = x.memberList);
+    this.memberService.getMembers(input).subscribe(
+      (x) => { this.assistants = x.memberList; this.loading2 = false; },
+      (err) => { this.loading2 = false; });
   }
 }

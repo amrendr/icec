@@ -12,6 +12,7 @@ import { Gallery, Args } from '../../services/app.class';
 export class YouthGroupComponent implements OnInit {
 
   gallery: Gallery;
+  loading: boolean;
 
   constructor(
     private galleryService: AppService
@@ -24,8 +25,10 @@ export class YouthGroupComponent implements OnInit {
   getYouthPhotos(): void {
     let input: Args = { type: 'youth', year: null };
 
+    this.loading = true;
     this.galleryService.getGallery(input).subscribe(
-      x => this.gallery = ((x && x.length > 0) ? x[0] : null)
+      (x) => { this.gallery = ((x && x.length > 0) ? x[0] : null); this.loading = false; },
+      (err) => { this.loading = false; }
     );
   }
 

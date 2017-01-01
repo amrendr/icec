@@ -11,7 +11,8 @@ export class ContentComponent implements OnInit {
   @Input() title: string;
   @Input() subtitle: string;
   @Input() nomargin: boolean;
-
+  @Input() loading: boolean;
+  
   constructor(
     private navService: AppNavigationService
   ) { }

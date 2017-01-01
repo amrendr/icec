@@ -11,6 +11,7 @@ import { Gallery, Args } from '../../services/app.class';
 export class RentalComponent implements OnInit {
 
   gallery: Gallery;
+  loading: boolean;
 
   constructor(
     private galleryService: AppService
@@ -23,8 +24,10 @@ export class RentalComponent implements OnInit {
   getRentalPhotos(): void {
     let input: Args = { type: 'rental', year: null };
 
+    this.loading = true;
     this.galleryService.getGallery(input).subscribe(
-      x => this.gallery = ((x && x.length > 0) ? x[0] : null)
+      (x) => { this.gallery = ((x && x.length > 0) ? x[0] : null); this.loading = false; },
+      (err) => { this.loading = false; }
     );
   }
 

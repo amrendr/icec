@@ -11,6 +11,7 @@ import { CommunityEvent } from '../../services/app.class';
 export class ResourcesComponent implements OnInit {
 
   event: CommunityEvent;
+  loading: boolean;
 
   constructor(
     private eventService: AppService
@@ -19,8 +20,11 @@ export class ResourcesComponent implements OnInit {
   ngOnInit() {
     this.getEventInfo('SAT');
   }
-  
+
   getEventInfo(key: string): void {
-    this.eventService.getCommunityEvents(key).subscribe(x => this.event = ((x && x.length > 0) ? x[0] : null));
+    this.loading = true;
+    this.eventService.getCommunityEvents(key).subscribe(
+      (x) => { this.event = ((x && x.length > 0) ? x[0] : null); this.loading = false; },
+      (err) => { this.loading = false; });
   }
 }

@@ -30,12 +30,18 @@ export class GalleryComponent implements OnInit {
 
   ) { }
 
+  loading: boolean;
+
   ngOnInit() {
     this.gallery$ = this.activeRoute.params
       .map((params: Params) => this.formatInput(params))
       .switchMap((input: Args) => this.galleryService.getGallery(input));
 
-    this.gallery$.subscribe(gallery => this.gallery = gallery);
+    this.loading = true;
+    this.gallery$.subscribe(
+      (gallery) => { this.gallery = gallery; this.loading = false; },
+      (err) => { this.loading = false; });
+      
     this.col$ = this.gallery$
       .switchMap((gallery: Gallery[]) => this.windowsize.getGalleryColumns(gallery[0].max_image_width))
       .startWith(4)

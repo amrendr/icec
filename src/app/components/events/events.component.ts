@@ -11,7 +11,7 @@ import { CommunityEvent } from '../../services/app.class';
 export class EventsComponent implements OnInit {
 
   events: CommunityEvent[];
-
+  loading: boolean;
   constructor(
     private eventService: AppService
   ) { }
@@ -21,6 +21,9 @@ export class EventsComponent implements OnInit {
   }
 
   getEvents(): void {
-    this.eventService.getCommunityEvents(null).subscribe(x => this.events = x);
+    this.loading = true;
+    this.eventService.getCommunityEvents(null).subscribe(
+      (x) => { this.events = x; this.loading = false; },
+      (err) => { this.loading = false; });
   }
 }

@@ -1,4 +1,4 @@
-<app-content [subtitle]="members.title || 'Administrative Structure and Membership'" [title]="'Members ' + (members.year || '')">
+<app-content [subtitle]="members.title || 'Administrative Structure and Membership'" [title]="'Members ' + (members.year || '')" [loading]="loading">
 
   <div class="member-form-flex">
     <div class="member-form-control">
@@ -33,7 +33,7 @@
         </md-card-content>
       </md-card>
     </div>
-    <div *ngIf="filteredMembers().length == 0">
+    <div *ngIf="filteredMembers().length == 0 && !loading">
       <h3>No Data Available</h3>
     </div>
   </div>

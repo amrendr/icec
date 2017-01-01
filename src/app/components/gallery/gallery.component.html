@@ -1,4 +1,4 @@
-<app-content [title]="getTitle()" [subtitle]="getSubtitle()" [nomargin]="gallery.length == 1">
+<app-content [title]="getTitle()" [subtitle]="getSubtitle()" [nomargin]="gallery.length == 1" [loading]="loading">
   <div class="flex first" *ngIf="gallery.length > 1">
     <div class="card card-33" *ngFor="let item of gallery">
       <gallery-card [item]="item"></gallery-card>
@@ -14,7 +14,7 @@
       </md-grid-tile>
     </md-grid-list>
   </div>
-  <div *ngIf="gallery.length == 0">
+  <div *ngIf="gallery.length == 0 && !loading">
     <h3>No Data Available</h3>
   </div>
 </app-content>
