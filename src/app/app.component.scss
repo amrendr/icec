@@ -9,6 +9,9 @@
   .app-height {
     min-height: calc(100vh - #{2*$margin});
   }
+  .app-img-preview{
+    min-height: calc(100vh - 10rem - #{2*$margin} );
+  }
 }
 
 // Set the default height for the toolbar.

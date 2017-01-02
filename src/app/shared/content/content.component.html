@@ -8,7 +8,7 @@
   <h1>{{title}}</h1>
   <h2 *ngIf="subtitle">{{subtitle}}</h2>
 </header>
-<button md-fab color="primary" (click)="goBack()"><md-icon>arrow_back</md-icon></button>
+<button md-mini-fab color="primary" (click)="goBack()"><md-icon>arrow_back</md-icon></button>
 <md-progress-bar *ngIf="loading" mode="indeterminate" color="accent"></md-progress-bar>
 <div class="app-article" [class.nomargin]="nomargin">
   <ng-content></ng-content>

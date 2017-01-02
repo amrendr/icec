@@ -21,9 +21,7 @@
   .first {
     margin-top: $first;
   }
-  .app-img-preview{
-    min-height: calc(100vh - #{14rem + 2*$margin-v + 2*$padding-v});
-  }
+  
 }
 
 @mixin app-hide-subheader(){
