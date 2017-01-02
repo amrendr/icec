@@ -176,7 +176,8 @@ export class AppService {
                 .catch(this.handleError)
                 .publishReplay(1)
                 .refCount();
-        return this._communityEventObservable;
+        return this._communityEventObservable
+            .map(data => this.filterCommunityEvent(data, key));
     }
 
     private filterCommunityEvent(data: any, key: string): CommunityEvent[] {
