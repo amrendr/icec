@@ -14,6 +14,18 @@ import { AppFilterListPipe } from '../../services/app.pipe';
 })
 export class MembersComponent implements OnInit {
 
+  currentType: string;
+  filterTxt: string;
+  loading: boolean;
+
+  members: Members = { year: null, title: null, memberList: [] };
+  memberTypes = [
+    { value: 'EM', viewValue: 'Executives', url: 'executives' },
+    { value: 'BM', viewValue: 'Board Members', url: 'board' },
+    { value: 'RM', viewValue: 'Regular Members', url: 'regular' },
+    { value: 'OM', viewValue: 'All Members Till Date', url: 'overall' },
+  ];
+
   constructor(
     private activeRoute: ActivatedRoute,
     private route: Router,
@@ -64,31 +76,18 @@ export class MembersComponent implements OnInit {
     return input;
   }
 
-  members: Members = { year: null, title: null, memberList: [] };
-
-  currentType: string;
-  filterTxt: string;
-  loading: boolean;
-
-  memberTypes = [
-    { value: 'EM', viewValue: 'Executives', url: 'executives' },
-    { value: 'BM', viewValue: 'Board Members', url: 'board' },
-    { value: 'RM', viewValue: 'Regular Members', url: 'regular' },
-    { value: 'OM', viewValue: 'All Members Till Date', url: 'overall' },
-  ];
-
   onSelect(url: string): void {
     this.loading = true;
-    this.filterTxt = "";
+    this.filterTxt = '';
     this.route.navigate(['/members', 'current', url]);
   }
 
   filteredMembers(): Member[] {
-    //filter over all of the property of Member object.
+    // filter over all of the property of Member object.
     return this.filterPipe.transform(
       this.members.memberList,
       this.filterTxt,
-      ["membershipType", "membershipTerm", "fullname", "lastname", "email", "contact", "title"]
+      ['membershipType', 'membershipTerm', 'fullname', 'lastname', 'email', 'contact', 'title']
     );
   }
 }

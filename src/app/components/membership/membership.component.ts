@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembershipComponent implements OnInit {
 
+  paymentType: string;
+
   constructor() { }
 
   ngOnInit() {

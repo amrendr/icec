@@ -22,15 +22,13 @@ export class GalleryComponent implements OnInit {
   hasPrevPhoto: boolean = false;
   isSlideShowActive: boolean = false;
   selectedPhoto: Photo;
+  loading: boolean;
 
   constructor(
     private activeRoute: ActivatedRoute,
     private galleryService: AppService,
     private windowsize: AppDimensionService
-
   ) { }
-
-  loading: boolean;
 
   ngOnInit() {
     this.gallery$ = this.activeRoute.params
@@ -41,7 +39,7 @@ export class GalleryComponent implements OnInit {
     this.gallery$.subscribe(
       (gallery) => { this.gallery = gallery; this.loading = false; },
       (err) => { this.loading = false; });
-      
+
     this.col$ = this.gallery$
       .switchMap((gallery: Gallery[]) => this.windowsize.getGalleryColumns(gallery[0].max_image_width))
       .startWith(4)
@@ -58,10 +56,11 @@ export class GalleryComponent implements OnInit {
       case undefined:
         break;
       default:
-        if (isNaN(params['year']))
+        if (isNaN(params['year'])) {
           input.year = -1;
-        else
+        } else {
           input.year = +params['year'];
+        }
         break;
     }
     input.type = params['section'];
@@ -70,27 +69,27 @@ export class GalleryComponent implements OnInit {
   }
 
   getSubtitle(): string {
-    let subtitle: string = '';
+    let subtitle = '';
     if (this.params.type) {
-      if (this.gallery.length == 1) {
+      if (this.gallery.length === 1) {
         subtitle = this.gallery[0].subtitle;
       } else if (this.gallery.length > 1) {
         subtitle = this.gallery[0].section;
         subtitle = subtitle.charAt(0).toUpperCase() + subtitle.slice(1);
       }
-    }
-    else {
-      subtitle = 'Various Items'
+    } else {
+      subtitle = 'Various Items';
     }
     return subtitle;
   }
 
   getTitle(): string {
-    let title: string = 'Gallery';
-    if (this.gallery.length == 1) {
+    let title = 'Gallery';
+    if (this.gallery.length === 1) {
       title = this.gallery[0].title;
-      if (this.gallery[0].year)
+      if (this.gallery[0].year) {
         title += ' (' + this.gallery[0].year + ')';
+      }
     }
     return title;
   }
@@ -102,40 +101,46 @@ export class GalleryComponent implements OnInit {
   showPhoto(index: number): void {
     this.isSlideShowActive = true;
     this.selectedPhotoIndex = index;
-    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex)
+    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex) {
       this.hasNextPhoto = true;
-    if (this.selectedPhotoIndex > 0)
+    }
+    if (this.selectedPhotoIndex > 0) {
       this.hasPrevPhoto = true;
+    }
 
     this.setSelectedPhoto();
   }
 
   showNextPhoto(): void {
-    if (!this.hasNextPhoto)
+    if (!this.hasNextPhoto) {
       return;
+    }
 
     this.selectedPhotoIndex = this.selectedPhotoIndex + 1;
     this.hasPrevPhoto = true;
 
-    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex)
+    if (this.gallery[0].photos.length - 1 > this.selectedPhotoIndex) {
       this.hasNextPhoto = true;
-    else
+    } else {
       this.hasNextPhoto = false;
+    }
 
     this.setSelectedPhoto();
   }
 
   showPrevPhoto(): void {
-    if (!this.hasPrevPhoto)
+    if (!this.hasPrevPhoto) {
       return;
+    }
 
     this.selectedPhotoIndex = this.selectedPhotoIndex - 1;
     this.hasNextPhoto = true;
 
-    if (this.selectedPhotoIndex > 0)
+    if (this.selectedPhotoIndex > 0) {
       this.hasPrevPhoto = true;
-    else
+    } else {
       this.hasPrevPhoto = false;
+    }
 
     this.setSelectedPhoto();
   }

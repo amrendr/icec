@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Gallery } from '../../services/app.class';
 
 @Component({
-  selector: 'gallery-card',
+  selector: 'app-gallery-card',
   templateUrl: './gallery-card.component.html',
   styleUrls: ['./gallery-card.component.css']
 })
@@ -21,8 +21,7 @@ export class GalleryCardComponent implements OnInit {
   navigateTo(item: Gallery): void {
     if (item.year && !item.hasMultiple) {
       this.router.navigate(['/gallery', item.section, item.year]);
-    }
-    else {
+    } else {
       this.router.navigate(['/gallery', item.section]);
     }
   }

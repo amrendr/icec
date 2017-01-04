@@ -3,15 +3,11 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/rx';
 
 import { Api } from './app.service.api';
-import { Args, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent } from './app.class';
+import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent } from './app.class';
 
 
 @Injectable()
 export class AppService {
-    constructor(
-        private http: Http,
-        private api: Api
-    ) { }
 
     _membersObservable: Observable<any> = null;
     _allMembersObservable: Observable<any> = null;
@@ -21,12 +17,17 @@ export class AppService {
     _galleryObservable: Observable<Gallery[]> = null;
     _communityEventObservable: Observable<CommunityEvent[]> = null;
 
+    constructor(
+        private http: Http,
+        private api: Api
+    ) { }
+
     private extractData(res: Response) {
         let body = res.text();
-        //remove multileline comments
-        body = body.replace(/\/\*[\s\S]*?\*\/.*?/g, "");
-        //remove single line comments
-        body = body.replace(/(\n|\r|\r\n)+?\s*?\/\/.*/g, "");
+        // remove multileline comments
+        body = body.replace(/\/\*[\s\S]*?\*\/.*?/g, '');
+        // remove single line comments
+        body = body.replace(/(\n|\r|\r\n)+?\s*?\/\/.*/g, '');
         let json = JSON.parse(body);
         return json || undefined;
     }
@@ -50,33 +51,36 @@ export class AppService {
 
         switch (input.type) {
             case 'OM':
-                if (!this._allMembersObservable)
+                if (!this._allMembersObservable) {
                     this._allMembersObservable = this.http.get(this.api.urls.allMemberDataApi)
                         .map(this.extractData)
                         .catch(this.handleError)
                         .publishReplay(1)
                         .refCount();
+                }
 
                 observable = this._allMembersObservable;
                 break;
             case 'IF':
-                if (!this._indiafestOrganizerObservable)
+                if (!this._indiafestOrganizerObservable) {
                     this._indiafestOrganizerObservable = this.http.get(this.api.urls.indiafestOrganizerDataApi)
                         .map(this.extractData)
                         .catch(this.handleError)
                         .publishReplay(1)
                         .refCount();
+                }
 
                 observable = this._indiafestOrganizerObservable;
                 break;
             case 'CU':
             case 'NA':
-                if (!this._icecContactsObservable)
+                if (!this._icecContactsObservable) {
                     this._icecContactsObservable = this.http.get(this.api.urls.icecContactsDataApi)
                         .map(this.extractData)
                         .catch(this.handleError)
                         .publishReplay(1)
                         .refCount();
+                }
 
                 observable = this._icecContactsObservable;
                 break;
@@ -84,12 +88,13 @@ export class AppService {
             case 'BM':
             case 'RM':
             default:
-                if (!this._membersObservable)
+                if (!this._membersObservable) {
                     this._membersObservable = this.http.get(this.api.urls.membersDataApi)
                         .map(this.extractData)
                         .catch(this.handleError)
                         .publishReplay(1)
                         .refCount();
+                }
 
                 observable = this._membersObservable;
                 break;
@@ -105,13 +110,15 @@ export class AppService {
 
 
         let item: MemberList;
-        if (input.type == 'EM' || input.type == 'BM' || input.type == 'RM') {
-            if (input.year)
-                item = data.find(member => member.year === input.year);
-            else
-                item = data.sort((a, b) => { return b.year - a.year; })[0];
-            if (!item)
+        if (input.type === 'EM' || input.type === 'BM' || input.type === 'RM') {
+            if (input.year) {
+                item = data.find((member: Members) => member.year === input.year);
+            } else {
+                item = data.sort((a: Members, b: Members) => { return b.year - a.year; })[0];
+            }
+            if (!item) {
                 item = { year: null, boardMembers: [], executives: [], regularMembers: [] };
+            }
         }
 
 
@@ -141,11 +148,11 @@ export class AppService {
                 break;
             case 'CU':
                 members.title = 'Contact Us';
-                members.memberList = data.filter(x => x.membershipType.toLowerCase() === 'contacts');
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'contacts');
                 break;
             case 'NA':
                 members.title = 'Newcomers Assistance';
-                members.memberList = data.filter(x => x.membershipType.toLowerCase() === 'assistance');
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'assistance');
                 break;
 
             default:
@@ -159,23 +166,25 @@ export class AppService {
 
     getAnnouncement(): Observable<AnnouncementBar> {
 
-        if (!this._announcementObservable)
+        if (!this._announcementObservable) {
             this._announcementObservable = this.http.get(this.api.urls.announcementsDataApi)
                 .map(this.extractData)
                 .catch(this.handleError)
                 .publishReplay(1)
                 .refCount();
+        }
         return this._announcementObservable;
     }
 
     getCommunityEvents(key: string): Observable<CommunityEvent[]> {
 
-        if (!this._communityEventObservable)
+        if (!this._communityEventObservable) {
             this._communityEventObservable = this.http.get(this.api.urls.communityEventsDataApi)
                 .map(this.extractData)
                 .catch(this.handleError)
                 .publishReplay(1)
                 .refCount();
+        }
         return this._communityEventObservable
             .map(data => this.filterCommunityEvent(data, key));
     }
@@ -183,22 +192,24 @@ export class AppService {
     private filterCommunityEvent(data: any, key: string): CommunityEvent[] {
         let returnItems: CommunityEvent[];
 
-        if (!key)
+        if (!key) {
             returnItems = data;
-        else
-            returnItems = data.filter(x => x.key.toUpperCase() === key.toUpperCase());
+        } else {
+            returnItems = data.filter((x: CommunityEvent) => x.key.toUpperCase() === key.toUpperCase());
+        }
 
         return returnItems;
     }
 
     getGallery(input: Args): Observable<Gallery[]> {
 
-        if (!this._galleryObservable)
+        if (!this._galleryObservable) {
             this._galleryObservable = this.http.get(this.api.urls.galleryListDataApi)
                 .map(this.extractData)
                 .catch(this.handleError)
                 .publishReplay(1)
                 .refCount();
+        }
 
         return this._galleryObservable
             .map(data => this.filterGallery(data, input));
@@ -207,12 +218,13 @@ export class AppService {
     private filterGallery(data: any[], input: Args): Gallery[] {
         let items: Gallery[];
 
-        if (input.type && input.year)
+        if (input.type && input.year) {
             items = this.getGalleryWithPhoto(data, input.type, input.year);
-        else {
+        } else {
             items = this.getGalleryBySection(data, input.type);
-            if (items.length == 1)
+            if (items.length === 1) {
                 items = this.getGalleryWithPhoto(data, items[0].section, items[0].year);
+            }
         }
         return items;
     }
@@ -222,14 +234,14 @@ export class AppService {
     }
 
     private getGalleryBySection(data: any[], section: string): Gallery[] {
-        if (section)
-            return data.filter(x => (x.section || "").toLowerCase() === section.toLowerCase())
+        if (section) {
+            return data.filter(x => (x.section || '').toLowerCase() === section.toLowerCase())
                 .map(x => {
                     let copy: Gallery = Object.assign({}, x);
                     copy.photos = [];
                     return copy;
                 });
-        else {
+        } else {
 
             let galleryItems: Gallery[] = data.sort((a, b) => { return b.year - a.year; });
             let gallerySections: Gallery[] = [];
@@ -240,8 +252,7 @@ export class AppService {
                     let copy: Gallery = Object.assign({}, x);
                     copy.photos = [];
                     gallerySections.push(copy);
-                }
-                else {
+                } else {
                     item.hasMultiple = true;
                 }
             });

@@ -9,11 +9,11 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 export class AppComponent {
   @ViewChild('navigation') navigation: NavigationComponent;
 
-  toggleSidenav(){
+  toggleSidenav() {
     this.navigation.toggleSidenav();
   }
 
-  closeSidenav(){
+  closeSidenav() {
     this.navigation.closeSidenav();
   }
 }

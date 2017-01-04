@@ -10,6 +10,9 @@ import { Gallery, Args } from '../../services/app.class';
 })
 export class CmeComponent implements OnInit {
 
+  gallery: Gallery;
+  loading: boolean;
+
   constructor(
     private galleryService: AppService
   ) { }
@@ -17,9 +20,6 @@ export class CmeComponent implements OnInit {
   ngOnInit() {
     this.getCmeGallery();
   }
-
-  gallery: Gallery;
-  loading: boolean;
 
   getCmeGallery(): void {
     let input: Args = { type: 'cme', year: null };

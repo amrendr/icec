@@ -1,5 +1,5 @@
 import { environment } from '../../environments/environment';
-import { OnInit } from '@angular/core'
+import { OnInit } from '@angular/core';
 
 export class Api implements OnInit {
     public urls: any = {};
@@ -15,8 +15,7 @@ export class Api implements OnInit {
                 communityEventsDataApi: './api/v1/events',
                 announcementsDataApi: './api/v1/announcement',
             };
-        }
-        else {
+        } else {
             this.urls = {
                 galleryListDataApi: '/data/galleryList.json',
                 membersDataApi: '/data/membersData.json',

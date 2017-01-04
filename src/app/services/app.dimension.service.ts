@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs/rx";
+import { Observable } from 'rxjs/rx';
 
 @Injectable()
 export class AppDimensionService {
@@ -15,24 +15,32 @@ export class AppDimensionService {
       .distinctUntilChanged();
   }
 
-  getGalleryColumns(img_maxwidth: number):Observable<number>{
+  getGalleryColumns(img_maxwidth: number): Observable<number> {
     return this.width$
       .map(x => this.getColumns(x, img_maxwidth))
       .distinctUntilChanged();
   }
 
-  private getColumns(current_width:number, img_maxwidth: number): number {
+  private getColumns(current_width: number, img_maxwidth: number): number {
     let col: number = Math.ceil((current_width + 1) / (img_maxwidth + 1));
-    //if img width is getting shorter than 2/3rd of the original max width, Give them more room.
-    if (current_width / col < img_maxwidth * 2 / 3)
+    // if img width is getting shorter than 2/3rd of the original max width, Give them more room.
+    if (current_width / col < img_maxwidth * 2 / 3) {
       col = col - 1;
-    if (col == 0)
+    }
+    if (col === 0) {
       col = 1;
+    }
     return col;
   }
 
 }
 
+const getWindowSize = () => {
+  return {
+    height: window.innerHeight,
+    width: window.innerWidth
+  };
+};
 
 const createWindowSize$ = () =>
   Observable.fromEvent(window, 'resize')
@@ -41,9 +49,4 @@ const createWindowSize$ = () =>
     .publishReplay(1)
     .refCount();
 
-const getWindowSize = () => {
-  return {
-    height: window.innerHeight,
-    width: window.innerWidth
-  }
-};
+

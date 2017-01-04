@@ -23,7 +23,7 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'bylaws', component: BylawsComponent },
     { path: 'mission', component: MissionComponent },
-    { path: 'members', redirectTo:'members/current/executives', pathMatch:'full' },
+    { path: 'members', redirectTo: 'members/current/executives', pathMatch: 'full' },
     { path: 'members/:type', component: MembersComponent },
     { path: 'members/:year/:type', component: MembersComponent },
     { path: 'membership', component: MembershipComponent },
@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     { path: 'gallery/:section', component: GalleryComponent },
     { path: 'gallery/:section/:year', component: GalleryComponent },
     { path: 'contact', component: ContactComponent }
-]
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
