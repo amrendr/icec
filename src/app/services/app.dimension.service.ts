@@ -23,8 +23,8 @@ export class AppDimensionService {
 
   private getColumns(current_width: number, img_maxwidth: number): number {
     let col: number = Math.ceil((current_width + 1) / (img_maxwidth + 1));
-    // if img width is getting shorter than 2/3rd of the original max width, Give them more room.
-    if (current_width / col < img_maxwidth * 2 / 3) {
+    // if img width is getting shorter than 80% of the original max width, Give them more room.
+    if (current_width / col < img_maxwidth * 4 / 5) {
       col = col - 1;
     }
     if (col === 0) {
