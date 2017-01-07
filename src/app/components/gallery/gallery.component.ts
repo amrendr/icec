@@ -23,6 +23,9 @@ export class GalleryComponent implements OnInit {
   isSlideShowActive: boolean = false;
   selectedPhoto: Photo;
   loading: boolean;
+  interval: any;
+  imgLoaded: boolean = false;
+  hasMultipleSection: boolean;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -45,7 +48,6 @@ export class GalleryComponent implements OnInit {
       .startWith(4)
       .publishReplay(1)
       .refCount();
-
   }
 
   formatInput(params: Params): Args {
@@ -65,6 +67,18 @@ export class GalleryComponent implements OnInit {
     }
     input.type = params['section'];
     this.params = input;
+
+    if (!input.type) {
+      // section input is not provided, top level gallery navigation
+      this.hasMultipleSection = false;
+    } else if (!input.year) {
+      // Navigating to a particular section but year input is not provided
+      // Multiple section can be available for different year, include year in the title
+      this.hasMultipleSection = true;
+    } else {
+      this.hasMultipleSection = false;
+    }
+
     return input;
   }
 
@@ -74,8 +88,7 @@ export class GalleryComponent implements OnInit {
       if (this.gallery.length === 1) {
         subtitle = this.gallery[0].subtitle;
       } else if (this.gallery.length > 1) {
-        subtitle = this.gallery[0].section;
-        subtitle = subtitle.charAt(0).toUpperCase() + subtitle.slice(1);
+        subtitle = this.gallery[0].title;
       }
     } else {
       subtitle = 'Various Items';
@@ -107,7 +120,6 @@ export class GalleryComponent implements OnInit {
     if (this.selectedPhotoIndex > 0) {
       this.hasPrevPhoto = true;
     }
-
     this.setSelectedPhoto();
   }
 
@@ -146,6 +158,25 @@ export class GalleryComponent implements OnInit {
   }
 
   setSelectedPhoto(): void {
-    this.selectedPhoto = this.gallery[0].photos[this.selectedPhotoIndex];
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+    this.imgLoaded = false;
+    this.interval = setInterval(() => {
+      this.imgLoaded = true;
+      this.selectedPhoto = this.gallery[0].photos[this.selectedPhotoIndex];
+    }, 100);
+
+  }
+
+  onKey(event: any): void {
+    if (event.keyCode == 27) {
+      this.closeSlideShow();
+    } else if (event.keyCode == 39 && this.hasNextPhoto) {
+      this.showNextPhoto();
+    }
+    else if (event.keyCode == 37 && this.hasPrevPhoto) {
+      this.showPrevPhoto();
+    }
   }
 }

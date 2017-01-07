@@ -6,7 +6,7 @@
   left: 100%;
   z-index: 1;
   transition: all 0.5s ease-out;
-  background: #303030;
+  background: rgba(48, 48, 48, 0.97);
 }
 
 .gallery{
@@ -36,7 +36,6 @@
 
 .btn md-icon{
     color: snow;
-    display: block;
 }
 
 .btn > button:disabled md-icon{

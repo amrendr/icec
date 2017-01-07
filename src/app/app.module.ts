@@ -31,6 +31,7 @@ import { EventsComponent } from './components/events/events.component';
 import { IndiafestComponent } from './components/indiafest/indiafest.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
+import { TrapFocusDirective } from './app.trap-focus.directive';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
     EventsComponent,
     IndiafestComponent,
     ContactComponent,
-    NavigationComponent
+    NavigationComponent,
+    TrapFocusDirective
   ],
   imports: [
     BrowserModule,

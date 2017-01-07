@@ -59,7 +59,7 @@
     },
     {
         "year": 0, "section": "resources",
-        "title": "Student Classes", "subtitle": "",
+        "title": "Student Classes", "subtitle": "SAT Classes",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/resources/thumbnail/ICEC-SAT-1.JPG",
         "photos": [
@@ -114,7 +114,7 @@
     },
 	{
 	"year": 2013, "section": "picnic",
-        "title": "Picnic", "subtitle": "",
+        "title": "Picnic", "subtitle": "Picnic Photos",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/picnic/thumbnail/picnic-12.jpg",
         "photos": [
@@ -135,7 +135,7 @@
 	},
 	{
 	"year": 0, "section": "cultural",
-        "title": "Cultural", "subtitle": "",
+        "title": "Cultural", "subtitle": "Cultural Photos",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/Cultural/thumbnail/50.jpg",
         "photos": [
@@ -177,7 +177,7 @@
 	},
 	{
 	"year": 0, "section": "eid",
-        "title": "Eid", "subtitle": "",
+        "title": "Eid", "subtitle": "Eid Photos",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/Eid/thumbnail/eid-67.jpg",
         "photos": [
@@ -215,7 +215,7 @@
 	},
 	{
 	"year": 2005, "section": "banquet",
-        "title": "Banquet", "subtitle": "",
+        "title": "Banquet", "subtitle": "Banquet Photos",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/Banquet/thumbnail/banquet-30.jpg",
         "photos": [

@@ -240,7 +240,8 @@ export class AppService {
                     let copy: Gallery = Object.assign({}, x);
                     copy.photos = [];
                     return copy;
-                });
+                })
+                .sort((a, b) => { return b.year - a.year; });
         } else {
 
             let galleryItems: Gallery[] = data.sort((a, b) => { return b.year - a.year; });

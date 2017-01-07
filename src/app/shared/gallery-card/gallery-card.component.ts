@@ -10,6 +10,7 @@ import { Gallery } from '../../services/app.class';
 export class GalleryCardComponent implements OnInit {
   @Input() item: Gallery;
   @Input() title: string;
+  @Input() titleWithYear: boolean;
 
   constructor(
     private router: Router
@@ -24,6 +25,14 @@ export class GalleryCardComponent implements OnInit {
     } else {
       this.router.navigate(['/gallery', item.section]);
     }
+  }
+
+  getTitle(): string {
+    let title = this.item.title;
+    if (this.item.year && this.titleWithYear) {
+      title = title + ' (' + this.item.year + ')'
+    }
+    return title;
   }
 
 }
