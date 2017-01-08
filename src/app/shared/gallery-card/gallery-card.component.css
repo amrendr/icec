@@ -1,21 +1,38 @@
-img {
-  width: auto;
+.group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+}
+
+.caption {
+  width: 12.5rem;
+}
+
+md-card-title,
+md-card-subtitle {
+  margin-right: 0.5rem;
+}
+
+a {
+  cursor: pointer;
 }
 
 .img {
   margin: -24px -16px -24px auto;
   overflow: hidden;
+  width: 9.5rem;
+  height: 9.5rem;
 }
 
-md-card-title,
-md-card-subtitle {
-  margin-right: 1rem;
+.img-lg {
+  width: 12.5rem;
+  height: 12.5rem;
 }
 
-md-card-title {
-  white-space: nowrap;
+.landscape {
+  margin: 0 -50%;
 }
 
-a {
-  cursor: pointer;
+.portrait {
+  margin: -50% 0;
 }

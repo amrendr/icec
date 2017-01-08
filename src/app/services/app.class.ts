@@ -43,6 +43,7 @@ export class Gallery {
     row_height: number;
     max_image_width: number;
     poster: string;
+    posterRows: number;
     photos: Photo[];
     hasMultiple?: boolean;
 }

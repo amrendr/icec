@@ -11,6 +11,8 @@ export class GalleryCardComponent implements OnInit {
   @Input() item: Gallery;
   @Input() title: string;
   @Input() titleWithYear: boolean;
+  @Input() rowSpan: number = 1;
+  @Input() largeImg: boolean;
 
   constructor(
     private router: Router

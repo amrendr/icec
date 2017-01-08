@@ -1,11 +1,13 @@
 <a *ngIf="item" (click)="navigateTo(item)">
   <md-card>
-    <md-card-title-group>
-      <md-card-title class="title">{{title || getTitle()}}</md-card-title>
-      <md-card-subtitle>{{item.subtitle}}</md-card-subtitle>
-      <div class="img">
-        <img md-card-lg-image src="{{item.poster}}" alt="{{item.subtitle}}">
+    <div class="group">
+      <div class="caption">
+        <md-card-title class="title">{{title || getTitle()}}</md-card-title>
+        <md-card-subtitle>{{item.subtitle}}</md-card-subtitle>
       </div>
-    </md-card-title-group>
+      <div class="img" [class.img-lg]="largeImg">
+        <img [ngClass]="{'portrait': rowSpan > 1, 'landscape': !rowSpan || rowSpan == 1 }" src="{{item.poster}}" alt="{{item.subtitle}}">
+      </div>
+    </div>
   </md-card>
 </a>
