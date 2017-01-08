@@ -11,3 +11,14 @@
     </div>
   </md-card>
 </a>
+<div *ngIf="showCardLoading">
+  <md-card>
+    <div class="group">
+      <div class="caption">
+      </div>
+      <div class="img" [class.img-lg]="largeImg">
+      </div>
+    </div>
+  </md-card>
+  <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+</div>

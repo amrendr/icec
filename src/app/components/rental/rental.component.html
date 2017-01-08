@@ -9,7 +9,6 @@
           <span class="flex detail" md-line><md-icon>phone</md-icon>(352) 871-7113</span>
           <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:iqbal.qaiyumi@gmail.com?subject=ICEC Rental Information">iqbal.qaiyumi@gmail.com</a></span>
         </md-card-content>
-
       </md-card>
     </div>
     <div class="card card-33">
@@ -34,7 +33,7 @@
       </md-card>
     </div>
     <div class="card card-33">
-      <app-gallery-card [item]="gallery" title="Gallery"></app-gallery-card>
+      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading"></app-gallery-card>
     </div>
   </div>
   <h3>Salient Features</h3>

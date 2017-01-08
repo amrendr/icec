@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../services/app.service';
-import { Member, Args, Gallery, CommunityEvent } from '../../services/app.class';
+import { Member, Args, CommunityEvent } from '../../services/app.class';
 
 
 @Component({
@@ -10,10 +10,10 @@ import { Member, Args, Gallery, CommunityEvent } from '../../services/app.class'
 })
 export class IndiafestComponent implements OnInit {
 
-  gallery: Gallery;
   contacts: Member[];
   event: CommunityEvent;
-  loading1: boolean;
+  input: Args = { type: 'indiafest', year: null };
+  loading1: boolean = true;
   loading2: boolean;
   loading3: boolean;
 
@@ -22,19 +22,8 @@ export class IndiafestComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getIndiafestPhotos();
     this.getIndiafestOrganizer();
     this.getEventInfo('IFHF');
-  }
-
-  getIndiafestPhotos(): void {
-    let input: Args = { type: 'indiafest', year: null };
-
-    this.loading1 = true;
-    this.appService.getGallery(input).subscribe(
-      (x) => { this.gallery = ((x && x.length > 0) ? x[0] : null); this.loading1 = false; },
-      (err) => { this.loading1 = false; }
-    );
   }
 
   getIndiafestOrganizer(): void {

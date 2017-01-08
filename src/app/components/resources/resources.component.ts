@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../services/app.service';
-import { CommunityEvent } from '../../services/app.class';
+import { CommunityEvent, Args } from '../../services/app.class';
 
 
 @Component({
@@ -12,6 +12,8 @@ export class ResourcesComponent implements OnInit {
 
   event: CommunityEvent;
   loading: boolean;
+  loading1: boolean = true;
+  input: Args = { type: 'resources', year: null };
 
   constructor(
     private eventService: AppService

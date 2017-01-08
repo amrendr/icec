@@ -1,4 +1,4 @@
-<app-content title="Resources" subtitle="Student Resources" [loading]="loading">
+<app-content title="Resources" subtitle="Student Resources" [loading]="loading || loading1">
 
   <h3 class="first">Classes and Extra-curricular activities</h3>
   <md-divider></md-divider>
@@ -20,6 +20,9 @@
         </md-card-content>
         <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
       </md-card>
+    </div>
+    <div class="card card-50">
+      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading1" largeImg="true"></app-gallery-card>
     </div>
   </div>
 
