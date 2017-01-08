@@ -1,11 +1,23 @@
 <div class="app-home-backdrop">
   <img src="assets/logo.png" alt="logo">
-  <h2>Some Tag line </h2>
+  <div class="tagline inset-15x">Community of Indian Heritage</div>
 </div>
 <app-announcement-bar></app-announcement-bar>
 <div class="app-home-content">
   <div>
-    Join ICEC's mailing list to learn about upcoming <a [routerLink]="['/events']">community events</a> in Gainesville 
-    by sending an email to <a href="mailto:icec-gainesville-subscribe@yahoogroups.com">icec-gainesville-subscribe@yahoogroups.com</a>
+    Join ICEC's mailing list to learn about upcoming <a [routerLink]="['/events']">community events</a> in Gainesville by
+    sending an email to <a href="mailto:icec-gainesville-subscribe@yahoogroups.com">icec-gainesville-subscribe@yahoogroups.com</a>
+  </div>
+
+  <div class="flex inset-15x">
+    <div class="card card-33">
+      <app-gallery-card [input]="youth" largeImg="true"></app-gallery-card>
+    </div>
+    <div class="card card-33">
+      <app-gallery-card [input]="indiafest" largeImg="true"></app-gallery-card>
+    </div>
+    <div class="card card-33">
+      <app-gallery-card [input]="resources" largeImg="true"></app-gallery-card>
+    </div>
   </div>
 </div>

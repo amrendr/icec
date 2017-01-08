@@ -7,3 +7,9 @@
     background-blend-mode:multiply; 
     position: relative;
 }
+
+.tagline{
+    color: #607D8B;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
