@@ -13,7 +13,7 @@ import { AppDimensionService } from '../../services/app.dimension.service';
 })
 export class GalleryComponent implements OnInit {
 
-  col$: Observable<number>;
+  col: number;
   gallery$: Observable<Gallery[]>;
   gallery: Gallery[] = [];
   params: Args;
@@ -43,11 +43,12 @@ export class GalleryComponent implements OnInit {
       (gallery) => { this.gallery = gallery; this.loading = false; },
       (err) => { this.loading = false; });
 
-    this.col$ = this.gallery$
+    this.gallery$
       .switchMap((gallery: Gallery[]) => this.windowsize.getGalleryColumns(gallery[0].max_image_width))
       .startWith(4)
       .publishReplay(1)
-      .refCount();
+      .refCount()
+      .subscribe((x) => { this.col = x; });
   }
 
   formatInput(params: Params): Args {
