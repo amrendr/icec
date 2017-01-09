@@ -17,6 +17,7 @@ export class GalleryCardComponent implements OnInit {
   @Input() rowSpan: number = 1;
   @Input() largeImg: boolean;
   @Input() loading: boolean;
+  @Input() showCount: boolean;
   @Output() loadingChange = new EventEmitter<boolean>();
   showCardLoading: boolean;
 

@@ -93,7 +93,20 @@ export class GalleryComponent implements OnInit {
     } else {
       subtitle = 'Various Items';
     }
-    return subtitle;
+    return this.galleryItems(subtitle);
+  }
+
+  private galleryItems(str: string): string {
+    let items: string = ' item';
+    if (this.gallery.length == 1) {
+      items = this.gallery[0].photos.length + items;
+      if (this.gallery[0].photos.length > 1) {
+        items = items + 's';
+      }
+    } else {
+      items = this.gallery.length + items + 's';
+    }
+    return str + ' - ' + items;
   }
 
   getTitle(): string {

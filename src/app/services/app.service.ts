@@ -238,6 +238,7 @@ export class AppService {
             return data.filter(x => (x.section || '').toLowerCase() === section.toLowerCase())
                 .map(x => {
                     let copy: Gallery = Object.assign({}, x);
+                    copy.photosCount = (copy.photos ? copy.photos.length : 0);
                     copy.photos = [];
                     return copy;
                 })
@@ -248,12 +249,18 @@ export class AppService {
             let gallerySections: Gallery[] = [];
 
             galleryItems.forEach(x => {
+                // Check if we have already stored in our gallerySection, else continue
                 let item: Gallery = gallerySections.find(y => y.section.toLowerCase() === x.section.toLowerCase());
                 if (!item) {
                     let copy: Gallery = Object.assign({}, x);
+                    copy.photosCount = (copy.photos ? copy.photos.length : 0);
                     copy.photos = [];
                     gallerySections.push(copy);
                 } else {
+                    if (!item.hasMultiple) {
+                        item.photosCount = 1;
+                    }
+                    item.photosCount++;
                     item.hasMultiple = true;
                 }
             });

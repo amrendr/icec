@@ -4,6 +4,7 @@
       <div class="caption">
         <md-card-title class="title">{{title || getTitle()}}</md-card-title>
         <md-card-subtitle>{{item.subtitle}}</md-card-subtitle>
+        <md-card-subtitle *ngIf="showCount">{{item.photosCount}} item<span *ngIf="item.photosCount > 1">s</span></md-card-subtitle>
       </div>
       <div class="img" [class.img-lg]="largeImg">
         <img [ngClass]="{'portrait': rowSpan > 1, 'landscape': !rowSpan || rowSpan == 1 }" src="{{item.poster}}" alt="{{item.subtitle}}">

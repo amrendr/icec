@@ -45,6 +45,7 @@ export class Gallery {
     poster: string;
     posterRows: number;
     photos: Photo[];
+    photosCount?: number;
     hasMultiple?: boolean;
 }
 
