@@ -16,6 +16,8 @@ export class IndiafestComponent implements OnInit {
   loading1: boolean = true;
   loading2: boolean;
   loading3: boolean;
+  title: string;
+  subtitle: string;
 
   constructor(
     private appService: AppService
@@ -37,7 +39,14 @@ export class IndiafestComponent implements OnInit {
 
   getEventInfo(key: string): void {
     this.loading3 = true;
-    this.appService.getCommunityEvents(key).subscribe((x) => { this.event = ((x && x.length > 0) ? x[0] : null); this.loading3 = false; },
+    this.appService.getCommunityEvents(key).subscribe((x) => {
+      this.event = ((x && x.length > 0) ? x[0] : null);
+      if(this.event){
+        this.title = this.event.title;
+        this.subtitle = this.event.time + ' at ' + this.event.venue;
+      }
+      this.loading3 = false;
+    },
       (err) => { this.loading3 = false; });
   }
 }

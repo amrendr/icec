@@ -1,4 +1,4 @@
-<app-content title="India Fest & Health Fair 2017" subtitle="April 8th from 9 AM - 6 PM (Santa Fe College Gym)" [loading]="loading1 || loading2 || loading3">
+<app-content [title]="title || 'India Fest & Health Fair'" [subtitle]="subtitle" [loading]="loading1 || loading2 || loading3">
 
   <div class="flex first">
     <div class="card card-50">
@@ -39,7 +39,7 @@
       <md-icon>star</md-icon>Cultural Program</div>
   </div>
 
-  <h3>For more information about 2017 event, please contact</h3>
+  <h3>For more information about {{title}} event, please contact</h3>
   <md-divider></md-divider>
   <div class="flex inset-15x">
     <div class="card card-33" *ngFor="let contact of contacts">
@@ -54,7 +54,7 @@
     </div>
   </div>
   <p>
-    Want to bring fresh ideas to the table for India Fest & Health Fair 2017? Want to participate in or organize the next event?
+    Want to bring fresh ideas to the table for {{title}}? Want to participate in or organize the next event?
     Contact us at <a href="mailto:IndiaFestGainesville@gmail.com?subject=Organize India Fest 2017">IndiaFestGainesville@gmail.com</a>.
   </p>
 

@@ -1,14 +1,14 @@
 <app-content [title]="getTitle()" [subtitle]="getSubtitle()" [nomargin]="gallery.length == 1" [loading]="loading">
   <div class="flex first" *ngIf="gallery.length > 1">
     <div class="card card-33" *ngFor="let item of gallery">
-      <app-gallery-card [item]="item" [titleWithYear]="hasMultipleSection" [rowSpan]="item.posterRows" largeImg="true" showCount="true"></app-gallery-card>
+      <app-gallery-card [item]="item" [titleWithYear]="hasMultipleSection" [portrait]="item.portrait" largeImg="true" showCount="true"></app-gallery-card>
     </div>
   </div>
   <div class="gallery" *ngIf="gallery.length == 1">
     <md-grid-list [cols]="col" [rowHeight]="gallery[0].row_height" gutterSize="5" [class.hide]="isSlideShowActive">
       <md-grid-tile *ngFor="let photo of gallery[0].photos; let i = index;" (click)="showPhoto(i)" [rowspan]="photo.rows">
         <img src="{{photo.thumbnail || photo.imageUrl}}" alt="photo of {{photo.caption}}">
-        <md-grid-tile-footer>
+        <md-grid-tile-footer *ngIf="photo.caption">
           <h3 md-line>{{photo.caption}}</h3>
         </md-grid-tile-footer>
       </md-grid-tile>

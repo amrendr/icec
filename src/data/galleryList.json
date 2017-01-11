@@ -3,7 +3,7 @@
         "year": 0, "section": "rental",
         "title": "Rental", "subtitle": "Photos of various rooms",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/building/thumbnail/stage.jpg", "posterRows": 1,
+        "poster": "assets/gallery/building/thumbnail/stage.jpg", 
         "photos": [
             { "rows": 1, "caption": "Auditorium Stage", "thumbnail": "assets/gallery/building/thumbnail/stage.jpg", "imageUrl": "assets/gallery/building/stage.jpg" },
             { "rows": 1, "caption": "Main Hall & Upstairs Rooms", "thumbnail": "assets/gallery/building/thumbnail/main_hall.jpg", "imageUrl": "assets/gallery/building/main_hall.jpg" },
@@ -17,7 +17,7 @@
     //     "year": 2016, "section": "rental",
     //     "title": "", "subtitle": "Photos of various rooms",
     //     "max_image_width": 448, "row_height": 336,
-    //     "poster": "assets/gallery/building/stage.jpg", "posterRows": 1,
+    //     "poster": "assets/gallery/building/stage.jpg", 
     //     "photos": [
     //         { "rows": 1, "caption": "2016 Auditorium Stage","thumbnail": "", "imageUrl": "assets/gallery/building/stage.jpg" },
     //         { "rows": 1, "caption": "2016 Main Hall & Upstairs Rooms","thumbnail": "", "imageUrl": "assets/gallery/building/main_hall.jpg" },
@@ -31,7 +31,7 @@
         "year": 2015, "section": "youth",
         "title": "Youth Group", "subtitle": "Youth Group Photos",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/youth/thumbnail/ICEC-youthgroup-earthday.JPG", "posterRows": 1,
+        "poster": "assets/gallery/youth/thumbnail/ICEC-youthgroup-earthday.JPG", 
         "photos": [
             { "rows": 1, "caption": "ISA", "thumbnail": "assets/gallery/youth/thumbnail/3.jpg", "imageUrl": "assets/gallery/youth/3.jpg" },
             { "rows": 2, "caption": "President youth 2005", "thumbnail": "assets/gallery/youth/thumbnail/4.jpg", "imageUrl": "assets/gallery/youth/4.jpg" },
@@ -61,7 +61,7 @@
         "year": 0, "section": "resources",
         "title": "Student Classes", "subtitle": "SAT Classes",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/resources/thumbnail/ICEC-SAT-1.JPG", "posterRows": 1,
+        "poster": "assets/gallery/resources/thumbnail/ICEC-SAT-1.JPG", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "assets/gallery/resources/thumbnail/ICEC-SAT-1.JPG", "imageUrl": "assets/gallery/resources/ICEC-SAT-1.JPG" },
             { "rows": 1, "caption": "", "thumbnail": "assets/gallery/resources/thumbnail/ICEC-SAT-2.JPG", "imageUrl": "assets/gallery/resources/ICEC-SAT-2.JPG" }
@@ -71,7 +71,7 @@
         "year": 2005, "section": "cme",
         "title": "CME", "subtitle": "Continuing Medical Education Programs",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/cme/2005/thumbnail/lecture.jpg", "posterRows": 1,
+        "poster": "assets/gallery/cme/2005/thumbnail/lecture.jpg", 
         "photos": [
             { "rows": 1, "caption": "CME 2005 002", "thumbnail": "assets/gallery/cme/2005/thumbnail/CME 2005 002.jpg", "imageUrl": "assets/gallery/cme/2005/CME 2005 002.jpg" },
             { "rows": 2, "caption": "CME 2005 003", "thumbnail": "assets/gallery/cme/2005/thumbnail/CME 2005 003.jpg", "imageUrl": "assets/gallery/cme/2005/CME 2005 003.jpg" },
@@ -93,7 +93,7 @@
         "year": 2004, "section": "cme",
         "title": "CME", "subtitle": "Continuing Medical Education Programs",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/cme/2014/thumbnail/wyeth.gif", "posterRows": 1,
+        "poster": "assets/gallery/cme/2014/thumbnail/wyeth.gif", 
         "photos": [
             { "rows": 1, "caption": "Audience", "thumbnail": "assets/gallery/cme/2014/thumbnail/audience.gif", "imageUrl": "assets/gallery/cme/2014/audience.gif" },
             { "rows": 2, "caption": "Aventis", "thumbnail": "assets/gallery/cme/2014/thumbnail/aventis.gif", "imageUrl": "assets/gallery/cme/2014/aventis.gif" },
@@ -116,7 +116,7 @@
 	"year": 2013, "section": "picnic",
         "title": "Picnic", "subtitle": "Picnic Photos",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/picnic/thumbnail/picnic-12.jpg", "posterRows": 1,
+        "poster": "assets/gallery/picnic/thumbnail/picnic-12.jpg", 
         "photos": [
             {"rows": 1, "caption": "", "thumbnail": "assets/gallery/picnic/thumbnail/Apr2013-1.JPG", "imageUrl":	"assets/gallery/picnic/Apr2013-1.JPG" },
             {"rows": 1, "caption": "", "thumbnail": "assets/gallery/picnic/thumbnail/Apr2013-2.JPG", "imageUrl":	"assets/gallery/picnic/Apr2013-2.JPG" },
@@ -137,7 +137,7 @@
 	"year": 0, "section": "cultural",
         "title": "Cultural", "subtitle": "Cultural Photos",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/Cultural/thumbnail/50.jpg", "posterRows": 1,
+        "poster": "assets/gallery/Cultural/thumbnail/50.jpg", 
         "photos": [
 		    { "rows": 1, "caption": "", "thumbnail": "assets/gallery/Cultural/thumbnail/10.jpg", "imageUrl": "assets/gallery/Cultural/10.jpg" },
             { "rows": 2, "caption": "", "thumbnail": "assets/gallery/Cultural/thumbnail/11.jpg", "imageUrl": "assets/gallery/Cultural/11.jpg" },
@@ -179,7 +179,7 @@
 	"year": 0, "section": "eid",
         "title": "Eid", "subtitle": "Eid Photos",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/Eid/thumbnail/eid-67.jpg", "posterRows": 1,
+        "poster": "assets/gallery/Eid/thumbnail/eid-67.jpg", 
         "photos": [
 		    { "rows": 2, "caption": "", "thumbnail": "assets/gallery/Eid/thumbnail/eid-63.jpg", "imageUrl": "assets/gallery/Eid/eid-63.jpg" },
             { "rows": 2, "caption": "", "thumbnail": "assets/gallery/Eid/thumbnail/eid-64.jpg", "imageUrl": "assets/gallery/Eid/eid-64.jpg" },
@@ -217,7 +217,7 @@
 	"year": 2005, "section": "banquet",
         "title": "Banquet", "subtitle": "Banquet Photos",
         "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/Banquet/thumbnail/banquet-30.jpg", "posterRows": 2,
+        "poster": "assets/gallery/Banquet/thumbnail/banquet-30.jpg", "portrait": true,
         "photos": [
 	    	{ "rows": 1, "caption": "", "thumbnail": "assets/gallery/Banquet/thumbnail/banquet-25.jpg", "imageUrl": "assets/gallery/Banquet/banquet-25.jpg" },
             { "rows": 2, "caption": "", "thumbnail": "assets/gallery/Banquet/thumbnail/banquet-26.jpg", "imageUrl": "assets/gallery/Banquet/banquet-26.jpg" },
@@ -232,7 +232,7 @@
         "year": 2010, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/SLQ1bZQ-YXPW_viCNRn3WJ8tBiqQdDAu5xrxMSOytBP0L-exak7Z_jgAcQ8u8RCkM9pa7gltpzOk=w331-h249", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/SLQ1bZQ-YXPW_viCNRn3WJ8tBiqQdDAu5xrxMSOytBP0L-exak7Z_jgAcQ8u8RCkM9pa7gltpzOk=w331-h249", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/4OWI9ZbErtb8EayrZXGRANOjvL6I88dVGAIt41HAXBO44suThCkzko1goeyZZT7z-nLl0_ZPbqun=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/4OWI9ZbErtb8EayrZXGRANOjvL6I88dVGAIt41HAXBO44suThCkzko1goeyZZT7z-nLl0_ZPbqun=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/cTVrigVE9YF_VgJEne8h_KQgKXFEyqt6lEhzYpT7ke_5cuLm-nJXqII0Iu0hn_JK70FK7X8PBVCV=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/cTVrigVE9YF_VgJEne8h_KQgKXFEyqt6lEhzYpT7ke_5cuLm-nJXqII0Iu0hn_JK70FK7X8PBVCV=w1600-h900-no" },
@@ -267,7 +267,7 @@
         "year": 2011, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/s_ZoASOY7M3im2_SQXh9HSQREvdnLndnfxg1jdD-oWciw4lg4umS1z2JAcULMtxONwk1WCVpn-HsjA=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/s_ZoASOY7M3im2_SQXh9HSQREvdnLndnfxg1jdD-oWciw4lg4umS1z2JAcULMtxONwk1WCVpn-HsjA=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/VgY3xRSaAkxrjFzjbjc_0Xb_NM1XrZNwDAajbbx1SNGRhDMB6sqck7gnV9VkANh6kyv_p0cDUlndyA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/VgY3xRSaAkxrjFzjbjc_0Xb_NM1XrZNwDAajbbx1SNGRhDMB6sqck7gnV9VkANh6kyv_p0cDUlndyA=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/s31OIuQNJqYfgCD7cWDWoOUIPcTwYB2ugBFhQ8-ipZ5_LIRCOScChD61_gJWxgEIuMCZQag0SpIMGA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/s31OIuQNJqYfgCD7cWDWoOUIPcTwYB2ugBFhQ8-ipZ5_LIRCOScChD61_gJWxgEIuMCZQag0SpIMGA=w1600-h900-no" },
@@ -310,7 +310,7 @@
         "year": 2012, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/j7IrlVyWWuVZ845TaQtn--14jxCsVi6BrJDdPao0jbeKL598Lzrx2SyM68shPfnjqfAIzCvo1BHkag=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/j7IrlVyWWuVZ845TaQtn--14jxCsVi6BrJDdPao0jbeKL598Lzrx2SyM68shPfnjqfAIzCvo1BHkag=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/DyZ7iZTVWEDc-SwEZfSSb5HTdCjCTDLbi9xZm1pcUcTqmF_G0aNO6igJyr9p10dqIhUMxMPzcyuerg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/DyZ7iZTVWEDc-SwEZfSSb5HTdCjCTDLbi9xZm1pcUcTqmF_G0aNO6igJyr9p10dqIhUMxMPzcyuerg=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/xnVwuoGPP2LJ_clnA6q4AU4QOAlInH-TnaUCx55D9VgfLszPcmgnNmy_XtokUF4RKAEv0lvl_qugOg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/xnVwuoGPP2LJ_clnA6q4AU4QOAlInH-TnaUCx55D9VgfLszPcmgnNmy_XtokUF4RKAEv0lvl_qugOg=w1600-h900-no" },
@@ -342,7 +342,7 @@
         "year": 2013, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/ZbTZ2I4pzCk6kE27X3SAFkWsQeY3CEYAAxJqSylbk1li7up8EV40Cw1vSFVafZ1rUH86uVxX-iS0mw=w331-h499", "posterRows": 2,
+        "poster": "https://lh3.googleusercontent.com/ZbTZ2I4pzCk6kE27X3SAFkWsQeY3CEYAAxJqSylbk1li7up8EV40Cw1vSFVafZ1rUH86uVxX-iS0mw=w331-h499", "portrait": true,
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/ztGI2pBTP5bEdneO5VzjQG3IR75sBEbBN-bNHH_YT9PzMEtt_MN3Hu84fniWzPNB7Rv5TxM9zdj8-Q=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/ztGI2pBTP5bEdneO5VzjQG3IR75sBEbBN-bNHH_YT9PzMEtt_MN3Hu84fniWzPNB7Rv5TxM9zdj8-Q=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/UyQGn_9brQEpCNIm-hccUx8XKXobR9AbC986bi_zhMUMnDf0M4gyT0WDtSExLoa5K0CsSi9GYp2Liw=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/UyQGn_9brQEpCNIm-hccUx8XKXobR9AbC986bi_zhMUMnDf0M4gyT0WDtSExLoa5K0CsSi9GYp2Liw=w1600-h900-no" },
@@ -363,7 +363,7 @@
         "year": 2014, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/S7w80EEEYE7kUB9LILPguSwZ4j2_inZ6eDDnuzis3hhPZ_cpPfFP6kULPG7jSCfWLwujV-Vjy-c2-Q=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/S7w80EEEYE7kUB9LILPguSwZ4j2_inZ6eDDnuzis3hhPZ_cpPfFP6kULPG7jSCfWLwujV-Vjy-c2-Q=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/S7w80EEEYE7kUB9LILPguSwZ4j2_inZ6eDDnuzis3hhPZ_cpPfFP6kULPG7jSCfWLwujV-Vjy-c2-Q=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/S7w80EEEYE7kUB9LILPguSwZ4j2_inZ6eDDnuzis3hhPZ_cpPfFP6kULPG7jSCfWLwujV-Vjy-c2-Q=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/H8gQhqyy7-k1SVk0cRUIo6YbxBAUaYhWCdZekVJSAorBu1lZTf9qcsqjZIr223UcbpdnCeTlzHEePQ=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/H8gQhqyy7-k1SVk0cRUIo6YbxBAUaYhWCdZekVJSAorBu1lZTf9qcsqjZIr223UcbpdnCeTlzHEePQ=w1600-h900-no" },
@@ -399,7 +399,7 @@
         "year": 2015, "section": "indiafest",
         "title": "India Fest", "subtitle": "Artists & Performances",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/95jAmfBMswKKcwADqGPL3BHnkgLANRN0V65DPHc5Rf0ts9FU4W74uJm5xTPdKezGF1nD-sGbN9sxGA=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/nDtme__Yff5OO3Lo0GU6DJe-eK6zY5iskCFMjizzD8wAu1CcRNeDyWFPOHc--_vXlmSDsOMfD-3Zlw=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/nDtme__Yff5OO3Lo0GU6DJe-eK6zY5iskCFMjizzD8wAu1CcRNeDyWFPOHc--_vXlmSDsOMfD-3Zlw=w1600-h900-no" },
@@ -450,7 +450,7 @@
         "year": 2010, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/JlsSifNo1VdTdOFsC6PqlklOCiDHBqsSzymWmfnNy786AOtATwAjKCm-v6sfUjgN8KOFjEZ6mKAV=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/JlsSifNo1VdTdOFsC6PqlklOCiDHBqsSzymWmfnNy786AOtATwAjKCm-v6sfUjgN8KOFjEZ6mKAV=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/xT9g-XYS3WI09a20uFhaetiw0psWcPw0SA3FSN42aFvKwobF6qNyTrwvswCXJTkyI4GvtHDNLEiB=w331-h249", "imageUrl": "https://lh3.googleusercontent.com/xT9g-XYS3WI09a20uFhaetiw0psWcPw0SA3FSN42aFvKwobF6qNyTrwvswCXJTkyI4GvtHDNLEiB=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/-IlOG68Aws42eBghkhpRDjvatx1KecSyMRN8V8cvupTu9A4dDSJnK9NHCVKRztx-KC8trckP3QPz=w331-h249", "imageUrl": "https://lh3.googleusercontent.com/-IlOG68Aws42eBghkhpRDjvatx1KecSyMRN8V8cvupTu9A4dDSJnK9NHCVKRztx-KC8trckP3QPz=w1600-h900-no" },
@@ -488,7 +488,7 @@
         "year": 2011, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/nXq8HD0ti3SO_PfapPlcm1S7wkM3B2ALuxvmBKcTPxsJ5mtOd1gL1QvssJLg4VlrO2yj-q8bepnmgQ=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/nXq8HD0ti3SO_PfapPlcm1S7wkM3B2ALuxvmBKcTPxsJ5mtOd1gL1QvssJLg4VlrO2yj-q8bepnmgQ=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/u8Qlq559GGfUmWRFJyyHOAcVVltqZOtdkkBe7266cwnj64ycPC8zz9Y9H1apn18CVFbYpiueh-s41w=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/u8Qlq559GGfUmWRFJyyHOAcVVltqZOtdkkBe7266cwnj64ycPC8zz9Y9H1apn18CVFbYpiueh-s41w=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/4eX-2EGcWKEDyddeUX4RCHbtA_G_o_fz3Vu7JpJIeCLrqIKs-U219oNTuTcjUlnmj3pdtiUmYNqUmg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/4eX-2EGcWKEDyddeUX4RCHbtA_G_o_fz3Vu7JpJIeCLrqIKs-U219oNTuTcjUlnmj3pdtiUmYNqUmg=w1600-h900-no" },
@@ -521,7 +521,7 @@
         "year": 2012, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/kHgYWvRNEhLyUEbVWdLpkjeX4cqPII7lAAJ2pOztBmrZXaCtXGknNleDyqvwPJOHVe8Mqv3JJ9bFww=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/kHgYWvRNEhLyUEbVWdLpkjeX4cqPII7lAAJ2pOztBmrZXaCtXGknNleDyqvwPJOHVe8Mqv3JJ9bFww=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/Xy152kMnGDtl8aw6LBy3WY-vps-CWkGIh-NhPf3K3C92An8fCi0eh4GefsW8AJCbEfETCukBcsuLfw=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/Xy152kMnGDtl8aw6LBy3WY-vps-CWkGIh-NhPf3K3C92An8fCi0eh4GefsW8AJCbEfETCukBcsuLfw=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/ego8DudR1MtvzoqhxX5h0G8dOozpBve-tdTdNKe89oSOyAIxxLBZzTLNta1Zc61U7dvdORaYytnM6w=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/ego8DudR1MtvzoqhxX5h0G8dOozpBve-tdTdNKe89oSOyAIxxLBZzTLNta1Zc61U7dvdORaYytnM6w=w1600-h900-no" },
@@ -560,7 +560,7 @@
         "year": 2013, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/mRRLVxyrejYGKvotWkZ1FBiLNO3z6bzhA5FD6mvRLWePHImg6sB3VE6Sus-ATUG1o2XgoRtQd002cQ=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/mRRLVxyrejYGKvotWkZ1FBiLNO3z6bzhA5FD6mvRLWePHImg6sB3VE6Sus-ATUG1o2XgoRtQd002cQ=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/J1PdSHcZD2j2V6OirviEHtjIC6IGdsX4WwBsK_o_QyVQPFlvlDE3cJ6YRTMIpw946oQP3g1fQ1DQzg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/J1PdSHcZD2j2V6OirviEHtjIC6IGdsX4WwBsK_o_QyVQPFlvlDE3cJ6YRTMIpw946oQP3g1fQ1DQzg=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/7ovdjbdK5uYO5G7toXJx-eyGkiw5J25WELMGGfK5yQ8PFIJ_R9qzeDEfHdjvQ8AHFvZaMuRhv7qLRg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/7ovdjbdK5uYO5G7toXJx-eyGkiw5J25WELMGGfK5yQ8PFIJ_R9qzeDEfHdjvQ8AHFvZaMuRhv7qLRg=w1600-h900-no" },
@@ -583,7 +583,7 @@
         "year": 2014, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/Lqxptj9grze8Gz9UtZJegzxWLSwTYYSdFxO6l8JBKUgow23Blz6y7wc25gw7WrFXLA8BmqzCRwaLtQ=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/Lqxptj9grze8Gz9UtZJegzxWLSwTYYSdFxO6l8JBKUgow23Blz6y7wc25gw7WrFXLA8BmqzCRwaLtQ=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/qSaGBVSX1atMyBHMiumriZ-aONmMhbitlCLouiCMSfdvCKPbZ_Ri5ORvmRFWye86UECfoQFdADyDXg=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/qSaGBVSX1atMyBHMiumriZ-aONmMhbitlCLouiCMSfdvCKPbZ_Ri5ORvmRFWye86UECfoQFdADyDXg=w1600-h900-no" },
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/jIJUWTKkh-w544RltsjkFRRakYr0ciwqeASf4eHBE1b-fMEucZ8Z-XJ5b3Hofi2JkvOZ5MTTBDvMiA=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/jIJUWTKkh-w544RltsjkFRRakYr0ciwqeASf4eHBE1b-fMEucZ8Z-XJ5b3Hofi2JkvOZ5MTTBDvMiA=w1600-h900-no" },
@@ -621,7 +621,7 @@
         "year": 2015, "section": "indiafestvendor",
         "title": "India Fest", "subtitle": "Food Stalls & Vendors",
         "max_image_width": 331, "row_height": 220,
-        "poster": "https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w331-h220", "posterRows": 1,
+        "poster": "https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w331-h220", 
         "photos": [
             { "rows": 1, "caption": "", "thumbnail": "https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w331-h220", "imageUrl": "https://lh3.googleusercontent.com/T5uy6NRnSTTU0_qp6Iv0eMYkj0Nc3BbdPmPj_F8-RpMg-dWJgLFaCVjcCPYGVXghTKHO9D2UjbADZQ=w1600-h900-no" }
         ]

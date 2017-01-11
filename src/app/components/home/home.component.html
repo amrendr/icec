@@ -1,3 +1,4 @@
+<div tabindex="0" trapFocus></div>
 <div class="app-home-backdrop">
   <img src="assets/logo.png" alt="logo">
   <div class="tagline inset-15x">Community of Indian Heritage</div>
@@ -11,13 +12,13 @@
 
   <div class="flex inset-15x">
     <div class="card card-33">
-      <app-gallery-card [input]="youth" largeImg="true"></app-gallery-card>
+      <app-gallery-card [input]="youth" largeImg="true" pageUrl='/youth'></app-gallery-card>
     </div>
     <div class="card card-33">
-      <app-gallery-card [input]="indiafest" largeImg="true"></app-gallery-card>
+      <app-gallery-card [input]="indiafest" largeImg="true" pageUrl='/indiafest'></app-gallery-card>
     </div>
     <div class="card card-33">
-      <app-gallery-card [input]="resources" largeImg="true"></app-gallery-card>
+      <app-gallery-card [input]="resources" largeImg="true" pageUrl='/resources/student'></app-gallery-card>
     </div>
   </div>
 </div>

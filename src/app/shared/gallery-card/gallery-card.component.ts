@@ -14,10 +14,11 @@ export class GalleryCardComponent implements OnInit {
   @Input() input: Args;
   @Input() title: string;
   @Input() titleWithYear: boolean;
-  @Input() rowSpan: number = 1;
+  @Input() portrait: boolean;
   @Input() largeImg: boolean;
   @Input() loading: boolean;
   @Input() showCount: boolean;
+  @Input() pageUrl: string;
   @Output() loadingChange = new EventEmitter<boolean>();
   showCardLoading: boolean;
 
@@ -62,11 +63,15 @@ export class GalleryCardComponent implements OnInit {
   }
 
   navigateTo(item: Gallery): void {
-    if (item.year && !item.hasMultiple) {
-      this.router.navigate(['/gallery', item.section, item.year]);
+    if (this.pageUrl) {
+      this.router.navigate([this.pageUrl]);
     } else {
-      this.router.navigate(['/gallery', item.section]);
-    }
+      if (item.year && !item.hasMultiple) {
+        this.router.navigate(['/gallery', item.section, item.year]);
+      } else {
+        this.router.navigate(['/gallery', item.section]);
+      }
+    } 
   }
 
   getTitle(): string {
