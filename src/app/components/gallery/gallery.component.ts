@@ -23,7 +23,6 @@ export class GalleryComponent implements OnInit {
   isSlideShowActive: boolean = false;
   selectedPhoto: Photo;
   loading: boolean;
-  interval: any;
   imgLoaded: boolean = false;
   hasMultipleSection: boolean;
 
@@ -172,11 +171,8 @@ export class GalleryComponent implements OnInit {
   }
 
   setSelectedPhoto(): void {
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
     this.imgLoaded = false;
-    this.interval = setInterval(() => {
+    setTimeout(() => {
       this.imgLoaded = true;
       this.selectedPhoto = this.gallery[0].photos[this.selectedPhotoIndex];
     }, 100);
