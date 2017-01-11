@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppService } from '../../services/app.service';
 import { Announcement } from '../../services/app.class';
 
@@ -8,7 +8,7 @@ import { Announcement } from '../../services/app.class';
   templateUrl: './announcement-bar.component.html',
   styleUrls: ['./announcement-bar.component.css']
 })
-export class AnnouncementBarComponent implements OnInit {
+export class AnnouncementBarComponent implements OnInit, OnDestroy {
 
   annoucements: Announcement[];
   showAnnouncement: boolean = false;
@@ -31,7 +31,7 @@ export class AnnouncementBarComponent implements OnInit {
           this.changeAnnouncementInterval = x.interval * 1000;
         }
 
-        this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
+        this.interval = setInterval(() => { this.startAnnouncement(); }, 1000);
 
         if (x.annoucements.length > 0) {
           this.selectedAnnoucement = x.annoucements[0];
@@ -42,18 +42,33 @@ export class AnnouncementBarComponent implements OnInit {
       });
   }
 
+  ngOnDestroy() {
+    this.clearLocalInterval();
+  }
 
+  private clearLocalInterval(): void {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
+
+  startAnnouncement(): void {
+    this.changeAnnouncement();
+    this.clearLocalInterval();
+    this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
+  }
 
   changeAnnouncement(): void {
+    this.currentAnnoucemntIndex = this.currentAnnoucemntIndex + 1;
     if (this.currentAnnoucemntIndex === this.annoucements.length) {
       this.currentAnnoucemntIndex = 0;
     }
 
-    this.selectedAnnoucement = this.annoucements[this.currentAnnoucemntIndex++];
+    this.selectedAnnoucement = this.annoucements[this.currentAnnoucemntIndex];
   }
 
   changeSlide(): void {
-    clearInterval(this.interval);
+    this.clearLocalInterval();
     this.changeAnnouncement();
     this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
   }
