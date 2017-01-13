@@ -1,12 +1,23 @@
-<app-content [title]="'Youth Group'" [loading]="loading">
+<app-content [title]="'Youth Group'" [loading]="loading || loading1">
   <div class="flex first">
-    <div class="card card-33">
+    <div class="card card-33" *ngIf="!contacts">
       <md-card>
-        <md-card-subtitle>Contact Person</md-card-subtitle>
+        <md-card-subtitle>&nbsp;</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>Sharvari Pathak</span>
-          <span class="flex detail" md-line><md-icon>phone</md-icon>(352) 331-4320</span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:shakul@hotmail.com?subject=ICEC Youth Group">shakul@hotmail.com</a></span>
+          <span class="flex detail" md-line><md-icon>person</md-icon></span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon></span>
+        </md-card-content>
+      </md-card>
+      <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+    </div>
+    <div class="card card-33" *ngFor="let contact of contacts">
+      <md-card>
+        <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
         </md-card-content>
       </md-card>
     </div>

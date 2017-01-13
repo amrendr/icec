@@ -1,4 +1,4 @@
-<app-content [subtitle]="'Benefits, Categories, and Payment'" [title]="'Membership'">
+<app-content [subtitle]="'Benefits, Categories, and Payment'" [title]="'Membership'" [loading]="loading1">
 
   <h3 class="first">Current Members</h3>
   <md-divider></md-divider>
@@ -91,8 +91,32 @@
   <h3>Benefits of membership</h3>
   <md-divider></md-divider>
   <ul>
-    <li>Participation in Independence & Republic Day cultural programs for Youth Group members only. Please contact <a href="mailto:shakul@hotmail.com?subject=ICEC YouthGroup">Sharvari Pathak</a>      / (352) 331-4320 for more details.</li>
-    <li>Xerographic Copy Center – 10% discount for all your printing and photocopying needs</li>
+    <li>Participation in Independence & Republic Day cultural programs for Youth Group members only.
+      <div class="flex inset-5x">
+        <div class="card card-33" *ngIf="!contacts">
+          <md-card>
+            <md-card-subtitle>&nbsp;</md-card-subtitle>
+            <md-card-content>
+              <span class="flex" md-line><md-icon>person</md-icon></span>
+              <span class="flex" md-line><md-icon>mail</md-icon></span>
+              <span class="flex" md-line><md-icon>phone</md-icon></span>
+            </md-card-content>
+          </md-card>
+          <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+        </div>
+        <div class="card card-33" *ngFor="let contact of contacts">
+          <md-card>
+            <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
+            <md-card-content>
+              <span class="flex" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+              <span class="flex" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+              <span class="flex" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+    </li>
+    <li class="inset-5x">Xerographic Copy Center – 10% discount for all your printing and photocopying needs</li>
     <li>Morgan Stanley Smith Barney – Get financial consultation</li>
     <li>First Place Auto Sales – Buy vehicles at wholesale prices</li>
     <li>Discounts on entry tickets to Celebration of Festivals, Music Concerts, Picnics, etc.</li>

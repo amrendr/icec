@@ -74,6 +74,10 @@ export class AppService {
                 break;
             case 'CU':
             case 'NA':
+            case 'IR':
+            case 'YG':
+            case 'EF':
+            case 'CME':
                 if (!this._icecContactsObservable) {
                     this._icecContactsObservable = this.http.get(this.api.urls.icecContactsDataApi)
                         .map(this.extractData)
@@ -154,7 +158,22 @@ export class AppService {
                 members.title = 'Newcomers Assistance';
                 members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'assistance');
                 break;
-
+            case 'IR':
+                members.title = 'ICEC Rental Information';
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'rental');
+                break;
+            case 'YG':
+                members.title = 'Youth Group Coordinator';
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'youth');
+                break;
+            case 'EF':
+                members.title = 'Educational Financial Assistance Program';
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'edufinance');
+                break;
+            case 'CME':
+                members.title = 'Continuing Medical Education';
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'cme');
+                break;
             default:
                 members.title = 'Executive Members';
                 members.year = item.year;

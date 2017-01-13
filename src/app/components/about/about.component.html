@@ -1,7 +1,4 @@
-<app-content [title]="'About ICEC'">
-
-
-
+<app-content [title]="'About ICEC'" [loading]="loading">
 
   <h3 class="first">A Historical Perspective</h3>
   <md-divider></md-divider>
@@ -36,7 +33,7 @@
     <li>The Indian Student Association (ISA) and Indian Graduate Students Association (IGSA) of the University of Florida nominate
       ICEC student liaisons every year. </li>
   </ul>
-  
+
   <div>
     <a [routerLink]="['/members/current/board']">ICEC Board Members...</a>
   </div>
@@ -53,15 +50,36 @@
   <p>Located at 1115 SW 13th Street, Gainesville, FL, the ICEC building is within walking distance of the UF campus. The two-story,
     15,000 sq. ft. building sits on a 2.6 acre wooded lot and consists of a 10,000 sq. ft. auditorium, a stage with curtains,
     projection screen, lights and sound system, a food-warming facility, and four rooms for multiple use.
-    </p>
-    <p> Student groups registered with the University of Florida (ISA, IGSA, ASHA, SPICMACAY and CHiTra) can rent the
-    hall on weekends for cultural and recreational purposes. They can use upstairs rooms on weekends at no cost with prior
-    arrangement by contacting Iqbal Qaiyumi at 352-871-7113.
   </p>
-
+  <p> Student groups registered with the University of Florida (ISA, IGSA, ASHA, SPICMACAY and CHiTra) can rent the hall on weekends
+    for cultural and recreational purposes. They can use upstairs rooms on weekends at no cost with prior arrangement.
+  </p>
+  <div class="flex inset-15x">
+    <div class="card card-33" *ngIf="!contacts">
+      <md-card>
+        <md-card-subtitle>&nbsp;</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon></span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon></span>
+        </md-card-content>
+      </md-card>
+      <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+    </div>
+    <div class="card card-33" *ngFor="let contact of contacts">
+      <md-card>
+        <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
   <h3>Activities organized &amp; sponsored by ICEC</h3>
   <md-divider></md-divider>
-  
+
   <h4>Education:</h4>
   <ul>
     <li>SAT review classes; Geography Bee classes - these are conducted by external instructors upon request </li>
@@ -79,7 +97,5 @@
     <li>Lectures by invited cultural &amp; religious leaders </li>
     <li>India Fest: Annual Indian Food and Cultural Festival </li>
   </ul>
-
-
 
 </app-content>

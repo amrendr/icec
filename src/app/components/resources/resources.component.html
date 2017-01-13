@@ -1,4 +1,4 @@
-<app-content title="Resources" subtitle="Student Resources" [loading]="loading || loading1">
+<app-content title="Resources" subtitle="Student Resources" [loading]="loading || loading1 || loading2">
 
   <h3 class="first">Classes and Extra-curricular activities</h3>
   <md-divider></md-divider>
@@ -109,13 +109,24 @@
     Bhavani Sankar (Chair) and Ramakant Srivastava, Eligible students may apply for a loan at any time.
   </p>
   <div class="flex">
-    <div class="card card-50">
+    <div class="card card-50" *ngIf="!contacts">
       <md-card>
-        <md-card-subtitle>You may submit your application to</md-card-subtitle>
+        <md-card-subtitle>&nbsp;</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>Bhavani Sankar</span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:Sankar@ufl.edu?subject=ICEC Education Financial Assistance Program">Sankar@ufl.edu</a></span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:bhavanisankar1947@gmail.com?subject=ICEC Education Financial Assistance Program">bhavanisankar1947@gmail.com</a></span>
+          <span class="flex detail" md-line><md-icon>person</md-icon></span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon></span>
+        </md-card-content>
+      </md-card>
+      <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+    </div>
+    <div class="card card-50" *ngFor="let contact of contacts">
+      <md-card>
+        <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
+        <md-card-content>
+          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span *ngIf="contact.contact" class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
           <div class="flex detail" md-line>
             <md-icon>description</md-icon>Application Form<span>&nbsp;(</span>
             <a href="assets/documents/Educational_Financial_Assistance_Program.pdf" target="blank">PDF</a><span>)</span>
