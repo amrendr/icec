@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/rx';
 
 import { Api } from './app.service.api';
@@ -193,6 +193,16 @@ export class AppService {
                 .refCount();
         }
         return this._announcementObservable;
+    }
+
+    sendMessage(message: string): Observable<boolean> {
+
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.post(this.api.urls.sendMessageApi, { message }, options)
+            .map(this.extractData)
+            .catch(this.handleError);
     }
 
     getCommunityEvents(key: string): Observable<CommunityEvent[]> {

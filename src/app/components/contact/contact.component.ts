@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AppService } from '../../services/app.service';
 import { Member, Args } from '../../services/app.class';
 
@@ -15,8 +16,10 @@ export class ContactComponent implements OnInit {
   loading1: boolean;
   loading2: boolean;
 
+  sendingMsg = false;
+
   constructor(
-    private memberService: AppService
+    private appService: AppService
   ) { }
 
   ngOnInit() {
@@ -24,10 +27,47 @@ export class ContactComponent implements OnInit {
     this.getIcecAssistance();
   }
 
+  onFormSubmit(form: NgForm): void {
+
+    if (form.invalid)
+      return;
+
+    this.sendingMsg = true;
+
+    this.appService
+      .sendMessage(this.formatMessage(form.value))
+      .subscribe(
+      (x) => {
+        form.resetForm();
+        this.sendingMsg = false;
+      },
+      (err) => {
+        this.sendingMsg = false;
+      }
+      );
+  }
+
+  private formatMessage(value: any): string {
+    let msg =
+      `
+From:  `+ value['name'] + `
+Email: `+ value['email'] + `
+
+Subject: `+ value['subject'] + `
+  
+    `+ value['message'] + `
+
+PS: This message is generated from ICEC Contact page.    
+
+`;
+
+    return msg;
+  }
+
   getIcecContacts(): void {
     this.loading1 = true;
     let input: Args = { type: 'CU', year: null };
-    this.memberService.getMembers(input).subscribe(
+    this.appService.getMembers(input).subscribe(
       (x) => { this.contacts = x.memberList; this.loading1 = false; },
       (err) => { this.loading1 = false; });
   }
@@ -35,7 +75,7 @@ export class ContactComponent implements OnInit {
   getIcecAssistance(): void {
     this.loading2 = true;
     let input: Args = { type: 'NA', year: null };
-    this.memberService.getMembers(input).subscribe(
+    this.appService.getMembers(input).subscribe(
       (x) => { this.assistants = x.memberList; this.loading2 = false; },
       (err) => { this.loading2 = false; });
   }

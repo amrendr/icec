@@ -14,6 +14,7 @@ export class Api implements OnInit {
                 icecContactsDataApi: './api/v1/contacts',
                 communityEventsDataApi: './api/v1/events',
                 announcementsDataApi: './api/v1/announcement',
+                sendMessageApi: './api/v1/message'
             };
         } else {
             this.urls = {
@@ -23,7 +24,8 @@ export class Api implements OnInit {
                 indiafestOrganizerDataApi: '/data/indiafest.json',
                 icecContactsDataApi: '/data/icecContacts.json',
                 communityEventsDataApi: '/data/communityEvents.json',
-                announcementsDataApi: '/data/annoucements.json'
+                announcementsDataApi: '/data/annoucements.json',
+                sendMessageApi: '/data/message.json'
             };
         }
     }

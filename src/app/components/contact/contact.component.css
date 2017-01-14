@@ -1,0 +1,22 @@
+.input {
+  width: 100%;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.send {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.progress {
+  margin-top: -16px;
+}
+
+md-hint{
+  color: #f44336;
+}
