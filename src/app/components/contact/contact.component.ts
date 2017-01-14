@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AppService } from '../../services/app.service';
-import { Member, Args } from '../../services/app.class';
+import { Member, Mail, Args } from '../../services/app.class';
 
 
 @Component({
@@ -47,21 +47,15 @@ export class ContactComponent implements OnInit {
       );
   }
 
-  private formatMessage(value: any): string {
-    let msg =
-      `
-From:  `+ value['name'] + `
-Email: `+ value['email'] + `
+  private formatMessage(value: any): Mail {
 
-Subject: `+ value['subject'] + `
-  
-    `+ value['message'] + `
+    let mail = new Mail();
 
-PS: This message is generated from ICEC Contact page.    
-
-`;
-
-    return msg;
+    mail.name = value['name'];
+    mail.from = value['email'];
+    mail.subject = value['subject'];
+    mail.message = value['message'];
+    return mail;
   }
 
   getIcecContacts(): void {

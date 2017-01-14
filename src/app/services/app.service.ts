@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/rx';
 
 import { Api } from './app.service.api';
-import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent } from './app.class';
+import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent, Mail } from './app.class';
 
 
 @Injectable()
@@ -195,14 +195,31 @@ export class AppService {
         return this._announcementObservable;
     }
 
-    sendMessage(message: string): Observable<boolean> {
+    sendMessage(data: Mail): Observable<boolean> {
 
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post(this.api.urls.sendMessageApi, { message }, options)
+        return this.http.post(this.api.urls.sendMessageApi, this.formatMessage(data), options)
             .map(this.extractData)
             .catch(this.handleError);
+    }
+
+    private formatMessage(mail: Mail): Mail {
+        mail.message =
+            `
+From:  `+ mail.name + `
+Email: `+ mail.from + `
+
+Subject: `+ mail.subject + `
+  
+    `+ mail.message + `
+
+PS: This message is generated from ICEC Contact page.    
+
+`;
+
+        return mail;
     }
 
     getCommunityEvents(key: string): Observable<CommunityEvent[]> {
