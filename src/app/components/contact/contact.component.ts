@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AppService } from '../../services/app.service';
 import { Member, Mail, Args } from '../../services/app.class';
@@ -9,7 +9,7 @@ import { Member, Mail, Args } from '../../services/app.class';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewChecked {
 
   contacts: Member[];
   assistants: Member[];
@@ -17,6 +17,10 @@ export class ContactComponent implements OnInit {
   loading2: boolean;
 
   sendingMsg = false;
+  msgForm: NgForm;
+  @ViewChild('f') currentForm: NgForm;
+
+  emailValidationFailed = false;
 
   constructor(
     private appService: AppService
@@ -25,6 +29,35 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.getIcecContacts();
     this.getIcecAssistance();
+  }
+
+  ngAfterViewChecked() {
+    this.formChanged();
+  }
+
+  formChanged() {
+    if (this.currentForm === this.msgForm) { return; }
+    this.msgForm = this.currentForm;
+    if (this.msgForm) {
+      this.msgForm.valueChanges
+        .subscribe(data => this.onValueChanged(data));
+    }
+  }
+
+  validateEmail(email:string): boolean {
+    if(email === ''){
+      return true;
+    }
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  onValueChanged(data?: any) {
+    if (!this.msgForm) { return; }
+    const control = this.msgForm.form.get('email');
+    if (control && control.dirty) {
+      this.emailValidationFailed = !this.validateEmail(control.value);
+    }
   }
 
   onFormSubmit(form: NgForm): void {

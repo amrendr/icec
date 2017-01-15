@@ -9,19 +9,22 @@
     <div class="flex inset-15x">
       <div class="card card-33">
         <md-input-container class="input">
-          <input md-input placeholder="Your Name" required name="name" ngModel #name="ngModel"/>
+          <input md-input placeholder="Your Name" required name="name" ngModel #name="ngModel" />
           <md-hint *ngIf="f.submitted && name.control.invalid">Please provide your name.</md-hint>
         </md-input-container>
       </div>
       <div class="card card-33">
         <md-input-container class="input">
-          <input md-input placeholder="Your Email" required name="email" ngModel #email="ngModel"/>
-          <md-hint *ngIf="f.submitted && email.control.invalid">Please provide your email address.</md-hint>
+          <input md-input placeholder="Your Email" required name="email" ngModel #email="ngModel" />
+          <md-hint>
+            <span *ngIf="f.submitted && email.control.invalid">Please provide your email address.</span>
+            <span *ngIf="emailValidationFailed">Invalid email address.</span>
+          </md-hint>
         </md-input-container>
       </div>
       <div class="card card-67">
         <md-input-container class="input">
-          <input md-input placeholder="Subject" required name="subject" ngModel #subject="ngModel"/>
+          <input md-input placeholder="Subject" required name="subject" ngModel #subject="ngModel" />
           <md-hint *ngIf="f.submitted && subject.control.invalid">Please provide the subject about which you are enquiring.</md-hint>
         </md-input-container>
       </div>

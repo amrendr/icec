@@ -28,15 +28,12 @@
   function send_mail(){
     $data = file_get_contents('php://input');
     $json = json_decode($data);
-    $message = $json->message;
-    $from= $json->from;
-    $subject = $json->subject;
-    $email = $json->name . ' <' . $from . '>';
         
     $headers = 'From: '. $json->name . ' <webmaster@icec-florida.org>' . "\r\n" .
-    'Reply-To: '. $email . "\r\n" .
+    'Reply-To: '. $json->name . ' <' . $json->from . '>' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-    mail('amrendra@gmail.com', '(Web) - '. $subject , $message, $headers);
+    
+    mail('icec.florida+web@gmail.com', '#web - '. $json->subject , $json->message, $headers);
     echo(true);
   }
 ?>

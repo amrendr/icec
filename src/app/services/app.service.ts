@@ -211,9 +211,7 @@ export class AppService {
 From:  `+ mail.name + `
 Email: `+ mail.from + `
 
-Subject: `+ mail.subject + `
-  
-    `+ mail.message + `
+       `+ mail.message + `
 
 PS: This message is generated from ICEC Contact page.    
 
