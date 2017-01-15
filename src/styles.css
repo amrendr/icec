@@ -61,6 +61,14 @@ footer md-toolbar-row {
   margin: 5px;
 }
 
+md-card {
+  min-height: calc(100% - 48px);
+}
+
+md-card.no-adjust-height {
+  min-height: auto;
+}
+
 md-card .avatar {
   font-size: 2.5rem;
   color: darkgray;
