@@ -2,31 +2,39 @@
 
 /***********mixin*********************/
 
-@mixin app-content-margin($margin, $nomargin) {
+@mixin app-content-margin($margin, $nomargin, $homebackdrop) {
   .app-content {
     margin: $margin 0 0;
   }
   .app-height {
-    min-height: calc(100vh - #{2*$margin});
+    height: calc(100vh - #{$margin});
+  }
+  .app-article-container {
+    min-height: calc(100vh - 10rem - #{2*$margin} - 0.2px);
+    padding: 0.1px 0;
+  }
+  .app-home-container {
+     min-height: calc(100vh - #{$homebackdrop} - 2.5rem - #{2*$margin} - 0.2px);
+    padding: 0.1px 0;
   }
   .app-article {
     .gallery {
-      min-height: calc(100vh - 10rem - #{2*$margin} - #{2*$nomargin});
+      min-height: calc(100vh - 10rem - #{2*$margin} - #{2*$nomargin} - 0.2px);
       padding: $nomargin;
     }
   }
 }
 
 // Set the default height for the toolbar.
-@include app-content-margin($md-toolbar-height-desktop, 5px);
+@include app-content-margin($md-toolbar-height-desktop, 5px, 26rem);
 // Specific height for mobile devices in portrait mode.
 @media ($md-xsmall) and (orientation: portrait) {
-  @include app-content-margin($md-toolbar-height-mobile-portrait, 1rem);
+  @include app-content-margin($md-toolbar-height-mobile-portrait, 1rem, 20rem);
 }
 
 // Specific height for mobile devices in landscape mode.
 @media ($md-small) and (orientation: landscape) {
-  @include app-content-margin($md-toolbar-height-mobile-landscape, 5px);
+  @include app-content-margin($md-toolbar-height-mobile-landscape, 5px, 26rem);
 }
 
 

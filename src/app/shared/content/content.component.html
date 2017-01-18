@@ -10,6 +10,8 @@
 </header>
 <button md-mini-fab color="primary" trapFocus (click)="goBack()"><md-icon>arrow_back</md-icon></button>
 <md-progress-bar *ngIf="loading" mode="indeterminate" color="accent"></md-progress-bar>
-<div class="app-article" [class.nomargin]="nomargin">
-  <ng-content></ng-content>
+<div class="app-article-container">
+  <div class="app-article" [class.nomargin]="nomargin">
+    <ng-content></ng-content>
+  </div>
 </div>

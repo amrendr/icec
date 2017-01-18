@@ -3,22 +3,24 @@
   <img src="assets/logo.png" alt="logo">
   <div class="tagline inset-15x">Community of Indian Heritage</div>
 </div>
-<app-announcement-bar></app-announcement-bar>
-<div class="app-home-content">
-  <div>
-    Join ICEC's mailing list to learn about upcoming <a [routerLink]="['/events']">community events</a> in Gainesville by
-    sending an email to <a href="mailto:icec-gainesville-subscribe@yahoogroups.com">icec-gainesville-subscribe@yahoogroups.com</a>
-  </div>
+<div class="app-home-container">
+  <app-announcement-bar></app-announcement-bar>
+  <div class="app-home-content">
+    <div>
+      Join ICEC's mailing list to learn about upcoming <a [routerLink]="['/events']">community events</a> in Gainesville
+      by sending an email to <a href="mailto:icec-gainesville-subscribe@yahoogroups.com">icec-gainesville-subscribe@yahoogroups.com</a>
+    </div>
 
-  <div class="flex inset-15x">
-    <div class="card card-33">
-      <app-gallery-card [input]="youth" largeImg="true" pageUrl='/youth'></app-gallery-card>
-    </div>
-    <div class="card card-33">
-      <app-gallery-card [input]="indiafest" largeImg="true" pageUrl='/indiafest'></app-gallery-card>
-    </div>
-    <div class="card card-33">
-      <app-gallery-card [input]="resources" largeImg="true" pageUrl='/resources/student'></app-gallery-card>
+    <div class="flex inset-15x">
+      <div class="card card-33">
+        <app-gallery-card [input]="youth" largeImg="true" pageUrl='/youth'></app-gallery-card>
+      </div>
+      <div class="card card-33">
+        <app-gallery-card [input]="indiafest" largeImg="true" pageUrl='/indiafest'></app-gallery-card>
+      </div>
+      <div class="card card-33">
+        <app-gallery-card [input]="resources" largeImg="true" pageUrl='/resources/student'></app-gallery-card>
+      </div>
     </div>
   </div>
 </div>
