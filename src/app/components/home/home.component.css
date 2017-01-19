@@ -1,15 +1,18 @@
-.app-home-backdrop{
-    padding-top: 2.5rem;
-    text-align: center; 
-    background: 
-    url('assets/silhouette2.png') no-repeat bottom center,
-     linear-gradient(75deg, #fd8e01, white, white, #45b803);
-    background-blend-mode:multiply; 
-    position: relative;
+.app-home-backdrop {
+  padding-top: 2.5rem;
+  text-align: center;
+  background: url('assets/silhouette2.png') no-repeat bottom center, linear-gradient(75deg, #fd8e01, white, white, #45b803);
+  background-blend-mode: multiply;
+  position: relative;
 }
 
-.tagline{
-    color: #607D8B;
-    font-size: 1.25rem;
-    font-weight: bold;
+.tagline {
+  color: #607D8B;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.tagline.small {
+  font-size: 1rem;
+  font-weight: normal;
 }
