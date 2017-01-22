@@ -1,31 +1,49 @@
 # Website
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
+This project is to redesign and enhance the current ICEC site. Following below step describes, how to set up a development server and make any changes.
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Follow steps will help you setup a development server. If you have already setup your development server earlier, skip to step 3.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+### 1. Required Softwares
+
+* Install [Node.js](https://nodejs.org/en/download/)
+* Install [Visual Studio Code](https://code.visualstudio.com/Download)
+* Install [Git](https://git-scm.com/downloads)
+* Install [TortoiseGit](https://tortoisegit.org/download/)
+
+### 2. Clone Code Repository
+
+* Create an empty folder
+* Right click on the folder and click on Git Clone...
+* use https://github.com/amrendr/icec.git in URL field and click ok.
+* open cmd prompt and navigate to the cloned code folder.
+* type `git branch --set-upstream-to=origin/master master` and press enter to setup branch tracking.
+
+Learn more about `Git` Repository. https://guides.github.com/
+
+### 3. Setup your code
+
+* Open Visual Studio Code 
+* File -> Open Folder...   Choose `icec` folder
+* View -> Integrated Terminal
+* In terminal window, type `git pull --rebase` to get latest code.
+* In terminal window, type `npm install` and press enter. This will take few mintues to complete.
+ 
+In terminal window, Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+In terminal window, run `ng build -prod --aot` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Deploying 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Delete following following files from your server, and then upload the files from `dist/` to your server
+* vendor.xxxxxxxxx.js
+* main.xxxxxxxxxxx.js
+* inline.xxxxxxxxx.js
+* styles.xxxxxxxxx.css
+* index.html
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`xxxxxxxxxx` is random alphanumeric.
