@@ -24,9 +24,9 @@
         <md-card-subtitle>Please fill membership form below and pay annual fees either by cash or online.</md-card-subtitle>
         <md-card-content>
           <div class="flex detail" md-line>
-            <md-icon>description</md-icon>Membership Form (
+            <md-icon>description</md-icon><div>Membership Form (
             <a href="assets/documents/ICEC_Membership_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)
+            <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)</div>
           </div>
           <div>&nbsp;</div>
         </md-card-content>
@@ -108,9 +108,9 @@
           <md-card>
             <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
             <md-card-content>
-              <span class="flex" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+              <span class="flex" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
               <span class="flex" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-              <span class="flex" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+              <span class="flex" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
             </md-card-content>
           </md-card>
         </div>

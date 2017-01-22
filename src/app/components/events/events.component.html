@@ -8,15 +8,15 @@
         <md-card-title *ngIf="!event.eventUrl">{{event.title}}</md-card-title>
         <md-card-title *ngIf="event.eventUrl"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></md-card-title>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon>{{event.date}}</span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon>{{event.time}}</span>
-          <span class="flex detail" md-line><md-icon>place</md-icon>{{event.venue}}</span>
-          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon>{{event.address}}</span>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon><span>{{event.date}}</span></span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon><span>{{event.time}}</span></span>
+          <span class="flex detail" md-line><md-icon>place</md-icon><span>{{event.venue}}</span></span>
+          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon><span>{{event.address}}</span></span>
         </md-card-content>
         <md-card-subtitle *ngIf="event.person || event.contact || event.email">For question, contact</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon>{{event.person}}</span>
-          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon>{{event.contact}}</span>
+          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon><span>{{event.person}}</span></span>
+          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon><span>{{event.contact}}</span></span>
           <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
         </md-card-content>
         <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>

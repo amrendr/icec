@@ -16,9 +16,9 @@
       <md-card>
         <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
           <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-          <span class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+          <span class="flex detail" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
         </md-card-content>
       </md-card>
     </div>
@@ -27,18 +27,18 @@
         <md-card-subtitle>ICEC Rental Documents</md-card-subtitle>
         <md-card-content>
           <div class="flex detail" md-line>
-            <md-icon>description</md-icon>Rental Agreement <span>&nbsp;(</span>
-            <a href="assets/documents/Rental_Agreement-Rev2013-08-31.pdf" target="blank">PDF</a><span>)</span>
+            <md-icon>description</md-icon><div><span>Rental Agreement (</span>
+            <a href="assets/documents/Rental_Agreement-Rev2013-08-31.pdf" target="blank">PDF</a>)</div>
           </div>
           <div class="flex detail" md-line>
-            <md-icon>description</md-icon>ICEC Reservation Request Form <span>&nbsp;(</span>
-            <a href="assets/documents/ICEC_Reservation_Request_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Reservation_Request_Form.doc" target="blank">DOC</a><span>)</span>
+            <md-icon>description</md-icon><div><span>Reservation Request Form (</span>
+            <a href="assets/documents/ICEC_Reservation_Request_Form.pdf" target="blank">PDF</a>/
+            <a href="assets/documents/ICEC_Reservation_Request_Form.doc" target="blank">DOC</a>)</div>
           </div>
           <div class="flex detail" md-line>
-            <md-icon>description</md-icon>ICEC-organized Event Reservation Form <span>&nbsp;(</span>
-            <a href="assets/documents/ICEC_Event_Reservation_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Event_Reservation_Form.doc" target="blank">DOC</a><span>)</span>
+            <md-icon>description</md-icon><div><span>ICEC-organized Event Reservation Form (</span>
+            <a href="assets/documents/ICEC_Event_Reservation_Form.pdf" target="blank">PDF</a>/
+            <a href="assets/documents/ICEC_Event_Reservation_Form.doc" target="blank">DOC</a>)</div>
           </div>
         </md-card-content>
       </md-card>

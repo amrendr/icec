@@ -28,8 +28,8 @@
         </md-card-header>
         <md-card-content>
           <span class="flex detail" md-line *ngIf="member.email"><md-icon>email</md-icon> <a href="mailto:{{member.email}}">{{member.email}}</a></span>
-          <span class="flex detail" md-line *ngIf="member.contact"><md-icon>phone</md-icon> {{member.contact}}</span>
-          <span class="flex detail" md-line *ngIf="member.membershipTerm"><md-icon>card_membership</md-icon> {{member.membershipTerm}}</span>
+          <span class="flex detail" md-line *ngIf="member.contact"><md-icon>phone</md-icon><span>{{member.contact}}</span></span>
+          <span class="flex detail" md-line *ngIf="member.membershipTerm"><md-icon>card_membership</md-icon><span>{{member.membershipTerm}}</span></span>
         </md-card-content>
       </md-card>
     </div>

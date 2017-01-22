@@ -7,15 +7,15 @@
       <md-card *ngIf="event">
         <md-card-title>{{event.title}}</md-card-title>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon>{{event.date}}</span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon>{{event.time}}</span>
-          <span class="flex detail" md-line><md-icon>place</md-icon>{{event.venue}}</span>
-          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon>{{event.address}}</span>
+          <span class="flex detail" md-line><md-icon>date_range</md-icon><span>{{event.date}}</span></span>
+          <span class="flex detail" md-line><md-icon>access_time</md-icon><span>{{event.time}}</span></span>
+          <span class="flex detail" md-line><md-icon>place</md-icon><span>{{event.venue}}</span></span>
+          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon><span>{{event.address}}</span></span>
         </md-card-content>
         <md-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon>{{event.person}}</span>
-          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon>{{event.contact}}</span>
+          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon><span>{{event.person}}</span></span>
+          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon><span>{{event.contact}}</span></span>
           <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
         </md-card-content>
         <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
@@ -69,27 +69,27 @@
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Cultural activities and social functions
+      <span>Cultural activities and social functions</span>
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Involving Indian students in the local community
+      <span>Involving Indian students in the local community</span>
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Visits of Indian students to host families in Gainesville during holidays
+      <span>Visits of Indian students to host families in Gainesville during holidays</span>
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Provision of support during times of stress and crisis
+      <span>Provision of support during times of stress and crisis</span>
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Organization of a physician support network for health emergencies
+      <span>Organization of a physician support network for health emergencies</span>
     </div>
     <div class="flex" md-line>
       <md-icon>star</md-icon>
-      Advise and assist the Indian student organizations at the University of Florida
+      <span>Advise and assist the Indian student organizations at the University of Florida</span>
     </div>
   </div>
 
@@ -124,9 +124,9 @@
       <md-card>
         <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
         <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon>{{contact.fullname}}</span>
+          <span class="flex detail" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
           <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-          <span *ngIf="contact.contact" class="flex detail" md-line><md-icon>phone</md-icon>{{contact.contact}}</span>
+          <span *ngIf="contact.contact" class="flex detail" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
           <div class="flex detail" md-line>
             <md-icon>description</md-icon>Application Form<span>&nbsp;(</span>
             <a href="assets/documents/Educational_Financial_Assistance_Program.pdf" target="blank">PDF</a><span>)</span>

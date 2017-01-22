@@ -35,6 +35,10 @@ footer md-toolbar-row {
   flex-grow: 1;
 }
 
+[md-line].flex{
+  flex-wrap: nowrap;
+}
+
 .inset-5x {
   margin-top: 0.3125rem;
 }
@@ -53,6 +57,7 @@ footer md-toolbar-row {
 
 .flex>md-icon {
   font-size: 1rem;
+  flex-shrink: 0;
   color: darkgray;
 }
 
