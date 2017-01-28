@@ -109,7 +109,7 @@ $app-xl: 1600px;
   @include app-content(1rem, 1rem, 0.5rem, 0.5rem, 0);
   @include app-hide-subheader();
   @include app-home-backdrop(20rem, auto, 175px);
-  @include app-announcemnt-container(1rem, 150px, 1rem, 0);
+  @include app-announcemnt-container(1rem, 150px, 1rem, 1);
   @include app-toobar-menu(true);
   
 }

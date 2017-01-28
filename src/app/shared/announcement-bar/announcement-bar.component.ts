@@ -12,6 +12,7 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
 
   annoucements: Announcement[];
   showAnnouncement: boolean = false;
+  loading: boolean;
 
   interval: any;
   selectedAnnoucement: Announcement;
@@ -23,6 +24,7 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.loading = true;
     this.annoucementService.getAnnouncement().subscribe(
       (x) => {
         this.annoucements = x.annoucements;
@@ -31,15 +33,20 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
           this.changeAnnouncementInterval = x.interval * 1000;
         }
 
-        this.interval = setInterval(() => { this.startAnnouncement(); }, 1000);
-
         if (x.annoucements.length > 0) {
           this.selectedAnnoucement = x.annoucements[0];
           this.showAnnouncement = false;
         } else {
           this.showAnnouncement = true;
         }
-      });
+
+        if (x.annoucements.length > 1) {
+          this.interval = setInterval(() => { this.startAnnouncement(); }, 1000);
+        }
+
+        this.loading = false;
+      },
+      (err) => { this.loading = false; });
   }
 
   ngOnDestroy() {
@@ -68,9 +75,11 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
   }
 
   changeSlide(): void {
-    this.clearLocalInterval();
-    this.changeAnnouncement();
-    this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
+    if (this.annoucements.length > 1) {
+      this.clearLocalInterval();
+      this.changeAnnouncement();
+      this.interval = setInterval(() => { this.changeAnnouncement(); }, this.changeAnnouncementInterval);
+    }
   }
 
 }
