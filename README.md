@@ -40,10 +40,10 @@ In terminal window, run `ng build -prod --aot` to build the project. The build a
 ## Deploying 
 
 Delete following following files from your server, and then upload the files from `dist/` to your server
-* vendor.xxxxxxxxx.js
-* main.xxxxxxxxxxx.js
-* inline.xxxxxxxxx.js
-* styles.xxxxxxxxx.css
+* vendor.`xxxxxxxxx`.js
+* main.`xxxxxxxxxxx`.js
+* inline.`xxxxxxxxx`.js
+* styles.`xxxxxxxxx`.css
 * index.html
 
 `xxxxxxxxxx` is random alphanumeric.
