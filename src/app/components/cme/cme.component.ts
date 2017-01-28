@@ -26,7 +26,7 @@ export class CmeComponent implements OnInit {
 
   getIcecContacts(): void {
     this.loading1 = true;
-    let input: Args = { type: 'CME', year: null };
+    const input: Args = { type: 'CME', year: null };
     this.memberService.getMembers(input).subscribe(
       (x) => { this.contacts = x.memberList; this.loading1 = false; },
       (err) => { this.loading1 = false; });

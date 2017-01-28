@@ -28,8 +28,8 @@ export class AppService {
         body = body.replace(/\/\*[\s\S]*?\*\/.*?/g, '');
         // remove single line comments
         body = body.replace(/(\n|\r|\r\n)+?\s*?\/\/.*/g, '');
-        let json = JSON.parse(body);
-        return json || undefined;
+
+        return JSON.parse(body) || undefined;
     }
 
     private handleError(error: Response | any) {
@@ -91,16 +91,10 @@ export class AppService {
             case 'EM':
             case 'BM':
             case 'RM':
+                observable = this.getMembersObservable();
+                break;
             default:
-                if (!this._membersObservable) {
-                    this._membersObservable = this.http.get(this.api.urls.membersDataApi)
-                        .map(this.extractData)
-                        .catch(this.handleError)
-                        .publishReplay(1)
-                        .refCount();
-                }
-
-                observable = this._membersObservable;
+                observable = this.getMembersObservable();
                 break;
         }
 
@@ -109,11 +103,21 @@ export class AppService {
 
     }
 
+    private getMembersObservable(): Observable<any> {
+        if (!this._membersObservable) {
+            this._membersObservable = this.http.get(this.api.urls.membersDataApi)
+                .map(this.extractData)
+                .catch(this.handleError)
+                .publishReplay(1)
+                .refCount();
+        }
+        return this._membersObservable;
+    }
+
     private formatMembers(data: any, input: Args): Members {
-        let members: Members = { year: input.year, title: '', memberList: [] };
-
-
+        const members: Members = { year: input.year, title: '', memberList: [] };
         let item: MemberList;
+
         if (input.type === 'EM' || input.type === 'BM' || input.type === 'RM') {
             if (input.year) {
                 item = data.find((member: Members) => member.year === input.year);
@@ -124,7 +128,6 @@ export class AppService {
                 item = { year: null, boardMembers: [], executives: [], regularMembers: [] };
             }
         }
-
 
         switch (input.type) {
             case 'EM':
@@ -197,8 +200,8 @@ export class AppService {
 
     sendMessage(data: Mail): Observable<boolean> {
 
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
+        const headers = new Headers({ 'Content-Type': 'application/json' });
+        const options = new RequestOptions({ headers: headers });
 
         return this.http.post(this.api.urls.sendMessageApi, this.formatMessage(data), options)
             .map(this.extractData)
@@ -208,15 +211,14 @@ export class AppService {
     private formatMessage(mail: Mail): Mail {
         mail.message =
             `
-From:  `+ mail.name + `
-Email: `+ mail.from + `
+From:  ` + mail.name + `
+Email: ` + mail.from + `
 
-       `+ mail.message + `
+       ` + mail.message + `
 
 PS: This message is generated from ICEC Contact page.    
 
 `;
-
         return mail;
     }
 
@@ -281,7 +283,7 @@ PS: This message is generated from ICEC Contact page.
         if (section) {
             return data.filter(x => (x.section || '').toLowerCase() === section.toLowerCase())
                 .map(x => {
-                    let copy: Gallery = Object.assign({}, x);
+                    const copy: Gallery = Object.assign({}, x);
                     copy.photosCount = (copy.photos ? copy.photos.length : 0);
                     copy.photos = [];
                     return copy;
@@ -289,14 +291,14 @@ PS: This message is generated from ICEC Contact page.
                 .sort((a, b) => { return b.year - a.year; });
         } else {
 
-            let galleryItems: Gallery[] = data.sort((a, b) => { return b.year - a.year; });
-            let gallerySections: Gallery[] = [];
+            const galleryItems: Gallery[] = data.sort((a, b) => { return b.year - a.year; });
+            const gallerySections: Gallery[] = [];
 
             galleryItems.forEach(x => {
                 // Check if we have already stored in our gallerySection, else continue
-                let item: Gallery = gallerySections.find(y => y.section.toLowerCase() === x.section.toLowerCase());
+                const item: Gallery = gallerySections.find(y => y.section.toLowerCase() === x.section.toLowerCase());
                 if (!item) {
-                    let copy: Gallery = Object.assign({}, x);
+                    const copy: Gallery = Object.assign({}, x);
                     copy.photosCount = (copy.photos ? copy.photos.length : 0);
                     copy.photos = [];
                     gallerySections.push(copy);

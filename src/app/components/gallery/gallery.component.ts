@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
@@ -11,7 +11,7 @@ import { AppDimensionService } from '../../services/app.dimension.service';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements OnInit, OnDestroy {
 
   col: number;
   gallery$: Observable<Gallery[]>;
@@ -25,11 +25,12 @@ export class GalleryComponent implements OnInit {
   loading: boolean;
   imgLoaded: boolean = false;
   hasMultipleSection: boolean;
+  gallerySubscription: any;
 
   constructor(
     private activeRoute: ActivatedRoute,
     private galleryService: AppService,
-    private windowsize: AppDimensionService
+    private appRuler: AppDimensionService
   ) { }
 
   ngOnInit() {
@@ -42,16 +43,22 @@ export class GalleryComponent implements OnInit {
       (gallery) => { this.gallery = gallery; this.loading = false; },
       (err) => { this.loading = false; });
 
-    this.gallery$
-      .switchMap((gallery: Gallery[]) => this.windowsize.getGalleryColumns(gallery[0].max_image_width))
+    this.gallerySubscription = this.gallery$
+      .switchMap((gallery: Gallery[]) => this.appRuler.getGalleryColumns(gallery[0].max_image_width))
       .startWith(4)
       .publishReplay(1)
       .refCount()
       .subscribe((x) => { this.col = x; });
   }
 
+  ngOnDestroy() {
+    if (this.gallerySubscription) {
+      this.gallerySubscription.unsubscribe();
+    }
+  }
+
   formatInput(params: Params): Args {
-    let input: Args = { year: null, type: null };
+    const input: Args = { year: null, type: null };
     switch (params['year']) {
       case 'current':
       case null:
@@ -97,8 +104,8 @@ export class GalleryComponent implements OnInit {
   }
 
   private galleryItems(str: string): string {
-    let items: string = ' item';
-    if (this.gallery.length == 1) {
+    let items = ' item';
+    if (this.gallery.length === 1) {
       items = this.gallery[0].photos.length + items;
       if (this.gallery[0].photos.length > 1) {
         items = items + 's';
@@ -180,12 +187,11 @@ export class GalleryComponent implements OnInit {
   }
 
   onKey(event: any): void {
-    if (event.keyCode == 27) {
+    if (event.keyCode === 27) {
       this.closeSlideShow();
-    } else if (event.keyCode == 39 && this.hasNextPhoto) {
+    } else if (event.keyCode === 39 && this.hasNextPhoto) {
       this.showNextPhoto();
-    }
-    else if (event.keyCode == 37 && this.hasPrevPhoto) {
+    } else if (event.keyCode === 37 && this.hasPrevPhoto) {
       this.showPrevPhoto();
     }
   }

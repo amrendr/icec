@@ -29,7 +29,7 @@ export class IndiafestComponent implements OnInit {
   }
 
   getIndiafestOrganizer(): void {
-    let input: Args = { type: 'IF', year: null };
+    const input: Args = { type: 'IF', year: null };
 
     this.loading2 = true;
     this.appService.getMembers(input).subscribe((x) => { this.contacts = x.memberList; this.loading2 = false; },
@@ -41,7 +41,7 @@ export class IndiafestComponent implements OnInit {
     this.loading3 = true;
     this.appService.getCommunityEvents(key).subscribe((x) => {
       this.event = ((x && x.length > 0) ? x[0] : null);
-      if(this.event){
+      if (this.event) {
         this.title = this.event.title;
         this.subtitle = this.event.time + ' at ' + this.event.venue;
       }

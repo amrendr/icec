@@ -35,9 +35,8 @@ export class GalleryCardComponent implements OnInit {
           this.showCardLoading = true;
         }
         this.getGalleryInfo();
-      }
-      else {
-        console.warn("Gallery Card, Input is not available.");
+      } else {
+        console.warn('Gallery Card, Input is not available.');
         this.loadingCompleted();
       }
     }
@@ -71,13 +70,13 @@ export class GalleryCardComponent implements OnInit {
       } else {
         this.router.navigate(['/gallery', item.section]);
       }
-    } 
+    }
   }
 
   getTitle(): string {
     let title = this.item.title;
     if (this.item.year && this.titleWithYear) {
-      title = title + ' (' + this.item.year + ')'
+      title = title + ' (' + this.item.year + ')';
     }
     return title;
   }

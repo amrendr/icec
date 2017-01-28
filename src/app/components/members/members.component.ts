@@ -45,7 +45,7 @@ export class MembersComponent implements OnInit {
 
   formatInput(params: Params): Args {
     // console.warn(params['year'], params['type']);
-    let input: Args = { year: null, type: null };
+    const input: Args = { year: null, type: null };
     switch (params['year']) {
       case 'current':
         break;

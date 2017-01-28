@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit {
 
   getIcecFacilityAssistance(): void {
     this.loading = true;
-    let input: Args = { type: 'IR', year: null };
+    const input: Args = { type: 'IR', year: null };
     this.memberService.getMembers(input).subscribe(
       (x) => {
         this.contacts = x.memberList;

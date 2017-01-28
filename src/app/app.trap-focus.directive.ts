@@ -1,14 +1,14 @@
 import { Directive, ElementRef, Renderer, AfterViewInit } from '@angular/core';
 
 @Directive({
-  selector: '[trapFocus]'
+  selector: '[appTrapFocus]'
 })
-export class TrapFocusDirective implements AfterViewInit{
+export class TrapFocusDirective implements AfterViewInit {
 
   constructor(
     private el: ElementRef,
     private renderer: Renderer
-  ) {  }
+  ) { }
 
   ngAfterViewInit() {
     this.renderer.invokeElementMethod(this.el.nativeElement, 'focus');

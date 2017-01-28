@@ -19,7 +19,7 @@
   </div>
 </app-content>
 
-<div *ngIf="isSlideShowActive" (keydown)="onKey($event)" trapFocus tabindex="0">
+<div *ngIf="isSlideShowActive" (keydown)="onKey($event)" appTrapFocus tabindex="0">
   <div class="btn close">
     <button md-icon-button (click)="closeSlideShow()"><md-icon >close</md-icon></button>
   </div>

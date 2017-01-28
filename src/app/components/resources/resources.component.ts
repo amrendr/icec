@@ -37,7 +37,7 @@ export class ResourcesComponent implements OnInit {
 
   getIcecContacts(): void {
     this.loading2 = true;
-    let input: Args = { type: 'EF', year: null };
+    const input: Args = { type: 'EF', year: null };
     this.appService.getMembers(input).subscribe(
       (x) => { this.contacts = x.memberList; this.loading2 = false; },
       (err) => { this.loading2 = false; });

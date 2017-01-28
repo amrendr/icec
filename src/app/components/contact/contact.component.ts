@@ -44,8 +44,8 @@ export class ContactComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  validateEmail(email:string): boolean {
-    if(email === ''){
+  validateEmail(email: string): boolean {
+    if (email === '') {
       return true;
     }
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -62,8 +62,9 @@ export class ContactComponent implements OnInit, AfterViewChecked {
 
   onFormSubmit(form: NgForm): void {
 
-    if (form.invalid)
+    if (form.invalid) {
       return;
+    }
 
     this.sendingMsg = true;
 
@@ -82,7 +83,7 @@ export class ContactComponent implements OnInit, AfterViewChecked {
 
   private formatMessage(value: any): Mail {
 
-    let mail = new Mail();
+    const mail = new Mail();
 
     mail.name = value['name'];
     mail.from = value['email'];
@@ -93,7 +94,7 @@ export class ContactComponent implements OnInit, AfterViewChecked {
 
   getIcecContacts(): void {
     this.loading1 = true;
-    let input: Args = { type: 'CU', year: null };
+    const input: Args = { type: 'CU', year: null };
     this.appService.getMembers(input).subscribe(
       (x) => { this.contacts = x.memberList; this.loading1 = false; },
       (err) => { this.loading1 = false; });
@@ -101,7 +102,7 @@ export class ContactComponent implements OnInit, AfterViewChecked {
 
   getIcecAssistance(): void {
     this.loading2 = true;
-    let input: Args = { type: 'NA', year: null };
+    const input: Args = { type: 'NA', year: null };
     this.appService.getMembers(input).subscribe(
       (x) => { this.assistants = x.memberList; this.loading2 = false; },
       (err) => { this.loading2 = false; });

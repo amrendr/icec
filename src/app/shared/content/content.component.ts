@@ -22,6 +22,10 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
   }
 
+  isSidenavOpen(): boolean {
+    return this.navService.isSidenavOpen;
+  }
+
   toggleSidenav(): void {
     this.navService.isSidenavOpen = !this.navService.isSidenavOpen;
     this.navService.toggleSidenav();
