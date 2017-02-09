@@ -37,7 +37,8 @@ const appRoutes: Routes = [
     { path: 'gallery', component: GalleryComponent },
     { path: 'gallery/:section', component: GalleryComponent },
     { path: 'gallery/:section/:year', component: GalleryComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'contact', component: ContactComponent },
+    { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
