@@ -26,6 +26,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
   imgLoaded = false;
   hasMultipleSection: boolean;
   gallerySubscription: any;
+  aspectRatio = 1;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -48,7 +49,14 @@ export class GalleryComponent implements OnInit, OnDestroy {
       .startWith(4)
       .publishReplay(1)
       .refCount()
-      .subscribe((x) => { this.col = x; });
+      .subscribe((x) => {
+        this.col = x;
+        if (x <= 2) {
+          this.aspectRatio = 0.75;
+        } else if (x > 2) {
+          this.aspectRatio = 1;
+        };
+      });
   }
 
   ngOnDestroy() {

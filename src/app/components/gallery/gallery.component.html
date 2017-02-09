@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="gallery" *ngIf="gallery.length == 1">
-    <md-grid-list [cols]="col" [rowHeight]="gallery[0].row_height" gutterSize="5" [class.hide]="isSlideShowActive">
+    <md-grid-list [cols]="col" [rowHeight]="aspectRatio*gallery[0].row_height" gutterSize="5" [class.hide]="isSlideShowActive">
       <md-grid-tile *ngFor="let photo of gallery[0].photos; let i = index;" (click)="showPhoto(i)" [rowspan]="photo.rows">
         <img src="{{photo.thumbnail || photo.imageUrl}}" alt="photo of {{photo.caption}}">
         <md-grid-tile-footer *ngIf="photo.caption">
