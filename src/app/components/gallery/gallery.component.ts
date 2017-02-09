@@ -18,12 +18,12 @@ export class GalleryComponent implements OnInit, OnDestroy {
   gallery: Gallery[] = [];
   params: Args;
   selectedPhotoIndex: number;
-  hasNextPhoto: boolean = false;
-  hasPrevPhoto: boolean = false;
-  isSlideShowActive: boolean = false;
+  hasNextPhoto = false;
+  hasPrevPhoto = false;
+  isSlideShowActive = false;
   selectedPhoto: Photo;
   loading: boolean;
-  imgLoaded: boolean = false;
+  imgLoaded = false;
   hasMultipleSection: boolean;
   gallerySubscription: any;
 

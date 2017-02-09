@@ -11,13 +11,13 @@ import { Announcement } from '../../services/app.class';
 export class AnnouncementBarComponent implements OnInit, OnDestroy {
 
   annoucements: Announcement[];
-  showAnnouncement: boolean = false;
+  showAnnouncement = false;
   loading: boolean;
 
   interval: any;
   selectedAnnoucement: Announcement;
-  currentAnnoucemntIndex: number = 0;
-  changeAnnouncementInterval: number = 5000;
+  currentAnnoucemntIndex = 0;
+  changeAnnouncementInterval = 5000;
 
   constructor(
     private annoucementService: AppService

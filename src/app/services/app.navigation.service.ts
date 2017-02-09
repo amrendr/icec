@@ -3,7 +3,7 @@ import { Observable, Subject } from 'rxjs/rx';
 
 @Injectable()
 export class AppNavigationService {
-  isSidenavOpen: boolean = false;
+  isSidenavOpen = false;
   // Observable string sources
   private navigationToggleSource = new Subject<string>();
   // Observable string streams

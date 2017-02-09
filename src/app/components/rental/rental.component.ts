@@ -9,7 +9,7 @@ import { Member, Args } from '../../services/app.class';
 })
 export class RentalComponent implements OnInit {
 
-  loading: boolean = true;
+  loading = true;
   input: Args = { type: 'rental', year: null };
   loading1: boolean;
   contacts: Member[];

@@ -10,7 +10,7 @@ import { AppNavigationService } from '../../services/app.navigation.service';
 })
 export class NavigationComponent implements OnInit {
 
-  isSidenavOpen: boolean = false;
+  isSidenavOpen = false;
   navitems: Navitem[] = [
     { title: 'Home', url: '/home' },
     { title: 'About', url: '/about' },

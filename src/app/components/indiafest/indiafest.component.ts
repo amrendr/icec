@@ -13,7 +13,7 @@ export class IndiafestComponent implements OnInit {
   contacts: Member[];
   event: CommunityEvent;
   input: Args = { type: 'indiafest', year: null };
-  loading1: boolean = true;
+  loading1 = true;
   loading2: boolean;
   loading3: boolean;
   title: string;

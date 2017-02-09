@@ -10,7 +10,7 @@ import { Member, Args } from '../../services/app.class';
 
 export class YouthGroupComponent implements OnInit {
 
-  loading: boolean = true;
+  loading = true;
   input: Args = { type: 'youth', year: null };
 
   contacts: Member[];

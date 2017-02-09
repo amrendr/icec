@@ -10,7 +10,7 @@ import { Member, Args } from '../../services/app.class';
 })
 export class CmeComponent implements OnInit {
 
-  loading: boolean = true;
+  loading = true;
   input: Args = { type: 'cme', year: null };
 
   loading1: boolean;

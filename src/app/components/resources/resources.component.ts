@@ -13,7 +13,7 @@ export class ResourcesComponent implements OnInit {
   loading: boolean;
   event: CommunityEvent;
 
-  loading1: boolean = true;
+  loading1 = true;
   input: Args = { type: 'resources', year: null };
 
   loading2: boolean;
