@@ -21,8 +21,9 @@
         </md-card-content>
       </md-card>
     </div>
-    <div class="card card-33">
-      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading"></app-gallery-card>
+    <div class="card card-50" *ngIf="contacts && contacts.length ==0"></div>
+    <div class="card card-50">
+      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading" largeImg="true"></app-gallery-card>
     </div>
   </div>
   <p>
@@ -55,10 +56,5 @@
     requested from the pharmaceutical companies and fee for the display booths charged to the medical supply companies, home
     healthcare and pharmaceutical representatives who want to advertise medically related products. As of January 2010, this
     division has helped ICEC to repay the debt and raise funds to help defray the cost of maintenance of the ICEC building.
-  </p>
-  <p>
-    The CME division plans to continue this tradition in the future to provide quality medical education to medical professionals
-    and community members and raise much needed funds for ICEC. For more information, please check with contact information 
-    on top of this page.
   </p>
 </app-content>

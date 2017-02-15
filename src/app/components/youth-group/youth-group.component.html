@@ -1,6 +1,6 @@
 <app-content [title]="'Youth Group'" [loading]="loading || loading1">
   <div class="flex first">
-    <div class="card card-33" *ngIf="!contacts">
+    <div class="card card-50" *ngIf="!contacts">
       <md-card>
         <md-card-subtitle>&nbsp;</md-card-subtitle>
         <md-card-content>
@@ -11,7 +11,7 @@
       </md-card>
       <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
     </div>
-    <div class="card card-33" *ngFor="let contact of contacts">
+    <div class="card card-50" *ngFor="let contact of contacts">
       <md-card>
         <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
         <md-card-content>
@@ -21,8 +21,9 @@
         </md-card-content>
       </md-card>
     </div>
-    <div class="card card-33">
-      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading"></app-gallery-card>
+    <div class="card card-50" *ngIf="contacts && contacts.length == 0"></div>
+    <div class="card card-50">
+      <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading" largeImage="true"></app-gallery-card>
     </div>
   </div>
 

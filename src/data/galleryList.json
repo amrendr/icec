@@ -1,18 +1,18 @@
 [
-    {
-        "year": 0, "section": "rental",
-        "title": "Rental", "subtitle": "Photos of various rooms",
-        "max_image_width": 350, "row_height": 200,
-        "poster": "assets/gallery/building/thumbnail/stage.jpg", 
-        "photos": [
-            { "rows": 1, "caption": "Auditorium Stage", "thumbnail": "assets/gallery/building/thumbnail/stage.jpg", "imageUrl": "assets/gallery/building/stage.jpg" },
-            { "rows": 1, "caption": "Main Hall & Upstairs Rooms", "thumbnail": "assets/gallery/building/thumbnail/main_hall.jpg", "imageUrl": "assets/gallery/building/main_hall.jpg" },
-            { "rows": 1, "caption": "Food-warming & Storage Area", "thumbnail": "assets/gallery/building/thumbnail/food_warming_area.jpg", "imageUrl": "assets/gallery/building/food_warming_area.jpg" },
-            { "rows": 1, "caption": "TV Room", "thumbnail": "assets/gallery/building/thumbnail/tv_room.jpg", "imageUrl": "assets/gallery/building/tv_room.jpg" },
-            { "rows": 1, "caption": "Library Room", "thumbnail": "assets/gallery/building/thumbnail/library.jpg", "imageUrl": "assets/gallery/building/library.jpg" },
-            { "rows": 1, "caption": "Prayer Room", "thumbnail": "assets/gallery/building/thumbnail/prayer_room.jpg", "imageUrl": "assets/gallery/building/prayer_room.jpg" }
-        ]
-    },
+    // {
+    //     "year": 0, "section": "rental",
+    //     "title": "Rental", "subtitle": "Photos of various rooms",
+    //     "max_image_width": 350, "row_height": 200,
+    //     "poster": "assets/gallery/building/thumbnail/stage.jpg", 
+    //     "photos": [
+    //         { "rows": 1, "caption": "Auditorium Stage", "thumbnail": "assets/gallery/building/thumbnail/stage.jpg", "imageUrl": "assets/gallery/building/stage.jpg" },
+    //         { "rows": 1, "caption": "Main Hall & Upstairs Rooms", "thumbnail": "assets/gallery/building/thumbnail/main_hall.jpg", "imageUrl": "assets/gallery/building/main_hall.jpg" },
+    //         { "rows": 1, "caption": "Food-warming & Storage Area", "thumbnail": "assets/gallery/building/thumbnail/food_warming_area.jpg", "imageUrl": "assets/gallery/building/food_warming_area.jpg" },
+    //         { "rows": 1, "caption": "TV Room", "thumbnail": "assets/gallery/building/thumbnail/tv_room.jpg", "imageUrl": "assets/gallery/building/tv_room.jpg" },
+    //         { "rows": 1, "caption": "Library Room", "thumbnail": "assets/gallery/building/thumbnail/library.jpg", "imageUrl": "assets/gallery/building/library.jpg" },
+    //         { "rows": 1, "caption": "Prayer Room", "thumbnail": "assets/gallery/building/thumbnail/prayer_room.jpg", "imageUrl": "assets/gallery/building/prayer_room.jpg" }
+    //     ]
+    // },
     // {
     //     "year": 2016, "section": "rental",
     //     "title": "", "subtitle": "Photos of various rooms",
@@ -59,7 +59,7 @@
     },
     {
         "year": 0, "section": "resources",
-        "title": "Student Classes", "subtitle": "SAT Classes",
+        "title": "Student Classes", "subtitle": "Student Resources",
         "max_image_width": 350, "row_height": 200,
         "poster": "assets/gallery/resources/thumbnail/ICEC-SAT-1.JPG", 
         "photos": [

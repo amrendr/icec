@@ -15,7 +15,7 @@ export class NavigationComponent implements OnInit {
     { title: 'Home', url: '/home' },
     { title: 'About', url: '/about' },
     { title: 'Mission And Purpose', url: '/mission' },
-    { title: 'Center Rental Information', url: '/rental' },
+    //{ title: 'Center Rental Information', url: '/rental' },
     { title: 'Membership', url: '/membership' },
     { title: 'Members', url: '/members' },
     { title: 'Youth Group', url: '/youth' },

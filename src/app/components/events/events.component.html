@@ -6,7 +6,8 @@
     <div class="card card-50" *ngFor="let event of events">
       <md-card>
         <md-card-title *ngIf="!event.eventUrl">{{event.title}}</md-card-title>
-        <md-card-title *ngIf="event.eventUrl"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></md-card-title>
+        <md-card-title *ngIf="event.eventUrl && !event.eventUrl.startsWith('http')"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></md-card-title>
+        <md-card-title *ngIf="event.eventUrl && event.eventUrl.startsWith('http')"><a [href]="event.eventUrl" target="blank">{{event.title}}</a></md-card-title>
         <md-card-content>
           <span class="flex detail" md-line><md-icon>date_range</md-icon><span>{{event.date}}</span></span>
           <span class="flex detail" md-line><md-icon>access_time</md-icon><span>{{event.time}}</span></span>
