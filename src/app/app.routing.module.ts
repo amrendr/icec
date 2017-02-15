@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     { path: 'members/:type', component: MembersComponent },
     { path: 'members/:year/:type', component: MembersComponent },
     { path: 'membership', component: MembershipComponent },
-    //{ path: 'rental', component: RentalComponent },
+    // { path: 'rental', component: RentalComponent },
     { path: 'youth', component: YouthGroupComponent },
     { path: 'resources', component: ResourcesComponent },
     { path: 'resources/:section', component: ResourcesComponent },
