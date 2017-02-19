@@ -9,13 +9,13 @@
     <div class="flex inset-15x">
       <div class="card card-33">
         <md-input-container class="input">
-          <input md-input placeholder="Your Name" required name="name" ngModel #name="ngModel" />
+          <input mdInput placeholder="Your Name" required name="name" ngModel #name="ngModel" />
           <md-hint *ngIf="f.submitted && name.control.invalid">Please provide your name.</md-hint>
         </md-input-container>
       </div>
       <div class="card card-33">
         <md-input-container class="input">
-          <input md-input placeholder="Your Email" required name="email" ngModel #email="ngModel" />
+          <input mdInput placeholder="Your Email" required name="email" ngModel #email="ngModel" />
           <md-hint>
             <span *ngIf="f.submitted && email.control.invalid">Please provide your email address.</span>
             <span *ngIf="emailValidationFailed">Invalid email address.</span>
@@ -24,13 +24,13 @@
       </div>
       <div class="card card-67">
         <md-input-container class="input">
-          <input md-input placeholder="Subject" required name="subject" ngModel #subject="ngModel" />
+          <input mdInput placeholder="Subject" required name="subject" ngModel #subject="ngModel" />
           <md-hint *ngIf="f.submitted && subject.control.invalid">Please provide the subject about which you are enquiring.</md-hint>
         </md-input-container>
       </div>
       <div class="card card-67">
         <md-input-container class="input">
-          <textarea md-input rows="5" minRows="5" maxRows="8" placeholder="Message" required name="message" ngModel #message="ngModel"></textarea>
+          <textarea mdInput rows="5" minRows="5" maxRows="8" placeholder="Message" required name="message" ngModel #message="ngModel"></textarea>
           <md-hint *ngIf="f.submitted && message.control.invalid">Please provide the message and we will get back to you at earliest.</md-hint>
         </md-input-container>
       </div>
