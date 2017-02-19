@@ -26,15 +26,15 @@
 }
 
 // Set the default height for the toolbar.
-@include app-content-margin($md-toolbar-height-desktop, 5px, 26rem);
+@include app-content-margin($mat-toolbar-height-desktop, 5px, 26rem);
 // Specific height for mobile devices in portrait mode.
-@media ($md-xsmall) and (orientation: portrait) {
-  @include app-content-margin($md-toolbar-height-mobile-portrait, 5px, 20rem);
+@media ($mat-xsmall) and (orientation: portrait) {
+  @include app-content-margin($mat-toolbar-height-mobile-portrait, 5px, 20rem);
 }
 
 // Specific height for mobile devices in landscape mode.
-@media ($md-small) and (orientation: landscape) {
-  @include app-content-margin($md-toolbar-height-mobile-landscape, 5px, 26rem);
+@media ($mat-small) and (orientation: landscape) {
+  @include app-content-margin($mat-toolbar-height-mobile-landscape, 5px, 26rem);
 }
 
 

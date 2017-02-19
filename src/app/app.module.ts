@@ -62,7 +62,7 @@ import { TrapFocusDirective } from './app.trap-focus.directive';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     AppRoutingModule
   ],
   providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService, Api],
