@@ -1,4 +1,9 @@
-@import '~@angular/material/toolbar/toolbar';
+$mat-toolbar-height-desktop: 64px !default;
+$mat-toolbar-height-mobile-portrait: 56px !default;
+$mat-toolbar-height-mobile-landscape: 48px !default;
+
+$mat-xsmall: 'max-width: 600px';
+$mat-small: 'max-width: 960px';
 
 /***********mixin*********************/
 
