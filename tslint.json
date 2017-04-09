@@ -9,6 +9,7 @@
       true,
       "check-space"
     ],
+    "ordered-imports": true,
     "curly": true,
     "eofline": true,
     "forin": true,

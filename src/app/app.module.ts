@@ -3,7 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+
+import { IcecMaterialModule } from './icec-material.module';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
@@ -64,7 +65,7 @@ import { TrapFocusDirective } from './app.trap-focus.directive';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    IcecMaterialModule,
     AppRoutingModule
   ],
   providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService, Api],

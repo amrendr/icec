@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+
+import { Observable } from '../../shared/rxjs.module';
 
 import { AppService } from '../../services/app.service';
 import { Gallery, Photo, Args } from '../../services/app.class';

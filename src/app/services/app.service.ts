@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/rx';
+import { Observable } from '../shared/rxjs.module';
 
 import { Api } from './app.service.api';
 import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent, Mail } from './app.class';

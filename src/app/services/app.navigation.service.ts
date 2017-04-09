@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs/rx';
+import { Subject } from '../shared/rxjs.module';
 
 @Injectable()
 export class AppNavigationService {
