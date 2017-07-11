@@ -15,10 +15,10 @@
       </div>
       <div class="card card-33">
         <md-input-container class="input">
-          <input mdInput placeholder="Your Email" required name="email" ngModel #email="ngModel" />
+          <input mdInput placeholder="Your Email" required name="email" ngModel #email="ngModel" email/>
           <md-hint>
             <span *ngIf="f.submitted && email.control.invalid">Please provide your email address.</span>
-            <span *ngIf="emailValidationFailed">Invalid email address.</span>
+            <span *ngIf="email.control.invalid">Invalid email address.</span>
           </md-hint>
         </md-input-container>
       </div>
