@@ -2,9 +2,7 @@ machine:
   node:
     version: 7.2.1
 dependencies:
-  pre:
-    - npm install npm@latest -g
-    - npm install @angular/cli@latest -g
+  override:
     - npm install --dev
 test:
   override:
