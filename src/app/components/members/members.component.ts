@@ -13,7 +13,10 @@ import { AppFilterListPipe } from '../../services/app.pipe';
 })
 export class MembersComponent implements OnInit {
 
-  currentType: string;
+  currentType = 'EM';
+  currentUrl = 'executives';
+  currentYear = 'current';
+  private previousYear = 'current';
   filterTxt: string;
   loading: boolean;
 
@@ -24,6 +27,11 @@ export class MembersComponent implements OnInit {
     { value: 'RM', viewValue: 'Regular Members', url: 'regular' },
     { value: 'OM', viewValue: 'All Members Till Date', url: 'overall' },
   ];
+
+  memberYears = [
+    { value: 'current', viewValue: '2017' },
+    { value: '2015', viewValue: '2015' }
+  ]
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -76,9 +84,21 @@ export class MembersComponent implements OnInit {
   }
 
   onSelect(url: string): void {
+    if (this.currentUrl === url)
+      return;
     this.loading = true;
+    this.currentUrl = url;
     this.filterTxt = '';
-    this.route.navigate(['/members', 'current', url]);
+    this.route.navigate(['/members', this.currentYear, this.currentUrl]);
+  }
+
+  onYearSelect(year: string): void {
+    if (this.previousYear === year)
+      return;
+    this.loading = true;
+    this.previousYear = year;
+    this.filterTxt = '';
+    this.route.navigate(['/members', this.currentYear, this.currentUrl]);
   }
 
   filteredMembers(): Member[] {

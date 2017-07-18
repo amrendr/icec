@@ -1,5 +1,43 @@
 [
     {
+        "year": 2017,
+        "executives": [
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Bhosale", "fullname": "Mr. Ravi Bhosale, MBA", "email": "bhosale.ravi@gmail.com", "contact": "352-275-2276", "title": "President" },
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Thanawala", "fullname": "Dr. Rizwana Thanawala, M.D.", "email": "kbrrz@aol.com", "contact": "386-365-5313", "title": "Vice-President" },
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Srivastava", "fullname": "Dr. Ramakant Srivastava, Ph.D.", "email": "rsrivastava1943@gmail.com", "contact": "352-466-3668", "title": "Secretary" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Qaiyumi", "fullname": "Dr. Shaheda Qaiyumi, M.D.", "email": "shahedaq@gmail.com", "contact": "352-378-7112", "title": "Treasurer" }
+        ],
+        "boardMembers": [
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Bhosale", "fullname": "Mr. Ravi Bhosale, MBA", "email": "bhosale.ravi@gmail.com", "contact": "352-275-2276", "title": "President" },
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Thanawala", "fullname": "Dr. Rizwana Thanawala, M.D.", "email": "kbrrz@aol.com", "contact": "386-365-5313", "title": "Vice-President" },
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Srivastava", "fullname": "Dr. Ramakant Srivastava, Ph.D.", "email": "rsrivastava1943@gmail.com", "contact": "352-466-3668", "title": "Secretary" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Qaiyumi", "fullname": "Dr. Shaheda Qaiyumi, M.D.", "email": "shahedaq@gmail.com", "contact": "352-378-7112", "title": "Treasurer" },
+            { "membershipType": "Donor Member", "membershipTerm": "2017-2019", "lastname": "Arora", "fullname": "Dr. Shiwani Arora, M.D.", "email": "shiwani.arora@clinicalpet.com", "contact": "352-332-9366" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Garg", "fullname": "Dr. Lal Garg, Ph.D.", "email": "lcgarg@ufl.edu", "contact": "352-378-4623" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Moudgil", "fullname": "Dr. Brij Moudgil, Ph.D.", "email": "bmoudgil@gmail.com", "contact": "352-372-3137" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Sankar", "fullname": "Dr. Bhavani Sankar, Ph.D.", "email": "bvsankar@gmail.com", "contact": "352-374-4382" },
+            { "membershipType": "Donor Member", "membershipTerm": "2015-2017", "lastname": "Sitharam", "fullname": "Dr. Meera Sitharam, Ph.D.", "email": "sitharam@cise.ufl.edu", "contact": "352-336-5926" },
+            { "membershipType": "Alternate Donor Member", "membershipTerm": "2015-2017", "lastname": "Ganesh", "fullname": "Dr. Thangavelu Ganesh, M.D.", "email": " ", "contact": " " },
+            { "membershipType": "Alternate Donor Member", "membershipTerm": "2015-2017", "lastname": "Thomas", "fullname": "Dr. Anil Thomas, M.D.", "email": "anilthomasv@hotmail.com", "contact": "352-262-7119" },
+            { "membershipType": "Founding Member", "membershipTerm": "2017-2019", "lastname": "Ranade", "fullname": "Manisha Ranade", "email": " ", "contact": " " },
+            { "membershipType": "Founding Member", "membershipTerm": "2017-2019", "lastname": "Sriram", "fullname": "Neeta Sriram", "email": "neeta_sriram@yahoo.com", "contact": "352-336-1434" },
+            { "membershipType": "Founding Member", "membershipTerm": "2017-2019", "lastname": "Mehta", "fullname": "Chetana Mehta", "email": "chetanamehta1230@gmail.com", "contact": "352-373-1230" },
+            { "membershipType": "Founding Member", "membershipTerm": "2017-2019", "lastname": "Singh", "fullname": "Ajay Singh, Atty. & CPA", "email": "ajay@akslawfirm.com", "contact": "352-871-1514" },
+            { "membershipType": "Regular Member", "membershipTerm": " ", "lastname": "Deshmukh", "fullname": "Mr. Yogesh Deshmukh", "email": "yogid1978@hotmail.com", "contact": "407-970-2934" },
+            { "membershipType": "Regular Member", "membershipTerm": "2017-2019", "lastname": "Lalwani", "fullname": "Mr. Lalit Lalwani", "email": "l_lals@yahoo.com", "contact": "352-871-8205" },
+            { "membershipType": "Alternate Regular Member", "membershipTerm": "2017-2019", "lastname": "Chopra", "fullname": "Mehak Chopra", "email": " ", "contact": " " },
+            { "membershipType": "Advisory Board Member", "membershipTerm": "2015-2017", "lastname": "Ganesh", "fullname": "Dr. Lalitha Ganesh, M.D.", "email": "lalitha_ganesh@hotmail.com", "contact": "352-377-2844" },
+            { "membershipType": "Advisory Board Member", "membershipTerm": "2015-2017", "lastname": "Nagda", "fullname": "Dr. Rasik Nagda, M.D.", "email": "babuji@aol.com", "contact": "352-854-1776" },
+            { "membershipType": "Advisory Board Member", "membershipTerm": "2015-2017", "lastname": "Narayanan", "fullname": "Dr. Vasudha Narayanan, Ph.D.", "email": "vasu@ufl.edu", "contact": "352-335-9812" },
+            { "membershipType": "Advisory Board Member", "membershipTerm": "2015-2017", "lastname": "Sahni", "fullname": "Mrs. Neeta Sahni", "email": "sahni.neeta@gmail.com", "contact": "352-331-0952" },
+            { "membershipType": "Advisory Board Member", "membershipTerm": "2015-2017 ", "lastname": "Shah", "fullname": "Dr. Dinesh Shah, Ph.D.", "email": "dineshoshah@yahoo.com", "contact": "352-378-3242" }
+        ],
+        "regularMembers": [
+            { "membershipType": "Regular Member", "membershipTerm": " ", "lastname": "Deshmukh", "fullname": "Mr. Yogesh Deshmukh", "email": "yogid1978@hotmail.com", "contact": "407-970-2934" },
+            { "membershipType": "Regular Member", "membershipTerm": "2017-2019", "lastname": "Lalwani", "fullname": "Mr. Lalit Lalwani", "email": "l_lals@yahoo.com", "contact": "352-871-8205" }
+           ]
+    },
+    {
         "year": 2015,
         "executives": [
             { "membershipType": "Donor Member", "membershipTerm": "2014-2016", "lastname": "Bhosale", "fullname": "Ravi Bhosale, MBA", "email": "bhosale.ravi@gmail.com", "contact": "352-275-2276", "title": "President" },
