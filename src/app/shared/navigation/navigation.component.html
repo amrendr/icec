@@ -1,26 +1,26 @@
-<md-sidenav-container class="app-height">
-  <md-sidenav align="start" mode="over" (close-start)="onCloseStart()" #sidenav>
-    <md-nav-list>
+<mat-sidenav-container class="app-height">
+  <mat-sidenav align="start" mode="over" (close-start)="onCloseStart()" #sidenav>
+    <mat-nav-list>
       <div class="nav-header">
-        <span md-subheader>Navigation</span>
-        <button md-icon-button (click)="toggleSidenav()"><md-icon>close</md-icon></button>
+        <span mat-subheader>Navigation</span>
+        <button mat-icon-button (click)="toggleSidenav()"><mat-icon>close</mat-icon></button>
       </div>
-      <md-divider></md-divider>
+      <mat-divider></mat-divider>
       <div *ngFor="let item of navitems" (click)="closeSidenav()">
         <a [routerLink]="[item.url]">
-          <md-list-item class="navitem">{{item.title}}</md-list-item>
+          <mat-list-item class="navitem">{{item.title}}</mat-list-item>
         </a>
-        <md-divider></md-divider>
+        <mat-divider></mat-divider>
       </div>
-    </md-nav-list>
-  </md-sidenav>
+    </mat-nav-list>
+  </mat-sidenav>
   <router-outlet></router-outlet>
   <footer>
-    <md-toolbar color="accent" class="app-toolbar">
-      <span md-line class="desktop-display footer">2603 NW 13th Street, STE#340, Gainesville, Florida 32609-2835 (352) 379-2911</span>
-      <span class="desktop-display credit" md-line>Design & Developed by: Amrendra Kumar</span>
-      <span md-line class="mobile-display footer">2603 NW 13th St, STE#340 (352) 379-2911</span>
-      <span class="credit mobile-display" md-line>Design by & Developed by: Amrendra Kumar</span>
-    </md-toolbar>
+    <mat-toolbar color="accent" class="app-toolbar">
+      <span mat-line class="desktop-display footer">2603 NW 13th Street, STE#340, Gainesville, Florida 32609-2835 (352) 379-2911</span>
+      <span class="desktop-display credit" mat-line>Design & Developed by: Amrendra Kumar</span>
+      <span mat-line class="mobile-display footer">2603 NW 13th St, STE#340 (352) 379-2911</span>
+      <span class="credit mobile-display" mat-line>Design by & Developed by: Amrendra Kumar</span>
+    </mat-toolbar>
   </footer>
-</md-sidenav-container>
+</mat-sidenav-container>

@@ -2,23 +2,23 @@
 
   <div class="member-form-flex">
     <div class="member-form-control">
-      <md-input-container>
-        <input mdInput placeholder="Search" [(ngModel)]="filterTxt" name="filter" />
-        <md-hint align="end">Showing {{filteredMembers().length}} / {{members.memberList.length}}</md-hint>
-      </md-input-container>
+      <mat-input-container>
+        <input matInput placeholder="Search" [(ngModel)]="filterTxt" name="filter" />
+        <mat-hint align="end">Showing {{filteredMembers().length}} / {{members.memberList.length}}</mat-hint>
+      </mat-input-container>
     </div>
     <span class="flex"></span>
     <div class="member-form-control">
-      <md-select placeholder="Select Member Type" [(ngModel)]="currentType" name="type">
-        <md-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
+      <mat-select placeholder="Select Member Type" [(ngModel)]="currentType" name="type">
+        <mat-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
           {{ type.viewValue }}
-        </md-option>
-      </md-select>
-      <md-select style="margin-left: 15px;" placeholder="Member Year" [(ngModel)]="currentYear" name="year">
-        <md-option *ngFor="let year of memberYears" [value]="year.value" (click)="onYearSelect(year.value)">
+        </mat-option>
+      </mat-select>
+      <mat-select style="margin-left: 15px;" placeholder="Member Year" [(ngModel)]="currentYear" name="year">
+        <mat-option *ngFor="let year of memberYears" [value]="year.value" (click)="onYearSelect(year.value)">
           {{ year.viewValue }}
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
       
     </div>
   </div>
@@ -26,18 +26,18 @@
 
   <div class="flex">
     <div class="card card-25" *ngFor="let member of filteredMembers()">
-      <md-card>
-        <md-card-header>
-          <md-icon class="avatar" md-card-avatar>person</md-icon>
-          <md-card-title md-line>{{member.fullname}}</md-card-title>
-          <md-card-subtitle md-line><span *ngIf="member.title">{{member.title}} & </span> <span>{{member.membershipType}}</span></md-card-subtitle>
-        </md-card-header>
-        <md-card-content>
-          <span class="flex detail" md-line *ngIf="member.email"><md-icon>email</md-icon> <a href="mailto:{{member.email}}">{{member.email}}</a></span>
-          <span class="flex detail" md-line *ngIf="member.contact"><md-icon>phone</md-icon><span>{{member.contact}}</span></span>
-          <span class="flex detail" md-line *ngIf="member.membershipTerm"><md-icon>card_membership</md-icon><span>{{member.membershipTerm}}</span></span>
-        </md-card-content>
-      </md-card>
+      <mat-card>
+        <mat-card-header>
+          <mat-icon class="avatar" mat-card-avatar>person</mat-icon>
+          <mat-card-title mat-line>{{member.fullname}}</mat-card-title>
+          <mat-card-subtitle mat-line><span *ngIf="member.title">{{member.title}} & </span> <span>{{member.membershipType}}</span></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <span class="flex detail" mat-line *ngIf="member.email"><mat-icon>email</mat-icon> <a href="mailto:{{member.email}}">{{member.email}}</a></span>
+          <span class="flex detail" mat-line *ngIf="member.contact"><mat-icon>phone</mat-icon><span>{{member.contact}}</span></span>
+          <span class="flex detail" mat-line *ngIf="member.membershipTerm"><mat-icon>card_membership</mat-icon><span>{{member.membershipTerm}}</span></span>
+        </mat-card-content>
+      </mat-card>
     </div>
     <div *ngIf="filteredMembers().length == 0 && !loading">
       <h3>No Data Available</h3>

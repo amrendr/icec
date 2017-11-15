@@ -1,27 +1,27 @@
 <app-content title="Community Events" subtitle="Meet, Organize, & Celebrate" [loading]="loading">
   
   <h3  class="first">Events</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <div class="flex inset-15x">
     <div class="card card-50" *ngFor="let event of events">
-      <md-card>
-        <md-card-title *ngIf="!event.eventUrl">{{event.title}}</md-card-title>
-        <md-card-title *ngIf="event.eventUrl && !event.eventUrl.startsWith('http')"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></md-card-title>
-        <md-card-title *ngIf="event.eventUrl && event.eventUrl.startsWith('http')"><a [href]="event.eventUrl" target="blank">{{event.title}}</a></md-card-title>
-        <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon><span>{{event.date}}</span></span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon><span>{{event.time}}</span></span>
-          <span class="flex detail" md-line><md-icon>place</md-icon><span>{{event.venue}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon><span>{{event.address}}</span></span>
-        </md-card-content>
-        <md-card-subtitle *ngIf="event.person || event.contact || event.email">For question, contact</md-card-subtitle>
-        <md-card-content>
-          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon><span>{{event.person}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon><span>{{event.contact}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
-        </md-card-content>
-        <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
-      </md-card>
+      <mat-card>
+        <mat-card-title *ngIf="!event.eventUrl">{{event.title}}</mat-card-title>
+        <mat-card-title *ngIf="event.eventUrl && !event.eventUrl.startsWith('http')"><a [routerLink]="[event.eventUrl]">{{event.title}}</a></mat-card-title>
+        <mat-card-title *ngIf="event.eventUrl && event.eventUrl.startsWith('http')"><a [href]="event.eventUrl" target="blank">{{event.title}}</a></mat-card-title>
+        <mat-card-content>
+          <span class="flex detail" mat-line><mat-icon>date_range</mat-icon><span>{{event.date}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>access_time</mat-icon><span>{{event.time}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>place</mat-icon><span>{{event.venue}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.address"><mat-icon>map</mat-icon><span>{{event.address}}</span></span>
+        </mat-card-content>
+        <mat-card-subtitle *ngIf="event.person || event.contact || event.email">For question, contact</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex detail" mat-line *ngIf="event.person"><mat-icon>person</mat-icon><span>{{event.person}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.contact"><mat-icon>phone</mat-icon><span>{{event.contact}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.email"><mat-icon>mail</mat-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
+        </mat-card-content>
+        <mat-card-subtitle *ngIf="event.ps">{{event.ps}}</mat-card-subtitle>
+      </mat-card>
     </div>
   </div>
   <h3>

@@ -13,7 +13,7 @@
   background: #303030;
 }
 
-.gallery md-grid-tile{
+.gallery mat-grid-tile{
     cursor: pointer;
 }
 
@@ -34,11 +34,11 @@
     flex-wrap: nowrap;
 }
 
-.btn md-icon{
+.btn mat-icon{
     color: snow;
 }
 
-.btn > button:disabled md-icon{
+.btn > button:disabled mat-icon{
     color: grey;
 }
 

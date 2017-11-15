@@ -8,8 +8,8 @@
   width: 12.5rem;
 }
 
-md-card-title,
-md-card-subtitle {
+mat-card-title,
+mat-card-subtitle {
   margin-right: 0.5rem;
 }
 

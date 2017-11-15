@@ -1,7 +1,7 @@
 <app-content [title]="'About ICEC'" [loading]="loading">
 
   <h3 class="first">A Historical Perspective</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <p>In early 1989, the Gainesville Indian Community was thrust into the midst of a mini crisis. Within a short space of two
     weeks, three students of Indian origin had tragically decided to end their precious lives. From the pangs of this despair
     and despondency, rose the concept of ICEC. Several key members of the local Indian community, Drs. Dinesh Shah and Rasik
@@ -10,7 +10,7 @@
   <a [routerLink]="['/bylaws']">ICEC Bylaws...</a>
 
   <h3>Mission &amp; Purpose</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <ul>
     <li>Assist students of Indian heritage for fulfilment of their cultural and educational aspirations </li>
     <li>Create a support network of students, faculty and community of Indian heritage to assist in times of emotional stress
@@ -24,7 +24,7 @@
   <a [routerLink]="['/mission']">Click here to learn more...</a>
 
   <h3>Administrative Structure</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <ul>
     <li>Governed by an elected 15-member Executive Board </li>
     <li>Board office bearers - President, Vice-President, Secretary and Treasurer </li>
@@ -46,7 +46,7 @@
 
 
   <h3>Facilities</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <p>Located at 1115 SW 13th Street, Gainesville, FL, the ICEC building is within walking distance of the UF campus. The two-story,
     15,000 sq. ft. building sits on a 2.6 acre wooded lot and consists of a 10,000 sq. ft. auditorium, a stage with curtains,
     projection screen, lights and sound system, a food-warming facility, and four rooms for multiple use.
@@ -56,29 +56,29 @@
   </p>
   <div class="flex inset-15x">
     <div class="card card-33" *ngIf="!contacts">
-      <md-card>
-        <md-card-subtitle>&nbsp;</md-card-subtitle>
-        <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon></span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon></span>
-          <span class="flex detail" md-line><md-icon>phone</md-icon></span>
-        </md-card-content>
-      </md-card>
-      <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+      <mat-card>
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex detail" mat-line><mat-icon>person</mat-icon></span>
+          <span class="flex detail" mat-line><mat-icon>mail</mat-icon></span>
+          <span class="flex detail" mat-line><mat-icon>phone</mat-icon></span>
+        </mat-card-content>
+      </mat-card>
+      <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
     </div>
     <div class="card card-33" *ngFor="let contact of contacts">
-      <md-card>
-        <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
-        <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-          <span class="flex detail" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
-        </md-card-content>
-      </md-card>
+      <mat-card>
+        <mat-card-subtitle>{{contact.subtitle}}</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex detail" mat-line><mat-icon>person</mat-icon><span>{{contact.fullname}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>mail</mat-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" mat-line><mat-icon>phone</mat-icon><span>{{contact.contact}}</span></span>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
   <h3>Activities organized &amp; sponsored by ICEC</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
 
   <h4>Education:</h4>
   <ul>

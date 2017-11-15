@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import {
-  MdSelectModule, MdInputModule, MdButtonModule, MdToolbarModule,
-  MdIconModule, MdGridListModule, MdRadioModule, MdSidenavModule,
-  MdListModule, MdCardModule, MdRippleModule, MdProgressBarModule
+  MatSelectModule, MatInputModule, MatButtonModule, MatToolbarModule,
+  MatIconModule, MatGridListModule, MatRadioModule, MatSidenavModule,
+  MatListModule, MatCardModule, MatRippleModule, MatProgressBarModule
 } from '@angular/material';
 
 
 const ICEC_MATERIAL_MODULES = [
-  MdButtonModule,
-  MdCardModule,
-  MdGridListModule,
-  MdIconModule,
-  MdInputModule,
-  MdListModule,
-  MdProgressBarModule,
-  MdRadioModule,
-  MdRippleModule,
-  MdSelectModule,
-  MdSidenavModule,
-  MdToolbarModule
+  MatButtonModule,
+  MatCardModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatProgressBarModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatToolbarModule
 ];
 
 @NgModule({

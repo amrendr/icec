@@ -2,73 +2,73 @@
 
   <div class="flex first">
     <div class="card card-50">
-      <md-card class="backdrop" *ngIf="event">
-        <md-card-title>{{event.title}}</md-card-title>
-        <md-card-content>
-          <span class="flex detail" md-line><md-icon>date_range</md-icon><span>{{event.date}}</span></span>
-          <span class="flex detail" md-line><md-icon>access_time</md-icon><span>{{event.time}}</span></span>
-          <span class="flex detail" md-line><md-icon>place</md-icon><span>{{event.venue}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.address"><md-icon>map</md-icon><span>{{event.address}}</span></span>
-        </md-card-content>
-        <md-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</md-card-subtitle>
-        <md-card-content>
-          <span class="flex detail" md-line *ngIf="event.person"><md-icon>person</md-icon><span>{{event.person}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.contact"><md-icon>phone</md-icon><span>{{event.contact}}</span></span>
-          <span class="flex detail" md-line *ngIf="event.email"><md-icon>mail</md-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
-        </md-card-content>
-        <md-card-subtitle *ngIf="event.ps">{{event.ps}}</md-card-subtitle>
-      </md-card>
+      <mat-card class="backdrop" *ngIf="event">
+        <mat-card-title>{{event.title}}</mat-card-title>
+        <mat-card-content>
+          <span class="flex detail" mat-line><mat-icon>date_range</mat-icon><span>{{event.date}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>access_time</mat-icon><span>{{event.time}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>place</mat-icon><span>{{event.venue}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.address"><mat-icon>map</mat-icon><span>{{event.address}}</span></span>
+        </mat-card-content>
+        <mat-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex detail" mat-line *ngIf="event.person"><mat-icon>person</mat-icon><span>{{event.person}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.contact"><mat-icon>phone</mat-icon><span>{{event.contact}}</span></span>
+          <span class="flex detail" mat-line *ngIf="event.email"><mat-icon>mail</mat-icon><a href="mailto:{{event.email}}?subject={{event.subject}}">{{event.email}}</a></span>
+        </mat-card-content>
+        <mat-card-subtitle *ngIf="event.ps">{{event.ps}}</mat-card-subtitle>
+      </mat-card>
     </div>
     <div class="card card-50">
-      <md-card>
-        <md-card-title>Flyers</md-card-title>
-        <md-card-content>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+      <mat-card>
+        <mat-card-title>Flyers</mat-card-title>
+        <mat-card-content>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>
               <a href="assets/documents/IndiaFest2017_Flyer.pdf" target="blank">India Fest</a>
             </div>
           </div>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>
               <a href="assets/documents/HealthFair2017_Flyer.pdf" target="blank">Health Fair</a>
             </div>
           </div>
-        </md-card-content>
-        <md-card-title>Application Forms</md-card-title>
-        <md-card-content>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+        </mat-card-content>
+        <mat-card-title>Application Forms</mat-card-title>
+        <mat-card-content>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>
               <a href="assets/documents/AdvertisementForm_IndiaFest2017.pdf" target="blank">Brochure Advertisement</a>
               <b>Deadline: February 25, 2017</b>
             </div>
           </div>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>
               <a href="assets/documents/VendorForm_IndiaFest2017.pdf" target="blank">Vendor booth</a>
               <b>Deadline: February 25, 2017</b>
             </div>
           </div>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>
               <a href="assets/documents/ParticipantForm_HealthFair2017.pdf" target="blank">Health Fair Participant</a>
               <b>Deadline: February 25, 2017</b>
             </div>
           </div>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon>
             <div>Cultural Program (
               <a href="assets/documents/CulturalProgramApplication_IndiaFest2017.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
               <a href="assets/documents/CulturalProgramApplication_IndiaFest2017.docx" target="blank">DOC</a>)
               <b>Deadline: January 31, 2017</b>
             </div>
           </div>
-        </md-card-content>
-      </md-card>
+        </mat-card-content>
+      </mat-card>
     </div>
     <div class="card card-50">
       <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading1" largeImg="true"></app-gallery-card>
@@ -76,32 +76,32 @@
   </div>
   <p>India Fest & Health Fair is organized annually by ICEC since 1999. Some of the activities include: </p>
   <div class="resources">
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Indian Dances</div>
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Indian Cuisine</div>
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Indian Jewelry</div>
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Indian Art & Crafts</div>
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Traditional Indian Attire</div>
-    <div class="flex" md-line>
-      <md-icon>star</md-icon>Cultural Program</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Indian Dances</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Indian Cuisine</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Indian Jewelry</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Indian Art & Crafts</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Traditional Indian Attire</div>
+    <div class="flex" mat-line>
+      <mat-icon>star</mat-icon>Cultural Program</div>
   </div>
 
   <h3>For more information about {{title}} event, please contact</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <div class="flex inset-15x">
     <div class="card card-33" *ngFor="let contact of contacts">
-      <md-card>
-        <md-card-title>{{contact.title}}</md-card-title>
-        <md-card-content>
-          <span class="flex detail" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
-          <span class="flex detail" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-          <span class="flex detail" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
-        </md-card-content>
-      </md-card>
+      <mat-card>
+        <mat-card-title>{{contact.title}}</mat-card-title>
+        <mat-card-content>
+          <span class="flex detail" mat-line><mat-icon>person</mat-icon><span>{{contact.fullname}}</span></span>
+          <span class="flex detail" mat-line><mat-icon>mail</mat-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+          <span class="flex detail" mat-line><mat-icon>phone</mat-icon><span>{{contact.contact}}</span></span>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
   <p>

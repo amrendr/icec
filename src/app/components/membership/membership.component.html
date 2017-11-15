@@ -1,54 +1,54 @@
 <app-content [subtitle]="'Benefits, Categories, and Payment'" [title]="'Membership'" [loading]="loading1">
 
   <h3 class="first">Current Members</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <div class="member">
-    <div class="flex" md-line>
-      <md-icon>group</md-icon>
+    <div class="flex" mat-line>
+      <mat-icon>group</mat-icon>
       <a [routerLink]="['/members/current/board']">ICEC Board Members</a>
     </div>
-    <div class="flex" md-line>
-      <md-icon>group</md-icon>
+    <div class="flex" mat-line>
+      <mat-icon>group</mat-icon>
       <a [routerLink]="['/members/current/regular']">ICEC Regular Members</a>
     </div>
-    <div class="flex" md-line>
-      <md-icon>group</md-icon>
+    <div class="flex" mat-line>
+      <mat-icon>group</mat-icon>
       <a [routerLink]="['/members/current/overall']">ICEC Donor / Founding Members</a>
     </div>
   </div>
 
   <div class="flex contact">
     <div class="card card-50">
-      <md-card>
-        <md-card-title>Membership, New and Renewal</md-card-title>
-        <md-card-subtitle>Please fill membership form below and pay annual fees either by cash or online.</md-card-subtitle>
-        <md-card-content>
-          <div class="flex detail" md-line>
-            <md-icon>description</md-icon><div>Membership Form (
+      <mat-card>
+        <mat-card-title>Membership, New and Renewal</mat-card-title>
+        <mat-card-subtitle>Please fill membership form below and pay annual fees either by cash or online.</mat-card-subtitle>
+        <mat-card-content>
+          <div class="flex detail" mat-line>
+            <mat-icon>description</mat-icon><div>Membership Form (
             <a href="assets/documents/ICEC_Membership_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
             <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)</div>
           </div>
           <div>&nbsp;</div>
-        </md-card-content>
-      </md-card>
+        </mat-card-content>
+      </mat-card>
     </div>
     <div class="card card-50">
-      <md-card>
-        <md-card-title>Pay Annual Membership Fees Online</md-card-title>
-        <md-card-subtitle>2.5% convenience charge is added to the total.</md-card-subtitle>
-        <md-card-content>
-          <div class="flex" md-line>
-            <md-radio-group [(ngModel)]="paymentType">
-              <md-radio-button class="radio-btn" [value]="'pp'" aria-label="PayPal">
+      <mat-card>
+        <mat-card-title>Pay Annual Membership Fees Online</mat-card-title>
+        <mat-card-subtitle>2.5% convenience charge is added to the total.</mat-card-subtitle>
+        <mat-card-content>
+          <div class="flex" mat-line>
+            <mat-radio-group [(ngModel)]="paymentType">
+              <mat-radio-button class="radio-btn" [value]="'pp'" aria-label="PayPal">
                 <img class="radio-img padding-right" src="assets/pp-acceptance-small.png" alt="PayPal Acceptance">
-              </md-radio-button>
-              <md-radio-button class="radio-btn" [value]="'cc'" aria-label="Credit / Debit Card">
+              </mat-radio-button>
+              <mat-radio-button class="radio-btn" [value]="'cc'" aria-label="Credit / Debit Card">
                 <img class="radio-img" src="assets/cc-badges-mcvdam-small.png" alt="Credit Card Badges">
-              </md-radio-button>
-            </md-radio-group>
+              </mat-radio-button>
+            </mat-radio-group>
           </div>
 
-          <div class="flex pp-item" md-line *ngIf="paymentType == 'pp'">
+          <div class="flex pp-item" mat-line *ngIf="paymentType == 'pp'">
             <div class="pp-item padding-right">Pay through your&nbsp;
               <a href="https://www.paypal.me/IndiaCenterGnvFL/102.50" target="blank">PayPal</a>&nbsp;account.
             </div>
@@ -57,30 +57,30 @@
             </a>
           </div>
           <form target="paypal" ngNoForm action="https://www.paypal.com/cgi-bin/webscr" method="post">
-            <div class="flex card-payment" md-line *ngIf="paymentType == 'cc'">
+            <div class="flex card-payment" mat-line *ngIf="paymentType == 'cc'">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="S36NWEERNN9TW">
-              <md-input-container class="input">
+              <mat-input-container class="input">
                 <input type="hidden" name="on0" value="Enter child(ren)'s name & age">
-                <input mdInput placeholder="Enter Child(ren)'s name & age" name="os0" maxlength="200" />
-              </md-input-container>
+                <input matInput placeholder="Enter Child(ren)'s name & age" name="os0" maxlength="200" />
+              </mat-input-container>
               <div>
                 <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_paynow_107x26.png" border="0" name="submit"
                   alt="PayPal - The safer, easier way to pay online!">
               </div>
             </div>
           </form>
-        </md-card-content>
-        <md-card-footer align="end" class="flex card-payment" md-line>
+        </mat-card-content>
+        <mat-card-footer align="end" class="flex card-payment" mat-line>
           <span class="flex"></span>
           <span class="poweredby">powered by</span>
           <img class="poweredbyimg" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal Logo">
-        </md-card-footer>
-      </md-card>
+        </mat-card-footer>
+      </mat-card>
     </div>
   </div>
   <h3>Categories of memberships</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <ul>
     <li> Donor Member (donation of $5,000 or more) </li>
     <li>Founding Member (donation of $1,000 - $4,999) </li>
@@ -90,30 +90,30 @@
   </ul>
 
   <h3>Benefits of membership</h3>
-  <md-divider></md-divider>
+  <mat-divider></mat-divider>
   <ul>
     <li>Participation in Independence & Republic Day cultural programs for Youth Group members only.
       <div class="flex inset-5x">
         <div class="card card-33" *ngIf="!contacts">
-          <md-card>
-            <md-card-subtitle>&nbsp;</md-card-subtitle>
-            <md-card-content>
-              <span class="flex" md-line><md-icon>person</md-icon></span>
-              <span class="flex" md-line><md-icon>mail</md-icon></span>
-              <span class="flex" md-line><md-icon>phone</md-icon></span>
-            </md-card-content>
-          </md-card>
-          <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+          <mat-card>
+            <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+            <mat-card-content>
+              <span class="flex" mat-line><mat-icon>person</mat-icon></span>
+              <span class="flex" mat-line><mat-icon>mail</mat-icon></span>
+              <span class="flex" mat-line><mat-icon>phone</mat-icon></span>
+            </mat-card-content>
+          </mat-card>
+          <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
         </div>
         <div class="card card-33" *ngFor="let contact of contacts">
-          <md-card>
-            <md-card-subtitle>{{contact.subtitle}}</md-card-subtitle>
-            <md-card-content>
-              <span class="flex" md-line><md-icon>person</md-icon><span>{{contact.fullname}}</span></span>
-              <span class="flex" md-line><md-icon>mail</md-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-              <span class="flex" md-line><md-icon>phone</md-icon><span>{{contact.contact}}</span></span>
-            </md-card-content>
-          </md-card>
+          <mat-card>
+            <mat-card-subtitle>{{contact.subtitle}}</mat-card-subtitle>
+            <mat-card-content>
+              <span class="flex" mat-line><mat-icon>person</mat-icon><span>{{contact.fullname}}</span></span>
+              <span class="flex" mat-line><mat-icon>mail</mat-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
+              <span class="flex" mat-line><mat-icon>phone</mat-icon><span>{{contact.contact}}</span></span>
+            </mat-card-content>
+          </mat-card>
         </div>
       </div>
     </li>

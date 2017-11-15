@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material';
 import { AppNavigationService } from '../../services/app.navigation.service';
 
 
@@ -28,7 +28,7 @@ export class NavigationComponent implements OnInit {
     { title: 'Contact US', url: '/contact' }
   ];
 
-  @ViewChild('sidenav') sidenav: MdSidenav;
+  @ViewChild('sidenav') sidenav: MatSidenav;
 
   constructor(
     private navService: AppNavigationService

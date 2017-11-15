@@ -5,14 +5,14 @@
     </div>
   </div>
   <div class="gallery" *ngIf="gallery.length == 1">
-    <md-grid-list [cols]="col" [rowHeight]="aspectRatio*gallery[0].row_height" gutterSize="5" [class.hide]="isSlideShowActive">
-      <md-grid-tile *ngFor="let photo of gallery[0].photos; let i = index;" (click)="showPhoto(i)" [rowspan]="photo.rows">
+    <mat-grid-list [cols]="col" [rowHeight]="aspectRatio*gallery[0].row_height" gutterSize="5" [class.hide]="isSlideShowActive">
+      <mat-grid-tile *ngFor="let photo of gallery[0].photos; let i = index;" (click)="showPhoto(i)" [rowspan]="photo.rows">
         <img src="{{photo.thumbnail || photo.imageUrl}}" alt="photo of {{photo.caption}}">
-        <md-grid-tile-footer *ngIf="photo.caption">
-          <h3 md-line>{{photo.caption}}</h3>
-        </md-grid-tile-footer>
-      </md-grid-tile>
-    </md-grid-list>
+        <mat-grid-tile-footer *ngIf="photo.caption">
+          <h3 mat-line>{{photo.caption}}</h3>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
   <div *ngIf="gallery.length == 0 && !loading">
     <h3>No Data Available</h3>
@@ -21,13 +21,13 @@
 
 <div *ngIf="isSlideShowActive" (keydown)="onKey($event)" appTrapFocus tabindex="0">
   <div class="btn close">
-    <button md-icon-button (click)="closeSlideShow()"><md-icon >close</md-icon></button>
+    <button mat-icon-button (click)="closeSlideShow()"><mat-icon >close</mat-icon></button>
   </div>
 
   <div class="slideshow-container" [class.active]="isSlideShowActive" *ngIf="selectedPhoto">
     <div class="flex slideshow" [class.hide]="!isSlideShowActive">
       <div class="flex btn slide-btn back">
-        <button md-icon-button (click)="showPrevPhoto()" [disabled]="!hasPrevPhoto"><md-icon>navigate_before</md-icon></button>
+        <button mat-icon-button (click)="showPrevPhoto()" [disabled]="!hasPrevPhoto"><mat-icon>navigate_before</mat-icon></button>
       </div>
 
       <div class="slide">
@@ -35,7 +35,7 @@
       </div>
 
       <div class="flex btn slide-btn next">
-        <button md-icon-button (click)="showNextPhoto()" [disabled]="!hasNextPhoto"><md-icon>navigate_next</md-icon></button>
+        <button mat-icon-button (click)="showNextPhoto()" [disabled]="!hasNextPhoto"><mat-icon>navigate_next</mat-icon></button>
       </div>
     </div>
   </div>

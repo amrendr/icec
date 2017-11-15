@@ -1,25 +1,25 @@
 <a *ngIf="item" (click)="navigateTo(item)">
-  <md-card class="no-adjust-height">
+  <mat-card class="no-adjust-height">
     <div class="group">
       <div class="caption">
-        <md-card-title class="title">{{title || getTitle()}}</md-card-title>
-        <md-card-subtitle>{{item.subtitle}}</md-card-subtitle>
-        <md-card-subtitle *ngIf="showCount">{{item.photosCount}} item<span *ngIf="item.photosCount > 1">s</span></md-card-subtitle>
+        <mat-card-title class="title">{{title || getTitle()}}</mat-card-title>
+        <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="showCount">{{item.photosCount}} item<span *ngIf="item.photosCount > 1">s</span></mat-card-subtitle>
       </div>
       <div class="img" [class.img-lg]="largeImg">
         <img [ngClass]="{'portrait': portrait, 'landscape': !portrait }" src="{{item.poster}}" alt="{{item.subtitle}}">
       </div>
     </div>
-  </md-card>
+  </mat-card>
 </a>
 <div *ngIf="showCardLoading">
-  <md-card>
+  <mat-card>
     <div class="group">
       <div class="caption">
       </div>
       <div class="img" [class.img-lg]="largeImg">
       </div>
     </div>
-  </md-card>
-  <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+  </mat-card>
+  <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
 </div>
