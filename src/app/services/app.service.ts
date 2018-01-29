@@ -151,7 +151,9 @@ export class AppService {
                 break;
             case 'IF':
                 members.title = 'India Fest Organizer';
-                members.memberList = data;
+                members.memberList = data[0];
+                members.flyers = data[1];
+                members.forms = data[2];
                 break;
             case 'CU':
                 members.title = 'Contact Us';

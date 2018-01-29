@@ -39,7 +39,7 @@ $mat-small: 'max-width: 960px';
 
 // Specific height for mobile devices in landscape mode.
 @media ($mat-small) and (orientation: landscape) {
-  @include app-content-margin($mat-toolbar-height-mobile-landscape, 5px, 26rem);
+  @include app-content-margin($mat-toolbar-height-mobile-portrait, 5px, 26rem);
 }
 
 

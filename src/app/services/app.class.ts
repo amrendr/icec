@@ -8,6 +8,20 @@ export class Members {
     year: number;
     title: string;
     memberList: Member[];
+    forms?: Form[];
+    flyers?: Flyer[];
+}
+
+export class Form{
+    form: string;
+    pdf?: string;
+    doc?: string;
+    deadline?: string;
+}
+
+export class Flyer{
+    flyer: string;
+    link: string;
 }
 
 export class Member {

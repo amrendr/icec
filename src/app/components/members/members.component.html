@@ -1,4 +1,5 @@
-<app-content [subtitle]="members.title || 'Administrative Structure and Membership'" [title]="'Members ' + (members.year || '')" [loading]="loading">
+<app-content [subtitle]="members.title || 'Administrative Structure and Membership'" [title]="'Members ' + (members.year || '')"
+  [loading]="loading">
 
   <div class="member-form-flex">
     <div class="member-form-control">
@@ -9,17 +10,20 @@
     </div>
     <span class="flex"></span>
     <div class="member-form-control">
-      <mat-select placeholder="Select Member Type" [(ngModel)]="currentType" name="type">
-        <mat-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
-          {{ type.viewValue }}
-        </mat-option>
-      </mat-select>
-      <mat-select style="margin-left: 15px;" placeholder="Member Year" [(ngModel)]="currentYear" name="year">
-        <mat-option *ngFor="let year of memberYears" [value]="year.value" (click)="onYearSelect(year.value)">
-          {{ year.viewValue }}
-        </mat-option>
-      </mat-select>
-      
+      <mat-input-container>
+        <mat-select placeholder="Select Member Type" [(ngModel)]="currentType" name="type">
+          <mat-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
+            {{ type.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-input-container>
+      <mat-input-container>
+        <mat-select style="margin-left: 15px;" placeholder="Member Year" [(ngModel)]="currentYear" name="year">
+          <mat-option *ngFor="let year of memberYears" [value]="year.value" (click)="onYearSelect(year.value)">
+            {{ year.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-input-container>
     </div>
   </div>
 
@@ -30,12 +34,24 @@
         <mat-card-header>
           <mat-icon class="avatar" mat-card-avatar>person</mat-icon>
           <mat-card-title mat-line>{{member.fullname}}</mat-card-title>
-          <mat-card-subtitle mat-line><span *ngIf="member.title">{{member.title}} & </span> <span>{{member.membershipType}}</span></mat-card-subtitle>
+          <mat-card-subtitle mat-line>
+            <span *ngIf="member.title">{{member.title}} & </span>
+            <span>{{member.membershipType}}</span>
+          </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <span class="flex detail" mat-line *ngIf="member.email"><mat-icon>email</mat-icon> <a href="mailto:{{member.email}}">{{member.email}}</a></span>
-          <span class="flex detail" mat-line *ngIf="member.contact"><mat-icon>phone</mat-icon><span>{{member.contact}}</span></span>
-          <span class="flex detail" mat-line *ngIf="member.membershipTerm"><mat-icon>card_membership</mat-icon><span>{{member.membershipTerm}}</span></span>
+          <span class="flex detail" mat-line *ngIf="member.email">
+            <mat-icon>email</mat-icon>
+            <a href="mailto:{{member.email}}">{{member.email}}</a>
+          </span>
+          <span class="flex detail" mat-line *ngIf="member.contact">
+            <mat-icon>phone</mat-icon>
+            <span>{{member.contact}}</span>
+          </span>
+          <span class="flex detail" mat-line *ngIf="member.membershipTerm">
+            <mat-icon>card_membership</mat-icon>
+            <span>{{member.membershipTerm}}</span>
+          </span>
         </mat-card-content>
       </mat-card>
     </div>
