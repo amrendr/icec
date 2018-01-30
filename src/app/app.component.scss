@@ -105,8 +105,9 @@ $mat-small: 'max-width: 960px';
 }
 
 footer {
-  mat-toolbar-row {
+  mat-toolbar {
     flex-direction: column!important;
+    justify-content: center;
     .credit {
       font-size: 14px;
       color: gainsboro !important;
@@ -122,7 +123,7 @@ footer {
 
 @media (max-width:600px) {
   footer {
-    mat-toolbar-row {
+    mat-toolbar {
       .footer {
         font-size: 1rem;
       }
