@@ -1,9 +1,7 @@
 $mat-toolbar-height-desktop: 64px !default;
-$mat-toolbar-height-mobile-portrait: 56px !default;
-$mat-toolbar-height-mobile-landscape: 48px !default;
+$mat-toolbar-height-mobile: 56px !default;
 
 $mat-xsmall: 'max-width: 600px';
-$mat-small: 'max-width: 960px';
 
 /***********mixin*********************/
 
@@ -32,16 +30,10 @@ $mat-small: 'max-width: 960px';
 
 // Set the default height for the toolbar.
 @include app-content-margin($mat-toolbar-height-desktop, 5px, 26rem);
-// Specific height for mobile devices in portrait mode.
-@media ($mat-xsmall) and (orientation: portrait) {
-  @include app-content-margin($mat-toolbar-height-mobile-portrait, 5px, 20rem);
+// Specific height for mobile devices.
+@media ($mat-xsmall) {
+  @include app-content-margin($mat-toolbar-height-mobile, 5px, 20rem);
 }
-
-// Specific height for mobile devices in landscape mode.
-@media ($mat-small) and (orientation: landscape) {
-  @include app-content-margin($mat-toolbar-height-mobile-portrait, 5px, 26rem);
-}
-
 
 /**********************************************************/
 
