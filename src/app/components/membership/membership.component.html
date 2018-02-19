@@ -24,16 +24,17 @@
         <mat-card-subtitle>Please fill membership form below and pay annual fees either by cash or online.</mat-card-subtitle>
         <mat-card-content>
           <div class="flex detail" mat-line>
-            <mat-icon>description</mat-icon><div>Membership Form (
-            <a href="assets/documents/ICEC_Membership_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
-            <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)</div>
+            <mat-icon>description</mat-icon>
+            <div>Membership Form (
+              <a href="assets/documents/ICEC_Membership_Form.pdf" target="blank">PDF</a>&nbsp;/&nbsp;
+              <a href="assets/documents/ICEC_Membership_Form-Mail.doc" target="blank">DOC</a>)</div>
           </div>
           <div>&nbsp;</div>
         </mat-card-content>
       </mat-card>
     </div>
     <div class="card card-50">
-      <mat-card>
+      <!-- <mat-card>
         <mat-card-title>Pay Annual Membership Fees Online</mat-card-title>
         <mat-card-subtitle>2.5% convenience charge is added to the total.</mat-card-subtitle>
         <mat-card-content>
@@ -76,7 +77,7 @@
           <span class="poweredby">powered by</span>
           <img class="poweredbyimg" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal Logo">
         </mat-card-footer>
-      </mat-card>
+      </mat-card> -->
     </div>
   </div>
   <h3>Categories of memberships</h3>
@@ -91,37 +92,56 @@
 
   <h3>Benefits of membership</h3>
   <mat-divider></mat-divider>
-  <ul>
-    <li>Participation in Independence & Republic Day cultural programs for Youth Group members only.
-      <div class="flex inset-5x">
-        <div class="card card-33" *ngIf="!contacts">
-          <mat-card>
-            <mat-card-subtitle>&nbsp;</mat-card-subtitle>
-            <mat-card-content>
-              <span class="flex" mat-line><mat-icon>person</mat-icon></span>
-              <span class="flex" mat-line><mat-icon>mail</mat-icon></span>
-              <span class="flex" mat-line><mat-icon>phone</mat-icon></span>
-            </mat-card-content>
-          </mat-card>
-          <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
-        </div>
-        <div class="card card-33" *ngFor="let contact of contacts">
-          <mat-card>
-            <mat-card-subtitle>{{contact.subtitle}}</mat-card-subtitle>
-            <mat-card-content>
-              <span class="flex" mat-line><mat-icon>person</mat-icon><span>{{contact.fullname}}</span></span>
-              <span class="flex" mat-line><mat-icon>mail</mat-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-              <span class="flex" mat-line><mat-icon>phone</mat-icon><span>{{contact.contact}}</span></span>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-    </li>
-    <li class="inset-5x">Xerographic Copy Center – 10% discount for all your printing and photocopying needs</li>
-    <li>Morgan Stanley Smith Barney – Get financial consultation</li>
-    <li>First Place Auto Sales – Buy vehicles at wholesale prices</li>
-    <li>Discounts on entry tickets to Celebration of Festivals, Music Concerts, Picnics, etc.</li>
-    <li>ICEC rental discount - $200.00 for Donor & Founding members and $100.00 for Regular members</li>
-  </ul>
-
+  <div class="flex inset-5x">
+    <div class="card card-50">
+      <ul>
+        <li> Maintain a strong and vibrant Indian community in Gainesville </li>
+        <li> Voting and nomination rights for ICEC Board </li>
+        <li> Free or Discounted entrance/participation fee to all ICEC events </li>
+        <li> Invitation to members only events like Annual Picnic </li>
+        <li> Members can only participate at Republic/Independence day events </li>
+        <li> Free youth group membership </li>
+        <li> Voting and nomination rights in Youth Group office bearers election. </li>
+        <li> Discounted price for ICEC offered classes(Ex: SAT) </li>
+        <li> Discounted price for Vendor booths at IndiaFest </li>
+        <li> Preference to members at ICEC organized events for Vendor booths/Cultural programs....etc </li>
+      </ul>
+    </div>
+    <div class="card card-25" *ngIf="!contacts">
+      <mat-card>
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex" mat-line>
+            <mat-icon>person</mat-icon>
+          </span>
+          <span class="flex" mat-line>
+            <mat-icon>mail</mat-icon>
+          </span>
+          <span class="flex" mat-line>
+            <mat-icon>phone</mat-icon>
+          </span>
+        </mat-card-content>
+      </mat-card>
+      <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+    </div>
+    <div class="card card-25" *ngFor="let contact of contacts">
+      <mat-card>
+        <mat-card-subtitle>{{contact.subtitle}}</mat-card-subtitle>
+        <mat-card-content>
+          <span class="flex" mat-line>
+            <mat-icon>person</mat-icon>
+            <span>{{contact.fullname}}</span>
+          </span>
+          <span class="flex" mat-line>
+            <mat-icon>mail</mat-icon>
+            <a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a>
+          </span>
+          <span class="flex" mat-line>
+            <mat-icon>phone</mat-icon>
+            <span>{{contact.contact}}</span>
+          </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </app-content>

@@ -78,6 +78,7 @@ export class AppService {
             case 'YG':
             case 'EF':
             case 'CME':
+            case 'MB':
                 if (!this._icecContactsObservable) {
                     this._icecContactsObservable = this.http.get(this.api.urls.icecContactsDataApi)
                         .map(this.extractData)
@@ -178,6 +179,10 @@ export class AppService {
             case 'CME':
                 members.title = 'Continuing Medical Education';
                 members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'cme');
+                break;
+            case 'MB':
+                members.title = 'Membership Benefits';
+                members.memberList = data.filter((x: Member) => x.membershipType.toLowerCase() === 'benefit');
                 break;
             default:
                 members.title = 'Executive Members';

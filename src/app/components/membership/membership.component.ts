@@ -23,7 +23,7 @@ export class MembershipComponent implements OnInit {
 
   getIcecContacts(): void {
     this.loading1 = true;
-    const input: Args = { type: 'YG', year: null };
+    const input: Args = { type: 'MB', year: null };
     this.memberService.getMembers(input).subscribe(
       (x) => { this.contacts = x.memberList; this.loading1 = false; },
       (err) => { this.loading1 = false; });
