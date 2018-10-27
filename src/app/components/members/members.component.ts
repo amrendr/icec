@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
+import { map, switchMap } from "rxjs/operators";
+
 import { AppService } from '../../services/app.service';
 import { Members, Member, Args } from '../../services/app.class';
 import { AppFilterListPipe } from '../../services/app.pipe';
@@ -43,8 +45,8 @@ export class MembersComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     this.activeRoute.params
-      .map((params: Params) => this.formatInput(params))
-      .switchMap((input: Args) => this.memberService.getMembers(input))
+      .pipe(map((params: Params) => this.formatInput(params)),
+      switchMap((input: Args) => this.memberService.getMembers(input)))
       .subscribe(
       (members) => { this.members = members; this.loading = false; },
       (err) => { this.loading = false; });

@@ -3,27 +3,27 @@
 
   <div class="member-form-flex">
     <div class="member-form-control">
-      <mat-input-container>
+      <mat-form-field>
         <input matInput placeholder="Search" [(ngModel)]="filterTxt" name="filter" />
         <mat-hint align="end">Showing {{filteredMembers().length}} / {{members.memberList.length}}</mat-hint>
-      </mat-input-container>
+      </mat-form-field>
     </div>
     <span class="flex"></span>
     <div class="member-form-control">
-      <mat-input-container>
+      <mat-form-field>
         <mat-select placeholder="Select Member Type" [(ngModel)]="currentType" name="type">
           <mat-option *ngFor="let type of memberTypes" [value]="type.value" (click)="onSelect(type.url)">
             {{ type.viewValue }}
           </mat-option>
         </mat-select>
-      </mat-input-container>
-      <mat-input-container>
+      </mat-form-field>
+      <mat-form-field>
         <mat-select style="margin-left: 15px;" placeholder="Member Year" [(ngModel)]="currentYear" name="year">
           <mat-option *ngFor="let year of memberYears" [value]="year.value" (click)="onYearSelect(year.value)">
             {{ year.viewValue }}
           </mat-option>
         </mat-select>
-      </mat-input-container>
+      </mat-form-field>
     </div>
   </div>
 

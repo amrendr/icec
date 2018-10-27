@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { Observable } from '../../shared/rxjs.module';
+import { Observable } from 'rxjs';
+import { map, switchMap, startWith, publishReplay, refCount } from 'rxjs/operators';
 
 import { AppService } from '../../services/app.service';
 import { Gallery, Photo, Args } from '../../services/app.class';
@@ -14,7 +15,7 @@ import { AppDimensionService } from '../../services/app.dimension.service';
 })
 export class GalleryComponent implements OnInit, OnDestroy {
 
-  col: number;
+  col: number | {};
   gallery$: Observable<Gallery[]>;
   gallery: Gallery[] = [];
   params: Args;
@@ -36,20 +37,20 @@ export class GalleryComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.gallery$ = this.activeRoute.params
-      .map((params: Params) => this.formatInput(params))
-      .switchMap((input: Args) => this.galleryService.getGallery(input));
+    this.gallery$ = this.activeRoute.params.pipe(
+      map((params: Params) => this.formatInput(params)),
+      switchMap((input: Args) => this.galleryService.getGallery(input)));
 
     this.loading = true;
     this.gallery$.subscribe(
       (gallery) => { this.gallery = gallery; this.loading = false; },
       (err) => { this.loading = false; });
 
-    this.gallerySubscription = this.gallery$
-      .switchMap((gallery: Gallery[]) => this.appRuler.getGalleryColumns(gallery[0].max_image_width))
-      .startWith(4)
-      .publishReplay(1)
-      .refCount()
+    this.gallerySubscription = this.gallery$.pipe(
+      switchMap((gallery: Gallery[]) => this.appRuler.getGalleryColumns(gallery[0].max_image_width)),
+      startWith(4),
+      publishReplay(1),
+      refCount())
       .subscribe((x) => {
         this.col = x;
         if (x <= 2) {

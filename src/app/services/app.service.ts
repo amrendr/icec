@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from '../shared/rxjs.module';
+import { Observable } from 'rxjs';
+import { catchError, map, publishReplay, refCount } from 'rxjs/operators';
 
 import { Api } from './app.service.api';
 import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent, Mail } from './app.class';
@@ -53,10 +54,11 @@ export class AppService {
             case 'OM':
                 if (!this._allMembersObservable) {
                     this._allMembersObservable = this.http.get(this.api.urls.allMemberDataApi)
-                        .map(this.extractData)
-                        .catch(this.handleError)
-                        .publishReplay(1)
-                        .refCount();
+                        .pipe(
+                            map(this.extractData),
+                            catchError(this.handleError),
+                            publishReplay(1),
+                            refCount());
                 }
 
                 observable = this._allMembersObservable;
@@ -64,10 +66,11 @@ export class AppService {
             case 'IF':
                 if (!this._indiafestOrganizerObservable) {
                     this._indiafestOrganizerObservable = this.http.get(this.api.urls.indiafestOrganizerDataApi)
-                        .map(this.extractData)
-                        .catch(this.handleError)
-                        .publishReplay(1)
-                        .refCount();
+                        .pipe(
+                            map(this.extractData),
+                            catchError(this.handleError),
+                            publishReplay(1),
+                            refCount());
                 }
 
                 observable = this._indiafestOrganizerObservable;
@@ -81,10 +84,11 @@ export class AppService {
             case 'MB':
                 if (!this._icecContactsObservable) {
                     this._icecContactsObservable = this.http.get(this.api.urls.icecContactsDataApi)
-                        .map(this.extractData)
-                        .catch(this.handleError)
-                        .publishReplay(1)
-                        .refCount();
+                        .pipe(
+                            map(this.extractData),
+                            catchError(this.handleError),
+                            publishReplay(1),
+                            refCount());
                 }
 
                 observable = this._icecContactsObservable;
@@ -100,17 +104,18 @@ export class AppService {
         }
 
         return observable
-            .map(data => this.formatMembers(data, input));
+            .pipe(map(data => this.formatMembers(data, input)));
 
     }
 
     private getMembersObservable(): Observable<any> {
         if (!this._membersObservable) {
             this._membersObservable = this.http.get(this.api.urls.membersDataApi)
-                .map(this.extractData)
-                .catch(this.handleError)
-                .publishReplay(1)
-                .refCount();
+                .pipe(
+                    map(this.extractData),
+                    catchError(this.handleError),
+                    publishReplay(1),
+                    refCount());
         }
         return this._membersObservable;
     }
@@ -197,10 +202,11 @@ export class AppService {
 
         if (!this._announcementObservable) {
             this._announcementObservable = this.http.get(this.api.urls.announcementsDataApi)
-                .map(this.extractData)
-                .catch(this.handleError)
-                .publishReplay(1)
-                .refCount();
+                .pipe(
+                    map(this.extractData),
+                    catchError(this.handleError),
+                    publishReplay(1),
+                    refCount());
         }
         return this._announcementObservable;
     }
@@ -211,8 +217,8 @@ export class AppService {
         const options = new RequestOptions({ headers: headers });
 
         return this.http.post(this.api.urls.sendMessageApi, this.formatMessage(data), options)
-            .map(this.extractData)
-            .catch(this.handleError);
+            .pipe(map(this.extractData),
+                catchError(this.handleError));
     }
 
     private formatMessage(mail: Mail): Mail {
@@ -233,13 +239,14 @@ PS: This message is generated from ICEC Contact page.
 
         if (!this._communityEventObservable) {
             this._communityEventObservable = this.http.get(this.api.urls.communityEventsDataApi)
-                .map(this.extractData)
-                .catch(this.handleError)
-                .publishReplay(1)
-                .refCount();
+                .pipe(
+                    map(this.extractData),
+                    catchError(this.handleError),
+                    publishReplay(1),
+                    refCount());
         }
         return this._communityEventObservable
-            .map(data => this.filterCommunityEvent(data, key));
+            .pipe(map(data => this.filterCommunityEvent(data, key)));
     }
 
     private filterCommunityEvent(data: any, key: string): CommunityEvent[] {
@@ -258,14 +265,16 @@ PS: This message is generated from ICEC Contact page.
 
         if (!this._galleryObservable) {
             this._galleryObservable = this.http.get(this.api.urls.galleryListDataApi)
-                .map(this.extractData)
-                .catch(this.handleError)
-                .publishReplay(1)
-                .refCount();
+                .pipe(
+                    map(this.extractData),
+                    catchError(this.handleError),
+                    publishReplay(1),
+                    refCount()
+                );
         }
 
         return this._galleryObservable
-            .map(data => this.filterGallery(data, input));
+            .pipe(map(data => this.filterGallery(data, input)));
     }
 
     private filterGallery(data: any[], input: Args): Gallery[] {

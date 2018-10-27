@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from '../shared/rxjs.module';
+import { Observable, fromEvent } from 'rxjs';
+import { distinctUntilChanged, map, pluck, startWith, publishReplay, refCount } from 'rxjs/operators';
 
 @Injectable()
 export class AppDimensionService {
@@ -9,16 +10,14 @@ export class AppDimensionService {
 
   constructor() {
     const windowSize$ =
-      Observable.fromEvent(window, 'resize')
-        .map(this.getWindowSize)
-        .startWith(this.getWindowSize())
-        .publishReplay(1)
-        .refCount();
+      fromEvent(window, 'resize')
+        .pipe(map(this.getWindowSize),
+        startWith(this.getWindowSize()),
+        publishReplay(1), 
+        refCount());
 
-    this.width$ = (windowSize$.pluck('width') as Observable<number>)
-      .distinctUntilChanged();
-    this.height$ = (windowSize$.pluck('height') as Observable<number>)
-      .distinctUntilChanged();
+    this.width$ = (windowSize$.pipe(pluck('width'), distinctUntilChanged())) as Observable<number>;
+    this.height$ = (windowSize$.pipe(pluck('height'), distinctUntilChanged())) as Observable<number>;
   }
 
   getWindowSize(): any {
@@ -30,8 +29,8 @@ export class AppDimensionService {
 
   getGalleryColumns(img_maxwidth: number): Observable<number> {
     return this.width$
-      .map(x => this.getColumns(x, img_maxwidth))
-      .distinctUntilChanged();
+      .pipe(map(x => this.getColumns(x, img_maxwidth)),
+      distinctUntilChanged());
   }
 
   private getColumns(current_width: number, img_maxwidth: number): number {

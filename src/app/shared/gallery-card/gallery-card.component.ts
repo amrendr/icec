@@ -19,7 +19,7 @@ export class GalleryCardComponent implements OnInit {
   @Input() loading: boolean;
   @Input() showCount: boolean;
   @Input() pageUrl: string;
-  @Output() loadingChange = new EventEmitter<boolean>();
+  @Output() loadingChange = new EventEmitter<boolean>(true);
   showCardLoading: boolean;
 
   constructor(
