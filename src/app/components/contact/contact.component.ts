@@ -1,7 +1,7 @@
-import { Component, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Args, Mail, Member } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
-import { Member, Mail, Args } from '../../services/app.class';
 
 
 @Component({
@@ -40,13 +40,13 @@ export class ContactComponent implements OnInit {
     this.appService
       .sendMessage(this.formatMessage(form.value))
       .subscribe(
-      (x) => {
-        form.resetForm();
-        this.sendingMsg = false;
-      },
-      (err) => {
-        this.sendingMsg = false;
-      }
+        (x) => {
+          form.resetForm();
+          this.sendingMsg = false;
+        },
+        (err) => {
+          this.sendingMsg = false;
+        }
       );
   }
 

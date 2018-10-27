@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Args, Member } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
-import { Member, Args } from '../../services/app.class';
 
 @Component({
   selector: 'app-membership',

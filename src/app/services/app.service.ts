@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Headers, Http, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { catchError, map, publishReplay, refCount } from 'rxjs/operators';
 
+import { AnnouncementBar, Args, CommunityEvent, Gallery, Mail, Member, MemberList, Members } from './app.class';
 import { Api } from './app.service.api';
-import { Args, Member, Members, MemberList, AnnouncementBar, Gallery, CommunityEvent, Mail } from './app.class';
 
 
 @Injectable()
@@ -58,7 +58,8 @@ export class AppService {
                             map(this.extractData),
                             catchError(this.handleError),
                             publishReplay(1),
-                            refCount());
+                            refCount()
+                        );
                 }
 
                 observable = this._allMembersObservable;
@@ -70,7 +71,8 @@ export class AppService {
                             map(this.extractData),
                             catchError(this.handleError),
                             publishReplay(1),
-                            refCount());
+                            refCount()
+                        );
                 }
 
                 observable = this._indiafestOrganizerObservable;
@@ -88,7 +90,8 @@ export class AppService {
                             map(this.extractData),
                             catchError(this.handleError),
                             publishReplay(1),
-                            refCount());
+                            refCount()
+                        );
                 }
 
                 observable = this._icecContactsObservable;
@@ -104,7 +107,9 @@ export class AppService {
         }
 
         return observable
-            .pipe(map(data => this.formatMembers(data, input)));
+            .pipe(
+                map(data => this.formatMembers(data, input))
+            );
 
     }
 
@@ -115,7 +120,8 @@ export class AppService {
                     map(this.extractData),
                     catchError(this.handleError),
                     publishReplay(1),
-                    refCount());
+                    refCount()
+                );
         }
         return this._membersObservable;
     }
@@ -128,7 +134,7 @@ export class AppService {
             if (input.year) {
                 item = data.find((member: Members) => member.year === input.year);
             } else {
-                item = data.sort((a: Members, b: Members) => { return b.year - a.year; })[0];
+                item = data.sort((a: Members, b: Members) => b.year - a.year)[0];
             }
             if (!item) {
                 item = { year: null, boardMembers: [], executives: [], regularMembers: [] };
@@ -206,7 +212,8 @@ export class AppService {
                     map(this.extractData),
                     catchError(this.handleError),
                     publishReplay(1),
-                    refCount());
+                    refCount()
+                );
         }
         return this._announcementObservable;
     }
@@ -217,8 +224,10 @@ export class AppService {
         const options = new RequestOptions({ headers: headers });
 
         return this.http.post(this.api.urls.sendMessageApi, this.formatMessage(data), options)
-            .pipe(map(this.extractData),
-                catchError(this.handleError));
+            .pipe(
+                map(this.extractData),
+                catchError(this.handleError)
+            );
     }
 
     private formatMessage(mail: Mail): Mail {
@@ -229,7 +238,7 @@ Email: ` + mail.from + `
 
        ` + mail.message + `
 
-PS: This message is generated from ICEC Contact page.    
+PS: This message is generated from ICEC Contact page.
 
 `;
         return mail;
@@ -243,10 +252,13 @@ PS: This message is generated from ICEC Contact page.
                     map(this.extractData),
                     catchError(this.handleError),
                     publishReplay(1),
-                    refCount());
+                    refCount()
+                );
         }
         return this._communityEventObservable
-            .pipe(map(data => this.filterCommunityEvent(data, key)));
+            .pipe(
+                map(data => this.filterCommunityEvent(data, key))
+            );
     }
 
     private filterCommunityEvent(data: any, key: string): CommunityEvent[] {
@@ -274,7 +286,9 @@ PS: This message is generated from ICEC Contact page.
         }
 
         return this._galleryObservable
-            .pipe(map(data => this.filterGallery(data, input)));
+            .pipe(
+                map(data => this.filterGallery(data, input))
+            );
     }
 
     private filterGallery(data: any[], input: Args): Gallery[] {
@@ -304,10 +318,10 @@ PS: This message is generated from ICEC Contact page.
                     copy.photos = [];
                     return copy;
                 })
-                .sort((a, b) => { return b.year - a.year; });
+                .sort((a, b) => b.year - a.year);
         } else {
 
-            const galleryItems: Gallery[] = data.sort((a, b) => { return b.year - a.year; });
+            const galleryItems: Gallery[] = data.sort((a, b) => b.year - a.year);
             const gallerySections: Gallery[] = [];
 
             galleryItems.forEach(x => {
@@ -326,7 +340,7 @@ PS: This message is generated from ICEC Contact page.
                     item.hasMultiple = true;
                 }
             });
-            return gallerySections.sort((a, b) => { return a.section.toLowerCase().localeCompare(b.section.toLowerCase()); });
+            return gallerySections.sort((a, b) => a.section.toLowerCase().localeCompare(b.section.toLowerCase()));
         }
     }
 }

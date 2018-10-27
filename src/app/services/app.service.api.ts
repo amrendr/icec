@@ -1,5 +1,5 @@
-import { environment } from '../../environments/environment';
 import { OnInit } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 export class Api implements OnInit {
     public urls: any = {};

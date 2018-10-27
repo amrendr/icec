@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
-import { map, switchMap } from "rxjs/operators";
+import { map, switchMap } from 'rxjs/operators';
 
-import { AppService } from '../../services/app.service';
-import { Members, Member, Args } from '../../services/app.class';
+import { Args, Member, Members } from '../../services/app.class';
 import { AppFilterListPipe } from '../../services/app.pipe';
+import { AppService } from '../../services/app.service';
 
 
 @Component({
@@ -33,7 +33,7 @@ export class MembersComponent implements OnInit {
   memberYears = [
     { value: 'current', viewValue: '2017' },
     { value: '2015', viewValue: '2015' }
-  ]
+  ];
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -46,10 +46,10 @@ export class MembersComponent implements OnInit {
     this.loading = true;
     this.activeRoute.params
       .pipe(map((params: Params) => this.formatInput(params)),
-      switchMap((input: Args) => this.memberService.getMembers(input)))
+        switchMap((input: Args) => this.memberService.getMembers(input)))
       .subscribe(
-      (members) => { this.members = members; this.loading = false; },
-      (err) => { this.loading = false; });
+        (members) => { this.members = members; this.loading = false; },
+        (err) => { this.loading = false; });
 
   }
 
@@ -86,8 +86,9 @@ export class MembersComponent implements OnInit {
   }
 
   onSelect(url: string): void {
-    if (this.currentUrl === url)
+    if (this.currentUrl === url) {
       return;
+    }
     this.loading = true;
     this.currentUrl = url;
     this.filterTxt = '';
@@ -95,8 +96,9 @@ export class MembersComponent implements OnInit {
   }
 
   onYearSelect(year: string): void {
-    if (this.previousYear === year)
+    if (this.previousYear === year) {
       return;
+    }
     this.loading = true;
     this.previousYear = year;
     this.filterTxt = '';

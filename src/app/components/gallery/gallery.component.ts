@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { Observable } from 'rxjs';
-import { map, switchMap, startWith, publishReplay, refCount } from 'rxjs/operators';
+import { map, publishReplay, refCount, startWith, switchMap } from 'rxjs/operators';
 
-import { AppService } from '../../services/app.service';
-import { Gallery, Photo, Args } from '../../services/app.class';
+import { Args, Gallery, Photo } from '../../services/app.class';
 import { AppDimensionService } from '../../services/app.dimension.service';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-gallery',
@@ -57,7 +57,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
           this.aspectRatio = 0.75;
         } else if (x > 2) {
           this.aspectRatio = 1;
-        };
+        }
       });
   }
 

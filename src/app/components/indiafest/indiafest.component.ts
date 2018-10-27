@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Args, CommunityEvent, Flyer, Form, Member } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
-import { Member, Args, CommunityEvent, Flyer, Form } from '../../services/app.class';
 
 
 @Component({
@@ -34,9 +34,15 @@ export class IndiafestComponent implements OnInit {
     const input: Args = { type: 'IF', year: null };
 
     this.loading2 = true;
-    this.appService.getMembers(input).subscribe((x) => { this.contacts = x.memberList; this.flyers = x.flyers; this.forms = x.forms; this.loading2 = false; },
-      (err) => { this.loading2 = false; }
-    );
+    this.appService.getMembers(input)
+      .subscribe((x) => {
+        this.contacts = x.memberList;
+        this.flyers = x.flyers;
+        this.forms = x.forms;
+        this.loading2 = false;
+      },
+        (err) => { this.loading2 = false; }
+      );
   }
 
   getEventInfo(key: string): void {

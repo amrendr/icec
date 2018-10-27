@@ -12,14 +12,14 @@ export class Members {
     flyers?: Flyer[];
 }
 
-export class Form{
+export class Form {
     form: string;
     pdf?: string;
     doc?: string;
     deadline?: string;
 }
 
-export class Flyer{
+export class Flyer {
     flyer: string;
     link: string;
 }

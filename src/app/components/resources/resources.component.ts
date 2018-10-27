@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Args, CommunityEvent, Member } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
-import { CommunityEvent, Member, Args } from '../../services/app.class';
 
 
 @Component({

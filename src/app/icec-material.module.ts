@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import {
-  MatSelectModule, MatInputModule, MatButtonModule, MatToolbarModule,
-  MatIconModule, MatGridListModule, MatRadioModule, MatSidenavModule,
-  MatListModule, MatCardModule, MatRippleModule, MatProgressBarModule
+  MatButtonModule, MatCardModule, MatGridListModule, MatIconModule,
+  MatInputModule, MatListModule, MatProgressBarModule, MatRadioModule,
+  MatRippleModule, MatSelectModule, MatSidenavModule, MatToolbarModule
 } from '@angular/material';
 
 

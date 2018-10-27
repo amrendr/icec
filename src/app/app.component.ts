@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 @Component({
   selector: 'app-root',

@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AppService } from '../../services/app.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Announcement } from '../../services/app.class';
+import { AppService } from '../../services/app.service';
 
 
 @Component({

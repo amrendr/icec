@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Gallery, Args } from '../../services/app.class';
+import { Args, Gallery } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
 
 @Component({

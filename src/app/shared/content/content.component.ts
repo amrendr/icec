@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { AppNavigationService } from '../../services/app.navigation.service';
 
 @Component({

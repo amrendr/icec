@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
   selector: '[appTrapFocus]'

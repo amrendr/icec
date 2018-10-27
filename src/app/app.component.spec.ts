@@ -1,12 +1,12 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 import { HttpModule, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
+import { MatIconModule } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
-import {MatIconModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import {NavigationComponent} from './shared/navigation/navigation.component';
-import {AppNavigationService} from './services/app.navigation.service';
+import { AppNavigationService } from './services/app.navigation.service';
+import { NavigationComponent } from './shared/navigation/navigation.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
