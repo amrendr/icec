@@ -1,5 +1,6 @@
-<mat-sidenav-container class="app-height">
-  <mat-sidenav align="start" mode="over" (close-start)="onCloseStart()" #sidenav>
+<mat-sidenav-container>
+  <mat-sidenav align="start" mode="over" (close-start)="onCloseStart()" #sidenav 
+               [fixedInViewport]="true" class="app-drawer">
     <mat-nav-list>
       <div class="nav-header">
         <span mat-subheader>Navigation</span>

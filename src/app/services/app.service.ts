@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError, map, publishReplay, refCount } from 'rxjs/operators';
 
 import { AnnouncementBar, Args, CommunityEvent, Gallery, Mail, Member, MemberList, Members } from './app.class';
@@ -44,7 +44,7 @@ export class AppService {
             errMsg = error.message ? error.message : error.toString();
         }
         console.error(errMsg);
-        return Observable.throw(errMsg);
+        return throwError(errMsg);
     }
 
     getMembers(input: Args): Observable<Members> {
