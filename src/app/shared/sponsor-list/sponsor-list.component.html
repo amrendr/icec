@@ -1,0 +1,23 @@
+<div *ngIf="!loading;else loader">
+  <div *ngIf="(sponsors||[]).length > 0">
+    <h2>India Fest Sponsors</h2>
+    <mat-divider></mat-divider>
+  </div>
+  <div class="flex inset-15x">
+    <div *ngFor="let sponsor of sponsors" class="card card-20">
+      <a [href]="sponsor.url" target="_blank">
+        <mat-card class="sponsor-content">
+          <img style="max-width: 100%; width: auto;" [src]="sponsor.img" [alt]="sponsor.title">
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+<ng-template #loader>
+  <div class="card card-20">
+    <mat-card>
+      <img style="width: 100%; height: 100px;">
+    </mat-card>
+    <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+  </div>
+</ng-template>

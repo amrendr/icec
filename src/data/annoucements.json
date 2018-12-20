@@ -3,5 +3,13 @@
     "annoucements": [
         { "title": "India Fest 2017", "desc": "April 8 from 9 AM - 6 PM (Santa Fe College Gymnasium)", "url": "/indiafest" },
         { "title": "Health Fair 2017", "desc": "April 8 from 9 AM - 6 PM (Santa Fe College Gymnasium)", "url": "/indiafest" }
+    ],
+    "sponsors": [
+        { "title": "Community of Indian Heritage", "desc": "We Help and Grow Together", "url": "/home",
+            "img": "assets/logo.png" },
+        { "title": "Clear Sound Audiology", "desc": "", "url": "https://www.clearsoundaudiology.com/",
+            "img": "https://www.clearsoundaudiology.com/app/themes/Clear_Sound_Ideology_Theme/dist//images/Clear-Sound-Audiology-Logo-Footer.png" },
+        { "title": "UF International Center", "desc": "", "url": "https://internationalcenter.ufl.edu/",
+            "img": "https://internationalcenter.ufl.edu/sites/all/themes/ufic/images/logo1.png" }
     ]
 }

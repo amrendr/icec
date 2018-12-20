@@ -81,12 +81,17 @@ export class CommunityEvent {
 export class AnnouncementBar {
     interval: number;
     annoucements: Announcement[];
+    sponsors: Sponsor[];
 }
 
 export class Announcement {
     title: string;
     desc: string;
     url: string;
+}
+
+export class Sponsor extends Announcement {
+    img: string;
 }
 
 export class Mail {

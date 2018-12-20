@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Announcement } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
 
-
 @Component({
   selector: 'app-announcement-bar',
   templateUrl: './announcement-bar.component.html',

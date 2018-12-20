@@ -34,7 +34,7 @@ import { RentalComponent } from './components/rental/rental.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
-
+import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,8 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
     IndiafestComponent,
     ContactComponent,
     NavigationComponent,
-    TrapFocusDirective
+    TrapFocusDirective,
+    SponsorListComponent
   ],
   imports: [
     BrowserModule,
