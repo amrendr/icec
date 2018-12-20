@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatCardModule, MatGridListModule, MatIconModule,
   MatInputModule, MatListModule, MatProgressBarModule, MatRadioModule,
-  MatRippleModule, MatSelectModule, MatSidenavModule, MatToolbarModule
+  MatRippleModule, MatSelectModule, MatSidenavModule, MatToolbarModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 
@@ -18,7 +19,8 @@ const ICEC_MATERIAL_MODULES = [
   MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

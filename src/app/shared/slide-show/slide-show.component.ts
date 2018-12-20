@@ -14,23 +14,6 @@ export class SlideShowComponent implements OnInit, OnDestroy {
       desc: 'We Help and Grow Together',
       img: 'assets/logo.png'
     }
-    ,
-    {
-      title: 'Clear Sound Audiology',
-      desc: 'Sponsor - India Fest 2019',
-      img: 'https://www.clearsoundaudiology.com/app/themes/Clear_Sound_Ideology_Theme/dist//images/Clear-Sound-Audiology-Logo-Footer.png'
-    },
-    {
-      title: 'Community of Indian Heritage',
-      desc: 'We Help and Grow Together',
-      img: 'assets/logo.png'
-    },
-    {
-      title: 'UF International Center',
-      desc: 'Sponsor - India Fest 2019',
-      img: 'https://internationalcenter.ufl.edu/sites/all/themes/ufic/images/logo1.png'
-    }
-
   ];
 
   @Input()

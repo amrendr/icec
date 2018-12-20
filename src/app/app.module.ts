@@ -36,6 +36,7 @@ import { YouthGroupComponent } from './components/youth-group/youth-group.compon
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.component';
 import { SlideShowComponent } from './shared/slide-show/slide-show.component';
+import { SponsorSlideShowComponent } from './shared/sponsor-slide-show/sponsor-slide-show.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { SlideShowComponent } from './shared/slide-show/slide-show.component';
     NavigationComponent,
     TrapFocusDirective,
     SponsorListComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    SponsorSlideShowComponent
   ],
   imports: [
     BrowserModule,

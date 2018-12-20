@@ -1,0 +1,8 @@
+<div *ngIf="!loading;else loader">
+  <app-slide-show [slides]="sponsors" [duration]="duration"></app-slide-show>
+</div>
+<ng-template #loader>
+  <div class="sponsor-list-loader">
+    <mat-spinner color="accent"></mat-spinner>
+  </div>
+</ng-template>
