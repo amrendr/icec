@@ -4,13 +4,13 @@
       [class.off-stage]="idx === offStageSlideIndex" [class.back-stage]="idx !== onStageSlideIndex && idx !== offStageSlideIndex">
       <div class="content">
         <img [src]="item.img" [alt]="item.title">
-        <div class="item">
-          <div class="title inset-15x">
-            {{item.title}}
-          </div>
-          <div class="inset-5x">
-            {{item.desc}}
-          </div>
+      </div>
+      <div class="item">
+        <div class="title inset-15x">
+          {{item.title}}
+        </div>
+        <div class="inset-5x">
+          {{item.desc}}
         </div>
       </div>
     </div>

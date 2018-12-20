@@ -42,7 +42,7 @@ export class SlideShowComponent implements OnInit, OnDestroy {
     }
 
     if (this.slides.length > 1) {
-      this.interval = setInterval(() => { this.startShow(); }, 1000);
+      this.interval = setInterval(() => { this.startShow(); }, this.changeSlideInterval);
     }
 
   }

@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=0.0.0.0 --vendorChunk=true --aot=true",
-    "build-prod": "ng build --aot=true --buildOptimizer=true --prod=true --sourceMap=true --baseHref=test",
+    "build-prod": "ng build --aot=true --buildOptimizer=true --prod=true --sourceMap=true",
     "test": "ng test --progress false --browsers PhantomJS -sr --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
