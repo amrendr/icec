@@ -94,6 +94,12 @@ export class Sponsor extends Announcement {
     img: string;
 }
 
+export class Slide {
+    title: string;
+    desc: string;
+    img: string;
+}
+
 export class Mail {
     name: string;
     from: string;

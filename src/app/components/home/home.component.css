@@ -1,5 +1,5 @@
 .app-home-backdrop {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   text-align: center;
   background: url('/assets/silhouette2.png') no-repeat bottom center, linear-gradient(75deg, #fd8e01, white, white, #45b803);
   background-blend-mode: multiply;

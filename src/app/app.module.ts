@@ -35,6 +35,7 @@ import { ResourcesComponent } from './components/resources/resources.component';
 import { YouthGroupComponent } from './components/youth-group/youth-group.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.component';
+import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.compone
     ContactComponent,
     NavigationComponent,
     TrapFocusDirective,
-    SponsorListComponent
+    SponsorListComponent,
+    SlideShowComponent
   ],
   imports: [
     BrowserModule,
