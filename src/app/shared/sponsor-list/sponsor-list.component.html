@@ -7,7 +7,7 @@
     <div *ngFor="let sponsor of sponsors" class="card card-20">
       <a [href]="sponsor.url" target="_blank">
         <mat-card class="sponsor-content">
-          <img style="max-width: 100%; max-height:100%; width: 100%;" [src]="sponsor.img" [alt]="sponsor.title">
+          <img [src]="sponsor.img" [alt]="sponsor.title">
         </mat-card>
       </a>
     </div>

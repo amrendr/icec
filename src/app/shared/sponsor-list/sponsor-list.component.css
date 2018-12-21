@@ -1,6 +1,19 @@
 .sponsor-content {
   display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
+}
+
+.sponsor-content img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* target IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .sponsor-content{
+    display: block;
+  }
 }
