@@ -1,31 +1,11 @@
 <app-content [title]="'Youth Group'" [loading]="loading || loading1">
-  <div class="flex first">
-    <div class="card card-50" *ngIf="!contacts">
-      <mat-card>
-        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
-        <mat-card-content>
-          <span class="flex detail" mat-line><mat-icon>person</mat-icon></span>
-          <span class="flex detail" mat-line><mat-icon>mail</mat-icon></span>
-          <span class="flex detail" mat-line><mat-icon>phone</mat-icon></span>
-        </mat-card-content>
-      </mat-card>
-      <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
-    </div>
-    <div class="card card-50" *ngFor="let contact of contacts">
-      <mat-card>
-        <mat-card-subtitle>{{contact.subtitle}}</mat-card-subtitle>
-        <mat-card-content>
-          <span class="flex detail" mat-line><mat-icon>person</mat-icon><span>{{contact.fullname}}</span></span>
-          <span class="flex detail" mat-line><mat-icon>mail</mat-icon><a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a></span>
-          <span class="flex detail" mat-line><mat-icon>phone</mat-icon><span>{{contact.contact}}</span></span>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="card card-50" *ngIf="contacts && contacts.length == 0"></div>
+    <div class="flex first">
+    <div class="card card-50"></div>
     <div class="card card-50">
       <app-gallery-card title="Gallery" [input]="input" [(loading)]="loading" [largeImg]="true"></app-gallery-card>
     </div>
   </div>
+  <app-contact-list [loading]="loading1" [contacts]="contacts" card="card-50"></app-contact-list>
 
   <h3>Brief History and Mission</h3>
   <mat-divider></mat-divider>

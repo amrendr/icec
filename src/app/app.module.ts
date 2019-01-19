@@ -37,6 +37,8 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.component';
 import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 import { SponsorSlideShowComponent } from './shared/sponsor-slide-show/sponsor-slide-show.component';
+import { ContactListComponent } from './shared/contact-list/contact-list.component';
+
 
 @NgModule({
   declarations: [
@@ -63,7 +65,8 @@ import { SponsorSlideShowComponent } from './shared/sponsor-slide-show/sponsor-s
     TrapFocusDirective,
     SponsorListComponent,
     SlideShowComponent,
-    SponsorSlideShowComponent
+    SponsorSlideShowComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,

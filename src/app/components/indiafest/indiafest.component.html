@@ -56,14 +56,14 @@
           <div *ngFor="let form of forms" class="flex detail" mat-line>
             <mat-icon *ngIf="form.doc || form.pdf">description</mat-icon>
             <div *ngIf="(form.doc && !form.pdf) || (!form.doc && form.pdf)">
-                <a href="assets/documents/{{form.pdf || form.doc}}" target="blank">{{form.form}}</a>
-                <b *ngIf="form.deadline">Deadline: {{form.deadline}}</b>
-              </div>
-              <div *ngIf="form.doc && form.pdf">{{form.form}} (
-                <a href="assets/documents/{{form.pdf}}" target="blank">PDF</a>&nbsp;/&nbsp;
-                <a href="assets/documents/{{form.doc}}" target="blank">DOC</a>)
-                <b *ngIf="form.deadline">Deadline: {{form.deadline}}</b>
-              </div>
+              <a href="assets/documents/{{form.pdf || form.doc}}" target="blank">{{form.form}}</a>
+              <b *ngIf="form.deadline">Deadline: {{form.deadline}}</b>
+            </div>
+            <div *ngIf="form.doc && form.pdf">{{form.form}} (
+              <a href="assets/documents/{{form.pdf}}" target="blank">PDF</a>&nbsp;/&nbsp;
+              <a href="assets/documents/{{form.doc}}" target="blank">DOC</a>)
+              <b *ngIf="form.deadline">Deadline: {{form.deadline}}</b>
+            </div>
           </div>
         </mat-card-content>
       </mat-card>
@@ -75,48 +75,32 @@
   <p>India Fest & Health Fair is organized annually by ICEC since 1999. Some of the activities include: </p>
   <div class="resources">
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Indian Dances</div>
+      <mat-icon>star</mat-icon>Indian Dances
+    </div>
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Indian Cuisine</div>
+      <mat-icon>star</mat-icon>Indian Cuisine
+    </div>
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Indian Jewelry</div>
+      <mat-icon>star</mat-icon>Indian Jewelry
+    </div>
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Indian Art & Crafts</div>
+      <mat-icon>star</mat-icon>Indian Art & Crafts
+    </div>
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Traditional Indian Attire</div>
+      <mat-icon>star</mat-icon>Traditional Indian Attire
+    </div>
     <div class="flex" mat-line>
-      <mat-icon>star</mat-icon>Cultural Program</div>
+      <mat-icon>star</mat-icon>Cultural Program
+    </div>
   </div>
 
   <app-sponsor-list></app-sponsor-list>
+  <app-contact-list header="For more information about {{title}} event, please contact" card="card-33" [contacts]="contacts"></app-contact-list>
 
-  <h3>For more information about {{title}} event, please contact</h3>
-  <mat-divider></mat-divider>
-  <div class="flex inset-15x">
-    <div class="card card-33" *ngFor="let contact of contacts">
-      <mat-card>
-        <mat-card-title>{{contact.title}}</mat-card-title>
-        <mat-card-content>
-          <span class="flex detail" mat-line>
-            <mat-icon>person</mat-icon>
-            <span>{{contact.fullname}}</span>
-          </span>
-          <span class="flex detail" mat-line>
-            <mat-icon>mail</mat-icon>
-            <a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a>
-          </span>
-          <span class="flex detail" mat-line>
-            <mat-icon>phone</mat-icon>
-            <span>{{contact.contact}}</span>
-          </span>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
   <p>
-    Want to bring fresh ideas to the table for {{title}}? Want to participate in or organize the next event? Contact us at
-    <a
-      href="mailto:IndiaFestGainesville@gmail.com?subject=Organize India Fest 2017">IndiaFestGainesville@gmail.com</a>.
+    Want to bring fresh ideas to the table for {{title}}? Want to participate in or organize the next event? Contact us
+    at
+    <a href="mailto:IndiaFestGainesville@gmail.com?subject=Organize India Fest 2017">IndiaFestGainesville@gmail.com</a>.
   </p>
 
 </app-content>

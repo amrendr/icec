@@ -1,0 +1,44 @@
+<div *ngIf="contacts && contacts.length > 0">
+  <h3>{{header}}</h3>
+  <mat-divider></mat-divider>
+</div>
+<div class="flex inset-15x">
+  <div class="card {{card}}" *ngIf="loading">
+    <mat-card>
+      <mat-card-title>&nbsp;</mat-card-title>
+      <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+      <mat-card-content>
+        <span class="flex detail" mat-line>
+          <mat-icon>person</mat-icon>
+        </span>
+        <span class="flex detail" mat-line>
+          <mat-icon>mail</mat-icon>
+        </span>
+        <span class="flex detail" mat-line>
+          <mat-icon>phone</mat-icon>
+        </span>
+      </mat-card-content>
+    </mat-card>
+    <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+  </div>
+  <div class="card {{card}}" *ngFor="let contact of contacts">
+    <mat-card>
+      <mat-card-title *ngIf="contact.title">{{contact.title}}</mat-card-title>
+      <mat-card-subtitle *ngIf="contact.subtitle">{{contact.subtitle}}</mat-card-subtitle>
+      <mat-card-content>
+        <span class="flex detail" mat-line>
+          <mat-icon>person</mat-icon>
+          <span>{{contact.fullname}}</span>
+        </span>
+        <span class="flex detail" *ngIf="contact.email" mat-line>
+          <mat-icon>mail</mat-icon>
+          <a href="mailto:{{contact.email}}?subject={{contact.membershipTerm}}">{{contact.email}}</a>
+        </span>
+        <span class="flex detail" *ngIf="contact.contact" mat-line>
+          <mat-icon>phone</mat-icon>
+          <span>{{contact.contact}}</span>
+        </span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

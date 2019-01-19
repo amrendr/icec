@@ -23,7 +23,6 @@
 }
 
 .pp-item {
-  margin-bottom: 0.5rem;
   align-items: center;
 }
 
@@ -49,4 +48,8 @@
 
 .card-payment {
   align-items: center;
+}
+
+.mat-card-content {
+  margin-bottom: 0;
 }
