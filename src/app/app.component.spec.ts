@@ -1,6 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { HttpModule, XHRBackend } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -11,12 +10,9 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpModule, RouterTestingModule, MatIconModule],
+      imports: [HttpClientTestingModule, RouterTestingModule, MatIconModule],
       declarations: [AppComponent, NavigationComponent],
-      providers: [
-        AppNavigationService,
-        { provide: XHRBackend, useClass: MockBackend }
-      ]
+      providers: [AppNavigationService]
     }).compileComponents();
   }));
 
