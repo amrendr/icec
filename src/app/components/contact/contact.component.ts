@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
 
   sendingMsg = false;
   msgForm: NgForm;
-  @ViewChild('f') currentForm: NgForm;
+  @ViewChild('f', { static: true }) currentForm: NgForm;
 
   constructor(
     private appService: AppService

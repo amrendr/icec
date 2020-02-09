@@ -7,7 +7,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  @ViewChild('navigation') navigation: NavigationComponent;
+  @ViewChild('navigation', { static: true }) navigation: NavigationComponent;
 
   toggleSidenav() {
     this.navigation.toggleSidenav();
