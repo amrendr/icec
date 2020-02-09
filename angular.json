@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "India Cultural & Education Center, Gainesville Florida": {
+    "icec": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -11,6 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,6 +31,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -51,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "India Cultural & Education Center, Gainesville Florida:build"
+            "browserTarget": "icec:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "India Cultural & Education Center, Gainesville Florida:build:production"
+              "browserTarget": "icec:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "India Cultural & Education Center, Gainesville Florida:build"
+            "browserTarget": "icec:build"
           }
         },
         "test": {
@@ -97,7 +104,7 @@
         }
       }
     },
-    "India Cultural & Education Center, Gainesville Florida-e2e": {
+    "icec-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -106,7 +113,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "India Cultural & Education Center, Gainesville Florida:serve"
+            "devServerTarget": "icec:serve"
           }
         },
         "lint": {
@@ -121,7 +128,7 @@
       }
     }
   },
-  "defaultProject": "India Cultural & Education Center, Gainesville Florida",
+  "defaultProject": "icec",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
