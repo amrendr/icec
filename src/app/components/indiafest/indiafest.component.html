@@ -1,4 +1,5 @@
-<app-content [title]="title || 'India Fest & Health Fair'" [subtitle]="subtitle" [loading]="loading1 || loading2 || loading3">
+<app-content [title]="title || 'India Fest & Health Fair'" [subtitle]="subtitle"
+  [loading]="loading1 || loading2 || loading3">
 
   <div class="flex first">
     <div class="card card-50">
@@ -22,7 +23,8 @@
             <span>{{event.address}}</span>
           </span>
         </mat-card-content>
-        <mat-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="event.person || event.contact || event.email">Contact for General Information
+        </mat-card-subtitle>
         <mat-card-content>
           <span class="flex detail" mat-line *ngIf="event.person">
             <mat-icon>person</mat-icon>
@@ -95,12 +97,13 @@
   </div>
 
   <app-sponsor-list></app-sponsor-list>
-  <app-contact-list header="For more information about {{title}} event, please contact" card="card-33" [contacts]="contacts"></app-contact-list>
+  <app-contact-list header="For more information about {{title}} event, please contact" card="card-33"
+    [contacts]="contacts"></app-contact-list>
 
   <p>
     Want to bring fresh ideas to the table for {{title}}? Want to participate in or organize the next event? Contact us
     at
-    <a href="mailto:IndiaFestGainesville@gmail.com?subject=Organize India Fest 2017">IndiaFestGainesville@gmail.com</a>.
+    <a href="mailto:indiafest@icec-florida.org?subject=Organize {{title | escape }}">indiafest@icec-florida.org</a>
   </p>
 
 </app-content>

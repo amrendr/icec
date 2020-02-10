@@ -8,13 +8,14 @@ import { IcecMaterialModule } from './icec-material.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
+import { AppPipeModule } from './app.pipe.module';
 import { AnnouncementBarComponent } from './shared/announcement-bar/announcement-bar.component';
 import { ContentComponent } from './shared/content/content.component';
 import { GalleryCardComponent } from './shared/gallery-card/gallery-card.component';
 
 import { AppDimensionService } from './services/app.dimension.service';
 import { AppNavigationService } from './services/app.navigation.service';
-import { AppFilterListPipe } from './services/app.pipe';
+
 import { AppService } from './services/app.service';
 import { Api } from './services/app.service.api';
 
@@ -51,7 +52,6 @@ import { ContactListComponent } from './shared/contact-list/contact-list.compone
     BylawsComponent,
     MissionComponent,
     MembersComponent,
-    AppFilterListPipe,
     RentalComponent,
     MembershipComponent,
     YouthGroupComponent,
@@ -74,9 +74,10 @@ import { ContactListComponent } from './shared/contact-list/contact-list.compone
     FormsModule,
     HttpClientModule,
     IcecMaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppPipeModule
   ],
-  providers: [AppService, AppFilterListPipe, AppDimensionService, AppNavigationService, Api],
+  providers: [AppService, AppDimensionService, AppNavigationService, Api],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
