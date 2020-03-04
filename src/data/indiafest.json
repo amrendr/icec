@@ -1,25 +1,123 @@
 [
-    [
-        { "membershipType": "Organizer", "fullname": "Yogesh Deshmukh", "lastname": "Deshmukh", "title": "Advertisement & Brochure", "contact": "", "email": "IndiaFestGainesville@gmail.com", "membershipTerm": "Question/Inquiry about India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Shobha Subhash", "lastname": "Subhash", "title": "Cultural Show", "contact": "", "email": "cultural.IndiaFestGainesville@gmail.com", "membershipTerm": "Cultural Program at India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Anil Thomas & Ashutosh Shukla", "lastname": "Thomas", "title": "Logistics", "contact": "(352) 262-7119", "email": "anilthomasv@hotmail.com", "membershipTerm": "Logistics for India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Thames Harrison", "lastname": "Harrison", "title": "Marketing & Publicity", "contact": "", "email": "marketing.indiafestgainesville@gmail.com", "membershipTerm": "India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Shaheda Qaiyumi", "lastname": "Qaiyumi", "title": "Non-Food Vendors", "contact": "(352) 871-7112", "email": "IndiaFestGainesville@gmail.com", "membershipTerm": "Vendor Stall at India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Rajyalakshmi Tumati", "lastname": "Tumati", "title": "Food Vendors", "contact": "(352) 474-2863", "email": "IndiaFestGainesville@gmail.com", "membershipTerm": "Food Vendor Stall at India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Manisha Ranade", "lastname": "Ranade", "title": "Volunteers", "contact": "(352) 271-3065", "email": "manisha.ranade@gmail.com", "membershipTerm": "Volunteering at India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Nisha Patel", "lastname": "Patel", "title": "Health Fair", "contact": "", "email": "IndiaFestGainesville@gmail.com", "membershipTerm": "Health Fair at India Fest 2018" },
-        { "membershipType": "Organizer", "fullname": "Rajyalakshmi Tumati", "lastname": "Tumati", "title": "General Information", "contact": "(352) 474-2863", "email": "IndiaFestGainesville@gmail.com", "membershipTerm": "Question/Inquiry about India Fest 2018" }
-    ],
-    [
-        {"flyer": "India Fest", "link":"IndiaFest2018_Flyer.pdf"},
-        {"flyer": "Health Fair", "link":"HealthFair2018_Flyer.pdf"}
-    ],
-    [
-        {"form":"Brochure Advertisement", "pdf":"AdvertisementForm_IndiaFest2018.pdf", "doc":"", "deadline":"February 23, 2018"},
-        {"form":"Vendor booth", "pdf":"VendorForm_IndiaFest2018.pdf", "doc":"", "deadline":"February 23, 2018"},
-        {"form":"Health Fair Participant", "pdf":"ParticipantForm_HealthFair2018.pdf", "doc":"", "deadline":"February 23, 2018"},
-        {"form":"Cultural Program", "pdf":"CulturalProgramApplication_IndiaFest2018.pdf", "doc":"CulturalProgramApplication_IndiaFest2018.docx", "deadline":"January 31, 2018"}
-        
-    ]
+  [
+    {
+      "membershipType": "Organizer",
+      "fullname": "Yogesh Deshmukh",
+      "lastname": "Deshmukh",
+      "title": "Advertisement & Brochure",
+      "contact": "",
+      "email": "IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Question/Inquiry about India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Shobha Subhash",
+      "lastname": "Subhash",
+      "title": "Cultural Show",
+      "contact": "",
+      "email": "cultural.IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Cultural Program at India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Anil Thomas & Ashutosh Shukla",
+      "lastname": "Thomas",
+      "title": "Logistics",
+      "contact": "(352) 262-7119",
+      "email": "anilthomasv@hotmail.com",
+      "membershipTerm": "Logistics for India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Thames Harrison",
+      "lastname": "Harrison",
+      "title": "Marketing & Publicity",
+      "contact": "",
+      "email": "marketing.indiafestgainesville@gmail.com",
+      "membershipTerm": "India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Shaheda Qaiyumi",
+      "lastname": "Qaiyumi",
+      "title": "Non-Food Vendors",
+      "contact": "(352) 871-7112",
+      "email": "IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Vendor Stall at India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Rajyalakshmi Tumati",
+      "lastname": "Tumati",
+      "title": "Food Vendors",
+      "contact": "(352) 474-2863",
+      "email": "IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Food Vendor Stall at India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Manisha Ranade",
+      "lastname": "Ranade",
+      "title": "Volunteers",
+      "contact": "(352) 271-3065",
+      "email": "manisha.ranade@gmail.com",
+      "membershipTerm": "Volunteering at India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Nisha Patel",
+      "lastname": "Patel",
+      "title": "Health Fair",
+      "contact": "",
+      "email": "IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Health Fair at India Fest 2018"
+    },
+    {
+      "membershipType": "Organizer",
+      "fullname": "Rajyalakshmi Tumati",
+      "lastname": "Tumati",
+      "twitter": "https://twitter.com/GnvIcec",
+      "facebook": "https://www.facebook.com/ICEC-Gnv-103263011285822/",
+      "title": "General Information",
+      "contact": "(352) 474-2863",
+      "email": "IndiaFestGainesville@gmail.com",
+      "membershipTerm": "Question/Inquiry about India Fest 2018"
+    }
+  ],
+  [
+    {
+      "flyer": "India Fest",
+      "link": "IndiaFest2018_Flyer.pdf"
+    },
+    {
+      "flyer": "Health Fair",
+      "link": "HealthFair2018_Flyer.pdf"
+    }
+  ],
+  [
+    {
+      "form": "Brochure Advertisement",
+      "pdf": "AdvertisementForm_IndiaFest2018.pdf",
+      "doc": "",
+      "deadline": "February 23, 2018"
+    },
+    {
+      "form": "Vendor booth",
+      "pdf": "VendorForm_IndiaFest2018.pdf",
+      "doc": "",
+      "deadline": "February 23, 2018"
+    },
+    {
+      "form": "Health Fair Participant",
+      "pdf": "ParticipantForm_HealthFair2018.pdf",
+      "doc": "",
+      "deadline": "February 23, 2018"
+    },
+    {
+      "form": "Cultural Program",
+      "pdf": "CulturalProgramApplication_IndiaFest2018.pdf",
+      "doc": "CulturalProgramApplication_IndiaFest2018.docx",
+      "deadline": "January 31, 2018"
+    }
+  ]
 ]
-

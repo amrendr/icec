@@ -38,6 +38,14 @@
           <mat-icon>phone</mat-icon>
           <span>{{contact.contact}}</span>
         </span>
+        <span class="flex detail" *ngIf="contact.twitter" mat-line>
+          <mat-icon class="social" svgIcon="twitter"></mat-icon>
+          <a target="_blank" href="{{contact.twitter}}">{{contact.twitter}}</a>
+        </span>
+        <span class="flex detail" *ngIf="contact.facebook" mat-line>
+          <mat-icon class="social" svgIcon="facebook"></mat-icon>
+          <a target="_blank" href="{{contact.facebook}}">{{contact.facebook}}</a>
+        </span>
       </mat-card-content>
     </mat-card>
   </div>
