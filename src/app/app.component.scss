@@ -93,6 +93,9 @@ $mat-xsmall: 'max-width: 600px';
     &:hover {
       background-color: rgba(0, 0, 0, 0.0588);
     }
+    &.social {
+      margin-left: 0;
+    }
   }
 }
 

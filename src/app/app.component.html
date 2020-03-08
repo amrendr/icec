@@ -1,11 +1,20 @@
 <div>
   <mat-toolbar color="primary" class="app-toolbar shadow">
-    <a [routerLink]="['./home']" (click)="closeSidenav()" class="logo"><button mat-icon-button disabled><mat-icon>spa</mat-icon></button><span mat-line class="txt">ICEC</span></a>
+    <a [routerLink]="['./home']" (click)="closeSidenav()" class="logo"><button mat-icon-button disabled>
+        <mat-icon>spa</mat-icon>
+      </button><span mat-line class="txt">ICEC</span></a>
     <span class="flex"></span>
     <a [routerLink]="['./about']" (click)="closeSidenav()" class="desktop"><span>About</span></a>
-    <a [routerLink]="['./indiafest']" (click)="closeSidenav()" class="desktop"><span class="app-flex">India Fest</span></a>
+    <a [routerLink]="['./indiafest']" (click)="closeSidenav()" class="desktop"><span class="app-flex">India
+        Fest</span></a>
     <a [routerLink]="['./gallery']" (click)="closeSidenav()" class="desktop"><span>Gallery</span></a>
     <a [routerLink]="['./contact']" (click)="closeSidenav()" class="desktop"><span>Contact</span></a>
+    <a class="logo social" target="_blank" href="https://www.facebook.com/ICEC-Gnv-103263011285822/">
+      <mat-icon svgIcon="facebook"></mat-icon>
+    </a>
+    <a class="logo social" target="_blank" href="https://twitter.com/GnvIcec">
+      <mat-icon svgIcon="twitter"></mat-icon>
+    </a>
     <button mat-icon-button (click)="toggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>

@@ -81,3 +81,8 @@ mat-card .avatar {
 mat-card .detail {
   font-size: 0.875rem;
 }
+
+snack-bar-container.mat-snack-bar-container{
+  background: transparent;
+  box-shadow: none;
+}

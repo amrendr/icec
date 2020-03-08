@@ -39,6 +39,7 @@ import { SponsorListComponent } from './shared/sponsor-list/sponsor-list.compone
 import { SlideShowComponent } from './shared/slide-show/slide-show.component';
 import { SponsorSlideShowComponent } from './shared/sponsor-slide-show/sponsor-slide-show.component';
 import { ContactListComponent } from './shared/contact-list/contact-list.component';
+import { AlertComponent } from './shared/alert/alert.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ContactListComponent } from './shared/contact-list/contact-list.compone
     SponsorListComponent,
     SlideShowComponent,
     SponsorSlideShowComponent,
-    ContactListComponent
+    ContactListComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

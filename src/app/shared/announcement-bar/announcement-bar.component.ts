@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Announcement } from '../../services/app.class';
 import { AppService } from '../../services/app.service';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { AlertComponent } from '../alert/alert.component';
 
 @Component({
   selector: 'app-announcement-bar',
@@ -18,8 +20,14 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
   currentAnnoucemntIndex = 0;
   changeAnnouncementInterval = 5000;
 
+  alertDurationInSeconds = 20;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+
+
   constructor(
-    private annoucementService: AppService
+    private annoucementService: AppService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -46,10 +54,24 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
         this.loading = false;
       },
       (err) => { this.loading = false; });
+    this.openSnackBar();
   }
 
   ngOnDestroy() {
     this.clearLocalInterval();
+    this.closeSnackBar();
+  }
+
+  private openSnackBar(): void {
+    this.snackBar.openFromComponent(AlertComponent, {
+      duration: this.alertDurationInSeconds * 1000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition
+    });
+  }
+
+  private closeSnackBar(): void {
+    this.snackBar.dismiss();
   }
 
   private clearLocalInterval(): void {
