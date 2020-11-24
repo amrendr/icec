@@ -54,12 +54,12 @@ export class AnnouncementBarComponent implements OnInit, OnDestroy {
         this.loading = false;
       },
       (err) => { this.loading = false; });
-    this.openSnackBar();
+    // this.openSnackBar();
   }
 
   ngOnDestroy() {
     this.clearLocalInterval();
-    this.closeSnackBar();
+    // this.closeSnackBar();
   }
 
   private openSnackBar(): void {
