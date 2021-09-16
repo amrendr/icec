@@ -31,7 +31,8 @@ export class MembersComponent implements OnInit {
   ];
 
   memberYears = [
-    { value: 'current', viewValue: '2017' },
+    { value: 'current', viewValue: 'current' },
+    { value: '2017', viewValue: '2017' },
     { value: '2015', viewValue: '2015' }
   ];
 
